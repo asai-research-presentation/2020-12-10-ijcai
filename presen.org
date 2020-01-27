@@ -273,7 +273,7 @@ It is precisely these parts that we address in this presentation.
 
 # #+HTML: <embed src="img/plan.svg" type="image/svg+xml" />
 
-* Applications 1. Space
+* Deployed Applications 1. Space
 
 # This is almost a dumb question if you ever took the standard AI class in the university
 
@@ -285,7 +285,7 @@ It is precisely these parts that we address in this presentation.
   + "*Six Minutes of Terror*" -- In only six minutes, the spacecraft
     will slow down from 12,000 to 0 miles per hour. Earth-Mars roundtrip time in lightspeed is 20 minutes.
 
-* Applications 2. Logistics/transportation
+* Deployed Applications 2. Logistics/transportation
 
 + *TIMIPLAN* effectively solved real problems from Acciona with up to 300 services, 600 locations, 300 trucks, 300 containers, and 50 train segments.
 + *Liner Shipping Fleet Repositioning Problem* (LSFRP) involves moving vessels between services ...
@@ -293,7 +293,7 @@ It is precisely these parts that we address in this presentation.
 + *Greenhouse Logistics*: ... controlling conveyor belts that transport plants between greenhouses and imaging facilities.
 + *Ship Operations*: Transportation and delivery of a list of requested cargo ... considering a number of constraints and elements based on a real problem of Petrobras – the Brazilian Petroleum Company. 
 
-* Applications 3. Manufacturing, Robotics & Motion Planning
+* Deployed Applications 3. Manufacturing, Robotics & Motion Planning
 
 + *Xerox PARC printer* (Ruml et al, JAIR '11, ICAPS'05) Generating the programs for 170 interconnected modular printers, each with different capabilities (laminating, color, paper type) in a production printing system. 
 + *IHI* (ICAPS'11) Composing the program for the automated cell-manufactoring machines interconnected by a network of conveyers.
@@ -302,15 +302,15 @@ It is precisely these parts that we address in this presentation.
 + Integrate vehicle routing & motion planning (Ruml et al, ICAPS'12)
 + Willow Garage various work 
 
-* Applications 4. Other Applications
+* Deployed Applications 4. Others
 
-+ *E-Learning* (Antonio Garrido @ ICAPS'12): ﻿myPTutor is a joint work
-  to take advantage of Artificial Intelligence planning techniques in the
-  adaptation of sequences of Learning Objects to pedagogical and
+I'll continue this until peeps stop saying "I can't imagine any applications of planning, should be toy problems eh?"
+
++ *E-Learning* (Antonio Garrido @ ICAPS'12): ﻿myPTutor is a joint work ...
+  in the adaptation of sequences of Learning Objects to pedagogical and
   students' requirements.
 + *MARIO* - Software composition (IBM demo @ ICAPS'12 SystemDemo + SPARK'12
-  paper): MARIO is an automated composer, that uses AI Planning for enabling
-  end-users to compose software components into data analysis flows in a
+  paper): ... compose software components into data analysis flows in a
   goal-driven manner.
 + *E-tourism*: is a tourist recommendation and planning application to
   assist users on the organization of a leisure and tourist agenda. (Sebastia et al)
@@ -357,12 +357,61 @@ It is precisely these parts that we address in this presentation.
 #   #+HTML: <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The wait for <a href="https://twitter.com/ICAPSConference?ref_src=twsrc%5Etfw">@ICAPSConference</a> is almost over! Your one stop shop for <a href="https://twitter.com/hashtag/AI?src=hash&amp;ref_src=twsrc%5Etfw">#AI</a> Planning and Scheduling. <a href="https://twitter.com/hashtag/ICAPS2019?src=hash&amp;ref_src=twsrc%5Etfw">#ICAPS2019</a> <a href="https://t.co/hXFy7C5wT3">pic.twitter.com/hXFy7C5wT3</a></p>&mdash; icapsycho (@icapsycho) <a href="https://twitter.com/icapsycho/status/1148745409499729920?ref_src=twsrc%5Etfw">July 10, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 # #+end_span6
 
-* We do not buy into hypes
+* We do not buy into the hype
 
 #+HTML: <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The wait for <a href="https://twitter.com/ICAPSConference?ref_src=twsrc%5Etfw">@ICAPSConference</a> is almost over! Your one stop shop for <a href="https://twitter.com/hashtag/AI?src=hash&amp;ref_src=twsrc%5Etfw">#AI</a> Planning and Scheduling. <a href="https://twitter.com/hashtag/ICAPS2019?src=hash&amp;ref_src=twsrc%5Etfw">#ICAPS2019</a> <a href="https://t.co/hXFy7C5wT3">pic.twitter.com/hXFy7C5wT3</a></p>&mdash; icapsycho (@icapsycho) <a href="https://twitter.com/icapsycho/status/1148745409499729920?ref_src=twsrc%5Etfw">July 10, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
-* Classical Planning: In simpler terms
 
+* Planning
+
+[[gif:plan/plan]]
+
+# #+HTML: <embed src="img/plan.svg" type="image/svg+xml" />
+
+
+** Classical Planning: In simpler terms (like tensors!)
+
+ [[png:simple-planning/1]]
+
+** Classical Planning: In simpler terms (like tensors!)
+
+ [[png:simple-planning/2]]
+
+** Classical Planning: In simpler terms (like tensors!)
+
+ [[png:simple-planning/3]]
+
+** Classical Planning: In simpler terms (like tensors!)
+
+ [[png:simple-planning/4]]
+
+** Classical Planning: In simpler terms (like tensors!)
+
+ [[png:simple-planning/5]]
+
+** Classical Planning: In simpler terms (like tensors!)
+
+ [[png:simple-planning/6]]
+
+** Classical Planning: In simpler terms (like tensors!)
+
+ [[png:simple-planning/7]]
+
+** Classical Planning: In simpler terms (like tensors!)
+
+ [[png:simple-planning/8]]
+
+** Classical Planning: In simpler terms (like tensors!)
+
+ [[png:simple-planning/9]]
+
+** Classical Planning: In simpler terms (like tensors!)
+
+ [[png:simple-planning/11]]
+
+** Classical Planning: In simpler terms (like tensors!)
+
+ [[png:simple-planning/10]]
 
 
 * Classical Planning solvers are scalable and efficient
