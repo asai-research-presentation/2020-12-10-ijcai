@@ -18,17 +18,17 @@
 # [[png:latplanlogo]]
 
 #+begin_larger
-*Classical Planning in Deep Latent Space: @@html:<br>@@ Bridging the Subsymbolic-Symbolic Boundary. @@html:<br>@@ Recent Progress*
+*Classical Planning in Deep Latent Space: @@html:<br>@@ Bridging the Subsymbolic-Symbolic Boundary. @@html:<br>@@ /Recent Progress/*
 #+end_larger
 
 　
 
 #+begin_larger
-*Masataro Asai (IBM)*
+Masataro Asai (IBM)
 #+end_larger
 
 #+begin_larger
-*MIT-IBM Watson AI Lab*
+MIT-IBM Watson AI Lab
 #+end_larger
 
 
@@ -48,6 +48,40 @@
 # MIT-IBM Watson AI Lab
 # #+end_xlarge
 
+* Overview
+
++ Introductory material
++ Contents
+
+* Don't think, Feel ??
+
+#+begin_container-fluid
+#+begin_row-fluid
+#+begin_span6
++ You are left on Mars, other crews already left Mars, no contact to Earth
++ You found potatoes for living 100 days
++ You are a botanist
++ You have two trucks
++ Trucks only drive for 2 hours, needs a battery recharge
++ Escape rocket for the next mission is far away (60 days driving)
++ There is a dead Mars Pathfinder nearby (15 days driving)
++ The building has the solar panels
++ You have tools
++ Survive!
+
+#+end_span6
+#+begin_span6
++ Do you want to follow your learned behavior?
+
+  (Don't think, feel!)
+
+  [[sgif:yoda]]
+
+#+end_span6
+#+end_row-fluid
+#+end_container-fluid
+
++ [[spng:are-reflex-intelligent2]]
 
 * Overview                                              :background:noexport:
 
@@ -134,6 +168,14 @@ It is precisely these parts that we address in this presentation.
 
 # #+HTML: <embed src="img/plan.svg" type="image/svg+xml" />
 
+* Planning = Central 
+
+* Applications.
+
+# This is almost a dumb question if you ever took the standard AI class in the university
+
+
+
 * Facts/Strength of Modern Symbolic Planning solvers.
 
 
@@ -143,7 +185,7 @@ It is precisely these parts that we address in this presentation.
 + *Scalable to a huge search space:* Generating the programs for 170 interconnected modular printers in a production printing system. (Ruml, et al. JAIR 2011)
 #+end_span6
 #+begin_span6
-+ *Can make long-term decisions:* Easily generates >1000 step plans (Asai, Fukunaga, ICAPS 2015)
++ *Can make long-term decisions:* SoTA easily generates >1000 step plans (Asai, Fukunaga, ICAPS 2015)
 #+end_span6
 #+end_row-fluid
 #+begin_row-fluid
