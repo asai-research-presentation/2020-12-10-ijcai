@@ -48,40 +48,67 @@ MIT-IBM Watson AI Lab
 # MIT-IBM Watson AI Lab
 # #+end_xlarge
 
-* Overview
-
-+ Introductory material
-+ Contents
-
-* Don't think, Feel ??
+* Decision Making
 
 #+begin_container-fluid
 #+begin_row-fluid
-#+begin_span6
-+ You are left on Mars, other crews already left Mars, no contact to Earth
-+ You found potatoes for living 100 days
+#+begin_span7
++ You are accidentally left on Mars
++ Crews already left Mars
++ Potatoes enough for living 100 days
 + You are a botanist
 + You have two trucks
-+ Trucks only drive for 2 hours, needs a battery recharge
-+ Escape rocket for the next mission is far away (60 days driving)
-+ There is a dead Mars Pathfinder nearby (15 days driving)
-+ The building has the solar panels
++ Trucks need recharge every 2 hours
++ Escape rocket nearby (60d driving)
++ Dead Mars Pathfinder nearby (15d)
++ The building has solar panels
 + You have tools
-+ Survive!
++ Return to Earth!
 
-#+end_span6
-#+begin_span6
-+ Do you want to follow your learned behavior?
+#+end_span7
+#+begin_span5
++ Do you follow your learned behavior?
 
-  (Don't think, feel!)
+  "Don't think, feel"?
 
   [[sgif:yoda]]
 
-#+end_span6
++ Says "yes", the RL fanatics...
+
+  "intelligence emerge from RL..."
+
+#+end_span5
 #+end_row-fluid
 #+end_container-fluid
 
 + [[spng:are-reflex-intelligent2]]
+
+* What characterises the */deliberative/* decision making vs */Reflex/* action?
+
+Deliberative vs Reflex
+
++ Deliberative decision making: Sit-down strategist
++ Reflex agent: Pretty much every human being + animals
+
++ Deliberation: for a state you *understand but never encountered*
+  + Fundamentally out-of-distribution
++ Reflex: a behavior learned from past experiences (incl. evolution)
+  + Works only inside the distribution similar to the past experience
+
+What characterize deliberation?
+
++ State Representation -- State is understantable
++ Operational Choises -- Actions -- You know how it transforms the state
++ Multi-step -- *deliberating about multi-step futures*
++ Systematic/complete -- *no stones unturned* + *do not turn any stone twice*
+
+What does not need delibation?
+
++ Image classification (single step)
++ Machine Translation (just follow the most likely predictions / incomplete)
++ Atari Game (just follow the policy function)
++ Tasks that completeness does not matter
+  + e.g. Game, where human opponent is also incomplete
 
 * Overview                                              :background:noexport:
 
@@ -168,7 +195,6 @@ It is precisely these parts that we address in this presentation.
 
 # #+HTML: <embed src="img/plan.svg" type="image/svg+xml" />
 
-* Planning = Central 
 
 * Applications.
 
