@@ -949,6 +949,12 @@ Reparametrization for $N(\mu,\sigma)$: $\mu + \sigma N(0,1)$
 
 　　　→ $z\;$ converges to a 1-hot vector e.g.  $\langle 0,0,1,0 \rangle$ .
 
+
+\[
+  \text{GumbelSoftmax}(x) = \text{Softmax}( (x + g) / \tau ) \\
+  g= - \log (- \log \text{Uniform}(0,1)),\quad \tau \rightarrow 0
+\]
+
 # Example: Represent an MNIST image with 30 variables of 8 categories.
 # 
 # #+begin_center
@@ -1157,6 +1163,10 @@ Trained with *20k* out of *360k* state examples. (8-puzzle)
 ** Action Auto Encoder
 
  [[png:ama/overview1]]
+
+** Action Auto Encoder
+
+ [[png:aae/aae3]]
 
 ** Action Auto Encoder → */Incorrect Transitions/* @@html:<br>@@ 　 @@html:<br>@@ 　
 
@@ -1536,7 +1546,27 @@ Measure the type-1 / type-2 error in %
 # #+end_larger
 
 
-* Recent Developments 1 : Symbol Stability.
+* Problematic Behavior of Latplan's SAE
+
+[[png:zsae/unstable]]
+
++ Single real world state has several propositional states
++ *Unstable propositional symbols*
+
+** Harmful effects of unstable propositonal symbols
+
+[[png:zsae/disconnected]]
+
++ *Harmful effect 1* : "Essential duplicates" are left undetected
+  + violate "*do not turn any stones more than twice*"
++ *Harmful effect 2* : Search graph become disconnected
+  + *Goal node becomes unreachable in the discrete space*
+
+** Problematic Behavior of Latplan's SAE / propositions            :noexport:
+
+[[png:zsae/zsae-overview]]
+
+** Recent Developments 1 : Symbol Stability.
 
 #+begin_center
 /Towards Stable Symbol Grounding with Zero-Suppressed State AutoEncoder./
@@ -1557,6 +1587,7 @@ Summary:
 
   　 → *More efficient search / shorter runtime*.
 #+end_quote
+
 
 * Recent Developments 2 : @@html:<br>@@ Unsupervised First-Order Logic Symbols. @@html:<br>@@ (Predicates, aka Relations)
 
@@ -1580,7 +1611,7 @@ Summary:
 #+begin_quote
 *Discrete (Gumbel-Softmax) Attention to extract the arguments.*
 
-*Predicates output a discrete boolean value (yes/no) to the queries.*
+*Each predicate outputs a boolean value (yes/no) for a query.*
 
 *Discrete latent space compatible to PDDL solvers.*
 #+end_quote
@@ -1595,7 +1626,7 @@ Summary:
 
 [[png:booleans_test]]
 
-* Conclusion : Latplan
+* Conclusion : Latplan                                             :noexport:
 
 #+begin_center
 *The /first completely automated system/* converting:
@@ -1677,7 +1708,7 @@ Hinders deriving heuristic functions
 
 Knowledge extraction by Konidaris et al.('14,'15), δ-ILP (Deepmind) ?
 
-* AMA_1 Appendix
+* AMA_1 Appendix                                                   :noexport:
 
 Using the Remaining Time (Discussion)
 
@@ -1889,7 +1920,7 @@ All results are AMA_1 (produce PDDL)
 
 + = a nonlinear function that recognize the entanglements between multiple pixels
 
-* AMA_2 Appendix 
+* AMA_2 Appendix                                                   :noexport:
 ** Successor Function
 
 AAE: *enumerates*, AD: *filtering* the invalid.
@@ -2026,7 +2057,7 @@ Case 2: Graphs
  #+end_container-fluid
  #+end_center
 
-* Basic Appendix for ML people
+* Basic Appendix for ML people                                     :noexport:
 ** Learning vs Planning
   
  Main differences: Purposes and the abstraction layer
@@ -2197,6 +2228,162 @@ Symbols are strong abstraction mechanisms becasue
      
      Heuristic functions use modus ponens to derive guidance
 
-* *Neural-Symbolic* AI.
+* *Neural-Symbolic* AI.                                            :noexport:
 
 [[png:latplanlogo-in-sicp]]
+
+
+* So far, what did I achieve?
+
++ *visual input \rightarrow a propositional space*
++ *unlabeled transitions \rightarrow action symbols*
++ *I have not solved truly difficult, combinatorial problems*
++ *8-Puzzle is super easy*  : state space is $!9=362880$ states
++ *15-Puzzle is significantly difficult* : $!16=10^{13}$ states
++ *SotA only recently solves hard 24-Puzzle instances* (Bu and Korf, IJCAI19): $!25=10^{25}$ states
+
+* Heuristic functions
+
++ You know RL learns a Value function $V(s)$
+  + *higher the value, better the state*
++ Classical planning have the same function *without learning*
+  + called a *Heuristic Function* $h(s)$
+  + = cost estimate to reach the goal states: *lower the better*
+
+** The current most successful heuristic function : Delete Relaxation
+
+ [[png:simple-planning/5]]
+
+** The current most successful heuristic function : Delete Relaxation
+
+ [[png:simple-planning/relax7]]
+
+** The current most successful heuristic function : Delete Relaxation
+
+ [[png:simple-planning/relax6]]
+
+** The current most successful heuristic function : Delete Relaxation
+
+ [[png:simple-planning/relax5]]
+
+** The current most successful heuristic function : Delete Relaxation
+
+ [[png:simple-planning/relax4]]
+
+** The current most successful heuristic function : Delete Relaxation
+
+ [[png:simple-planning/relax3]]
+
+** The current most successful heuristic function : Delete Relaxation
+
+ [[png:simple-planning/relax2]]
+
+** The current most successful heuristic function : Delete Relaxation
+
+ [[png:simple-planning/relax1]]
+
+* Descriptive Action Model
+
+In order to use h+, we need a *descriptive action model* that has a *symbolic* effect/precondition
+
+Action AutoEncoder is a black-box function
+
+ [[png:aae/aae3]]
+
+*Still incompatible to SotA heuristics!*
+
+SotA heuristics: The ones that wins the *International Planning Competition*.
+
+SotA relaxation heuristics: *Landmark Cut* (relaxation of h+ into graph cut, AAAI '09)
+
+SotA abstraction heuristics: *Bisimulation Merge-And-Shrink* (AAAI '11)
+
+
+* What is lacking in the AAE: Disentanglement of states and action in */apply/*
+
+AAE's Apply function: $z_{t+1} = \text{apply}(z_t, a) = z_t + \text{effect}(z_t, a)$
+
++ PDDL's Apply function: $z_{t+1} = (z_t \setminus \text{eff}^-(a)) \cap \text{eff}^+(a)$
+
+  *Effects in classical planning are separated from the current state $z_t$*
+
++ Issue: *No guarantee* that the learned $(z_t, z_{t+1})$ can be expressed by $z_{t+1} = (z_t \setminus \text{eff}^-(a)) \cap \text{eff}^+(a)$
+
++ \rightarrow We learn *states and actions at once (end-to-end)*
+
+* End-to-End Space AutoEncoder
+
+[[png:space-ae/1-sae]]
+
+** End-to-End Space AutoEncoder
+
+[[png:space-ae/2-1]]
+
+** End-to-End Space AutoEncoder
+
+[[png:space-ae/2-2]]
+
+** End-to-End Space AutoEncoder
+
+[[png:space-ae/2-3]]
+
+** End-to-End Space AutoEncoder
+
+[[png:space-ae/2-4]]
+** End-to-End Space AutoEncoder
+
+[[png:space-ae/2-4h]]
+
+** End-to-End Space AutoEncoder
+
+[[png:space-ae/2-5]]
+
+* Fixing the AAE: Disentangling effects from states
+
+[[png:space-ae/3-1]]
+
+** Fixing the AAE: Disentangling effects from states
+
+[[png:space-ae/3-2]]
+
+** Fixing the AAE: Disentangling effects from states
+
+[[png:space-ae/3-3]]
+
+** Fixing the AAE: Disentangling effects from states
+
+[[png:space-ae/3-3h]]
+
+** Fixing the AAE: Disentangling effects from states
+
+[[png:space-ae/3-5]]
+
+* Results : Example PDDL output from our system
+
+[[spng:results/fig1]]
+
+* Results : Ablation study
+
+[[spng:results/table1]]
+
+* Results : Blind search tends to eat up 2GB memory limit and dies
+
+[[spng:results/table2]]
+
+* Results : Confirms the search efficiency
+
+[[spng:results/fig2]]
+
+* Conclusion
+
++ Back-to-Logit technique that disentangles the states and the dynamics *while learning the propositional space*
++ Allows access to *variety of existing strong SotA heuristic search method*
++ *First demonstration of SotA heuristics scaling up the search in the automatically learned representation*
+  + These are the central focus of the community in the past >20 years
++ Unlike RL, it requires
+  + *No policy learning* from the environment
+  + *Domain-independent*; Not specific to any environment
+  + *Guarantees optimality*
++ Now it is time to start the new era of *powerful SotA heuristics* beating the learned policies with 0 training!
+
+*Acknoledgements*: Christian Muise (coauthor), Hilde, Murat (for redirection), Akash
