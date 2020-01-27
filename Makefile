@@ -1,8 +1,8 @@
 
 latexmk    = latexmk/latexmk.pl
 
-GH_DOMAIN  = git@github.com
-GH_USER    = asai-research-presentation
+GH_DOMAIN  = git@github.ibm.com
+GH_USER    = masataro-asai-ibm
 EMACS      = emacs
 EMACSFLAGS =
 styles     = sty/anorg.sty sty/user.sty
