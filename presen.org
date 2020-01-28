@@ -108,10 +108,10 @@ What characterize deliberation?
   + (unless you can prove otherwise)
   + Also, *do not turn any stone twice*
 
-What do not need deliberation?
+When you do not need deliberation?
 
 + Image classification (single step)
-+ Machine Translation (Just follow the most likely predictions, ignoring others. Never look back.)
++ Machine Translation (Just follow the most likely next word predictions, ignoring others. Never look back.)
 + Atari Game (Just follow the policy function.)
 + Tasks that completeness does not matter
   + e.g. Game, where winning an incomplete agent (human) is enough
@@ -174,7 +174,7 @@ record of violence AND his terminally stupid choices, as follows:
 #+begin_container-fluid
 #+begin_row-fluid
 #+begin_span6
-How NASA operated its satellites before automated planner:
+How NASA operated its satellites before deploying its planner:
 
 *All aerospace engineers involved* meet in one room and
 evaluate the feasibility of every single operation in the mission plan
@@ -949,11 +949,11 @@ Reparametrization for $N(\mu,\sigma)$: $\mu + \sigma N(0,1)$
 
 　　　→ $z\;$ converges to a 1-hot vector e.g.  $\langle 0,0,1,0 \rangle$ .
 
-
-\[
-  \text{GumbelSoftmax}(x) = \text{Softmax}( (x + g) / \tau ) \\
-  g= - \log (- \log \text{Uniform}(0,1)),\quad \tau \rightarrow 0
-\]
+\begin{align*}
+  \text{GumbelSoftmax}(x) &= \text{Softmax}( (x + g) / \tau ) \\
+   g&= - \log (- \log \text{Uniform}(0,1))\\
+  \tau &\rightarrow 0
+\end{align*}
 
 # Example: Represent an MNIST image with 30 variables of 8 categories.
 # 
@@ -2239,8 +2239,8 @@ Symbols are strong abstraction mechanisms becasue
 + *unlabeled transitions \rightarrow action symbols*
 + *I have not solved truly difficult, combinatorial problems*
 + *8-Puzzle is super easy*  : state space is $!9=362880$ states
-+ *15-Puzzle is significantly difficult* : $!16=10^{13}$ states
-+ *SotA only recently solves hard 24-Puzzle instances* (Bu and Korf, IJCAI19): $!25=10^{25}$ states
++ *15-Puzzle is significantly difficult* : $!16\approx 10^{13}$ states
++ *SotA only recently solves hard 24-Puzzle instances* : $!25\approx 10^{25}$ states
 
 * Heuristic functions
 
@@ -2264,10 +2264,6 @@ Symbols are strong abstraction mechanisms becasue
 
 ** The current most successful heuristic function : Delete Relaxation
 
- [[png:simple-planning/relax5]]
-
-** The current most successful heuristic function : Delete Relaxation
-
  [[png:simple-planning/relax4]]
 
 ** The current most successful heuristic function : Delete Relaxation
@@ -2281,6 +2277,10 @@ Symbols are strong abstraction mechanisms becasue
 ** The current most successful heuristic function : Delete Relaxation
 
  [[png:simple-planning/relax1]]
+
+** The current most successful heuristic function : Delete Relaxation
+
+ [[png:simple-planning/relax]]
 
 * Descriptive Action Model
 
@@ -2307,7 +2307,11 @@ AAE's Apply function: $z_{t+1} = \text{apply}(z_t, a) = z_t + \text{effect}(z_t,
 
   *Effects in classical planning are separated from the current state $z_t$*
 
-+ Issue: *No guarantee* that the learned $(z_t, z_{t+1})$ can be expressed by $z_{t+1} = (z_t \setminus \text{eff}^-(a)) \cap \text{eff}^+(a)$
++ Issue: *No guarantee* that the learned $(z_t, z_{t+1})$ can be expressed by
+
+#+begin_center
+ $z_{t+1} = (z_t \setminus \text{eff}^-(a)) \cap \text{eff}^+(a)$
+#+end_center
 
 + \rightarrow We learn *states and actions at once (end-to-end)*
 
