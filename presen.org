@@ -38,16 +38,6 @@ MIT-IBM Watson AI Lab
 
 #+end_outline-text-1
 
-# #+begin_xlarge
-# Masataro Asai (IBM)
-# #+end_xlarge
-# 
-# 　
-# 
-# #+begin_xlarge
-# MIT-IBM Watson AI Lab
-# #+end_xlarge
-
 * Decision Making
 
 [[png:mars/mars5]]
@@ -122,9 +112,6 @@ MIT-IBM Watson AI Lab
 #+end_span6
 #+end_row-fluid
 #+end_container-fluid
-
-
-
 
 * What characterises the */deliberative/* decision making?
 
@@ -215,28 +202,6 @@ evaluate the feasibility of every single operation in the mission plan
 #+end_row-fluid
 #+end_container-fluid
 
-* Overview                                              :background:noexport:
-
-#+begin_center
-#+begin_xlarge
-*/Background/*
-
-*Latplan Architecture*
-
-*State AutoEncoder (SAE)*
-#+end_xlarge
-
-break
-
-#+begin_xlarge
-*AMA_2 Overview*
-
-*Action AutoEncoder (AAE)*
-
-*Action Discriminator (AD)*
-#+end_xlarge
-#+end_center
-
 * Generic AI agent architechture                                   :noexport:
 
 [[png:agent/search-agent5]]
@@ -292,7 +257,6 @@ It is precisely these parts that we address in this presentation.
 #+begin_alignright
 *The scope of our paper ↑*
 #+end_alignright
-
 
 * Planning
 
@@ -441,7 +405,6 @@ I'll continue this until peeps stop saying "I can't imagine any applications of 
 
  [[png:simple-planning/10]]
 
-
 * Classical Planning solvers are scalable and efficient
 
 Modern planners *easily solve an 8-puzzle optimally << 0.1sec.*
@@ -539,7 +502,6 @@ Action rules.
   e.g. *autonomous space exploration*
   #+end_larger
   #+end_alignright
-
 
 * Knowledge-Acquisition Bottleneck:
 
@@ -775,28 +737,6 @@ DQN (Mnih et al. '15), AlphaGo (Silver et al. '16)
 
 #+HTML: <embed src="img/overview/3-hanoi.svg" type="image/svg+xml"  />
 
-* Overview                                            :architecture:noexport:
-
-#+begin_center
-#+begin_xlarge
-*Background*
-
-*/Latplan Architecture/*
-
-*State AutoEncoder (SAE)*
-#+end_xlarge
-
-break
-
-#+begin_xlarge
-*AMA_2 Overview*
-
-*Action AutoEncoder (AAE)*
-
-*Action Discriminator (AD)*
-#+end_xlarge
-#+end_center
-
 * Latent-Space Planner (*/LatPlan/*) architechture
 
   [[png:overview/planning1]]
@@ -828,41 +768,6 @@ We must bridge the gap between these two worlds!
 #+begin_center
 #+begin_larger
 #+end_larger
-#+end_center
-
-** Summary                                                         :noexport:
-
-#+begin_xlarge
-Latplan: Latent-space Planner.
-#+end_xlarge
-
-#+begin_larger
-+ *bridges /real-world/ and /propositional/ representations.*
-+ *performs a /propositional, logical, sound reasoning/.*
-+ *returns a /real-world/ output* (e.g. images).
-+ *runs in a /completely automated, unsupervised/ manner.*
-#+end_larger
-
-* Overview                                                     :SAE:noexport:
-
-#+begin_center
-#+begin_xlarge
-*Background*
-
-*Latplan Architecture*
-
-*/State AutoEncoder (SAE)/*
-#+end_xlarge
-
-break
-
-#+begin_xlarge
-*AMA_2 Overview*
-
-*Action AutoEncoder (AAE)*
-
-*Action Discriminator (AD)*
-#+end_xlarge
 #+end_center
 
 * State AutoEncoder (SAE)                                          :noexport:
@@ -1143,102 +1048,6 @@ Enforces $Z \sim \textbf{Categorical}$:
 #+end_center
 #+end_larger
 
-
-* State Autoencoder Conclusion                                     :noexport:
-
-+ */SAE can learn from small examples/* ::
-
-     20k training images → learn to map 360k unseen images
-
-+ SAE-based propositions are */sound/* ::
-
-     Planners can reason over the generated propositions
-
-+ Latplan maintains the */theoretical guarantee/* in the search algorithm ::
-
-     Given the complete state space graph,
-
-     　Optimising algorithm (A*) returns an optimal solution
-
-     　Completeness is guaranteed
-
-* Overview                                                    :AMA2:noexport:
-
-#+begin_center
-#+begin_xlarge
-*Background*
-
-*Latplan Architecture*
-
-*State AutoEncoder (SAE)*
-#+end_xlarge
-
-break
-
-#+begin_xlarge
-*/AMA_2 Overview/*
-
-*/Action AutoEncoder (AAE)/*
-
-*/Action Discriminator (AD)/*
-#+end_xlarge
-#+end_center
-
-* State AE propositions are sound! Now what?                       :noexport:
-
-#+begin_larger
-*/○/* *State AE is practical.*
-#+end_larger
-
-Trained with *20k* out of *360k* state examples. (8-puzzle)
-
-　
-
-#+begin_larger
-*/✗/* *AMA_1 is impractical.* ← Requires *all valid transitions*
-#+end_larger
-
-#+begin_alignright
-#+begin_larger
-(AMA: *A* ction *M* odel *A* cquisition)
-#+end_larger
-#+end_alignright
-　
-
-#+begin_larger
-*/✗/* Therefore *SAE + /AMA_1/ is impractical.*
-#+end_larger
-
-#+begin_larger
-#+begin_alignright
-+ → SAE + *AMA_2* which learns from examples
-#+end_alignright
-#+end_larger
-
-* The Task of AMA_2 : The */Real/* AMA method                      :noexport:
-
-*Input:* Propositional transitions $\{ (s,t) \ldots \}$
-
-#+begin_alignright
-($Encod$'ed from Training Input)
-#+end_alignright
-
-+ *Action Symbol Grounding*
-  
-  #+begin_src lisp
-  (:action slide-up-tile7-at-x0-y1 ...
-  #+end_src
-+ *Action Preconditon Learning*
-  
-  #+begin_src lisp
-   :precondition (and (empty x0 y0) ...)
-  #+end_src
-+ *Action Effect Learning*
-  
-  #+begin_src lisp
-   :effects      (and (empty x0 y1) (not ...)))
-  #+end_src
-
 * AMA_1 (Oracular) → */AMA_2 (Learning-based)/*
 
 [[png:ama/overview0]]
@@ -1281,22 +1090,6 @@ Trained with *20k* out of *360k* state examples. (8-puzzle)
 ** Not all actions are applicable
 
  [[png:ama2/overview1-3]]
-
-** Action Discriminator → */Prunes the Incorrect/*                 :noexport:
-
-  [[png:ama/overview2-1]]
-
-#+begin_note
-Elkan, Noto 08
-#+end_note
-
-** Action Discriminator → */Prunes the Incorrect/*                 :noexport:
-
-  [[png:ama/overview2]]
-
-#+begin_note
-Elkan, Noto 08
-#+end_note
 
 ** AMA_2 Overview
 
@@ -1447,7 +1240,6 @@ Learning a *positive / negative classifier* from *positive / /unlabelled/ datase
 + Unlabelled: *Successor candidates generated by the AAE*
   
   Some are valid, some are invalid
-
 
 * Experiments
 
@@ -1643,7 +1435,6 @@ Measure the type-1 / type-2 error in %
 # #+end_alignright
 # #+end_larger
 
-
 * Problematic Behavior of Latplan's SAE
 
 [[png:zsae/unstable]]
@@ -1685,7 +1476,6 @@ Summary:
 
   　 → *More efficient search / shorter runtime*.
 #+end_quote
-
 
 * Recent Developments 2 : @@html:<br>@@ Unsupervised First-Order Logic Symbols. @@html:<br>@@ (Predicates, aka Relations)
 
@@ -2330,7 +2120,6 @@ Symbols are strong abstraction mechanisms becasue
 
 [[png:latplanlogo-in-sicp]]
 
-
 * So far, what did I achieve?
 
 + *Visual input \rightarrow a propositional space*
@@ -2409,8 +2198,6 @@ Idea:
 + Convert Random Forest to a logical formula
 
 * Did not Work!
-
-
 
 * What is lacking in the AAE: Disentanglement of states and action in */apply/*
 
