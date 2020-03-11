@@ -50,33 +50,54 @@ MIT-IBM Watson AI Lab
 
 * Decision Making
 
+[[png:mars/mars5]]
+
+** Decision Making
+
+[[png:mars/mars4]]
+
+** Decision Making
+
+[[png:mars/mars3]]
+
+
+** Decision Making
+
+[[png:mars/mars2]]
+
+** Decision Making
+
+[[png:mars/mars1]]
+
+** Decision Making
+
+[[png:mars/mars]]
+
+* Decision Making
+
 #+begin_container-fluid
 #+begin_row-fluid
-#+begin_span7
-+ You are accidentally left on Mars
-+ Crews already left Mars
-+ Potatoes enough for living 100 days
-+ You are a botanist
-+ You have two trucks
-+ Trucks need recharge every 2 hours
-+ Escape rocket nearby (60d driving)
-+ Dead Mars Pathfinder nearby (15d)
-+ The building has solar panels
-+ You have tools
-+ Return to Earth!
-
-#+end_span7
 #+begin_span5
-+ Do you follow your learned behavior?
+#+begin_center
++ Continue your
 
+  *learned* habit?
+  
   "Don't think, feel"?
 
   [[sgif:yoda]]
 
-+ Says "yes", the RL fanatics...
-  "intelligence emerge from RL..."
++ the RL fanatics says "yes",
+  "/intelligence emerges from RL.../"
 
+#+end_center
 #+end_span5
+#+begin_span7
++ Or do you *think*, adjust, and take appropriate behavior?
+  
+  [[sgif:mars/yoda-hmph]]
+
+#+end_span7
 #+end_row-fluid
 #+end_container-fluid
 
@@ -84,22 +105,28 @@ MIT-IBM Watson AI Lab
 
 * */Deliberative/* decision making vs */Reflex/* ?
 
+
+#+begin_container-fluid
+#+begin_row-fluid
+#+begin_span6
 *Deliberation*
 
 + Sit-down strategist
 + For an environment you *understand but are never trained*
-  + Fundamentally out-of-distribution
-
+#+end_span6
+#+begin_span6
 *Reflex*
 
-+ "feeling", "sixth sense", "instinct"
-+ Human being + animals
-+ A behavior learned from past experiences (incl. evolution)
-  + Works only inside the distribution similar to the past experience
++ A behavior learned from past experiences
++ Works *only when the learned knowledge is useful*
+#+end_span6
+#+end_row-fluid
+#+end_container-fluid
+
+
+
 
 * What characterises the */deliberative/* decision making?
-
-What characterize deliberation?
 
 + State Representation -- State is understantable
 + Operational Choises -- Actions -- You know how it transforms the state
@@ -108,13 +135,13 @@ What characterize deliberation?
   + (unless you can prove otherwise)
   + Also, *do not turn any stone twice*
 
-When you do not need deliberation?
+When deliberation is unnecessary?
 
-+ Image classification (single step)
-+ Machine Translation (Just follow the most likely next word predictions, ignoring others. Never look back.)
-+ Atari Game (Just follow the policy function.)
-+ Tasks that completeness does not matter
-  + e.g. Game, where winning an incomplete agent (human) is enough
++ Image classification (*single step*)
++ Atari Game (*mostly reflex*)
++ Tasks that *completeness does not matter*
+  + Machine Translation (*An O.K. job is enough*)
+  + Games (*winning against a human is enough*)
 
 * Humans are so bad at deliberation
 
@@ -150,6 +177,7 @@ record of violence AND his terminally stupid choices, as follows:
   several customers ... removing the confused
   criminal from the gene pool.
   No one else was hurt.
+  → */human-like intelligence/ is BS*
 
 # [[sgif:darwin]]
 # 
@@ -168,8 +196,7 @@ record of violence AND his terminally stupid choices, as follows:
 #    The event must be true. 
 # #+end_quote
 
-* Humans are costly
-
+* Humans are costly                                                :noexport:
 
 #+begin_container-fluid
 #+begin_row-fluid
@@ -180,13 +207,13 @@ How NASA operated its satellites before deploying its planner:
 evaluate the feasibility of every single operation in the mission plan
 
 *The task of deliberative agent*: A complete rational decision making that replaces them
+
 #+end_span6
 #+begin_span6
 [[sjpg:nasa-meeting]]
 #+end_span6
 #+end_row-fluid
 #+end_container-fluid
-
 
 * Overview                                              :background:noexport:
 
@@ -273,7 +300,7 @@ It is precisely these parts that we address in this presentation.
 
 # #+HTML: <embed src="img/plan.svg" type="image/svg+xml" />
 
-* Deployed Applications 1. Space
+* Deployed Applications 1. Space                                   :noexport:
 
 # This is almost a dumb question if you ever took the standard AI class in the university
 
@@ -285,7 +312,7 @@ It is precisely these parts that we address in this presentation.
   + "*Six Minutes of Terror*" -- In only six minutes, the spacecraft
     will slow down from 12,000 to 0 miles per hour. Earth-Mars roundtrip time in lightspeed is 20 minutes.
 
-* Deployed Applications 2. Logistics/transportation
+* Deployed Applications 2. Logistics/transportation                :noexport:
 
 + *TIMIPLAN* effectively solved real problems from Acciona with up to 300 services, 600 locations, 300 trucks, 300 containers, and 50 train segments.
 + *Liner Shipping Fleet Repositioning Problem* (LSFRP) involves moving vessels between services ...
@@ -293,7 +320,7 @@ It is precisely these parts that we address in this presentation.
 + *Greenhouse Logistics*: ... controlling conveyor belts that transport plants between greenhouses and imaging facilities.
 + *Ship Operations*: Transportation and delivery of a list of requested cargo ... considering a number of constraints and elements based on a real problem of Petrobras – the Brazilian Petroleum Company. 
 
-* Deployed Applications 3. Manufacturing, Robotics & Motion Planning
+* Deployed Applications 3. Manufacturing, Robotics & Motion Planning :noexport:
 
 + *Xerox PARC printer* (Ruml et al, JAIR '11, ICAPS'05) Generating the programs for 170 interconnected modular printers, each with different capabilities (laminating, color, paper type) in a production printing system. 
 + *IHI* (ICAPS'11) Composing the program for the automated cell-manufactoring machines interconnected by a network of conveyers.
@@ -302,7 +329,7 @@ It is precisely these parts that we address in this presentation.
 + Integrate vehicle routing & motion planning (Ruml et al, ICAPS'12)
 + Willow Garage various work 
 
-* Deployed Applications 4. Others
+* Deployed Applications 4. Others                                  :noexport:
 
 I'll continue this until peeps stop saying "I can't imagine any applications of planning, should be toy problems eh?"
 
@@ -357,12 +384,13 @@ I'll continue this until peeps stop saying "I can't imagine any applications of 
 #   #+HTML: <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The wait for <a href="https://twitter.com/ICAPSConference?ref_src=twsrc%5Etfw">@ICAPSConference</a> is almost over! Your one stop shop for <a href="https://twitter.com/hashtag/AI?src=hash&amp;ref_src=twsrc%5Etfw">#AI</a> Planning and Scheduling. <a href="https://twitter.com/hashtag/ICAPS2019?src=hash&amp;ref_src=twsrc%5Etfw">#ICAPS2019</a> <a href="https://t.co/hXFy7C5wT3">pic.twitter.com/hXFy7C5wT3</a></p>&mdash; icapsycho (@icapsycho) <a href="https://twitter.com/icapsycho/status/1148745409499729920?ref_src=twsrc%5Etfw">July 10, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 # #+end_span6
 
-* We do not buy into the hype
+* I do not buy into the hype                                       :noexport:
 
+#+begin_center
 #+HTML: <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The wait for <a href="https://twitter.com/ICAPSConference?ref_src=twsrc%5Etfw">@ICAPSConference</a> is almost over! Your one stop shop for <a href="https://twitter.com/hashtag/AI?src=hash&amp;ref_src=twsrc%5Etfw">#AI</a> Planning and Scheduling. <a href="https://twitter.com/hashtag/ICAPS2019?src=hash&amp;ref_src=twsrc%5Etfw">#ICAPS2019</a> <a href="https://t.co/hXFy7C5wT3">pic.twitter.com/hXFy7C5wT3</a></p>&mdash; icapsycho (@icapsycho) <a href="https://twitter.com/icapsycho/status/1148745409499729920?ref_src=twsrc%5Etfw">July 10, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+#+end_center
 
-
-* Planning
+* Planning                                                         :noexport:
 
 [[gif:plan/plan]]
 
@@ -644,7 +672,7 @@ Latent-Space Planner
 
 [[sjpg:puzzle]]
 
-** Task: Solving an Imaged-Based 8-puzzle */without any Prior Explicit Knowledge (i.e. Annotation=Cheating)/*
+** Task: Solving an Imaged-Based 8-puzzle @@html:<br>@@ */without any Prior Explicit Knowledge/* @@html:<br>@@ (i.e. No Human Annotation)
 
 #+begin_center
 */System is not given any labels/symbols/* : e.g. "9 tiles", "moving"
@@ -682,7 +710,7 @@ Latent-Space Planner
 ** Inputs
 
 #+begin_xlarge
-The system is given *2 types of input*:
+The system is given *2 inputs*:
 
 #+begin_center
 Training Input
@@ -925,34 +953,48 @@ adding a label: Latent vector
 #+end_larger
 #+end_center
 
-* Variational AutoEncoder (VAE)                                    :noexport:
+* Variational AutoEncoder (VAE)
 
-An AutoEncoder that *enforce a certain distribution* on $Z \subset \mathbb{R}^n$ over the dataset $X$
+An AutoEncoder that *enforces a certain distribution* on $Z \subset \mathbb{R}^n$.
 
-#+begin_quote
-You have $X=$ { 10k images of apples }. If you train a *Gaussian VAE* on $X$, then $Z = Encode(X) \approx N(\mu,\sigma)$ for some $\mu,\sigma \in \mathbb{R}^n$.
-#+end_quote
+Minimize $|x-f(x)|$ + *Kullback-Leibler Divergence* (KL loss)
 
-VAE needs a *reparametrization trick* because random distributions are non-differentiable.
++ $D_{\text{KL}}(p||q)$: distribution distance between $p$ and $q$
++ (Gaussian) VAE: Make $q(z)$ closer to $p(z)=\mathcal{N}(\mu,\sigma)$
++ $\mu,\sigma$ are learned. $\qquad Z\sim \mathcal{N}(\mu,\sigma)$
 
-#+begin_quote
-Reparametrization for $N(\mu,\sigma)$: $\mu + \sigma N(0,1)$
+[[spng:ae-vae-embedding]]
 
-#+begin_center
-\mu and \sigma are differentiable vectors, $N(0,1)$ is not.
-#+end_center
-#+end_quote
+# #+begin_quote
+# You have 10k images of apples. A *Gaussian VAE* learns $Z = Encode(X) \approx N(\mu,\sigma)$ for some $\mu,\sigma \in \mathbb{R}^n$.
+# #+end_quote
 
-* Solution: Gumbel-Softmax VAE (Jang, Gu, ICLR2017)
+#+begin_note
+https://www.jeremyjordan.me/variational-autoencoders/
+#+end_note
 
-*Additional optimization penalty* which enforces $Z \sim \textbf{Categorical}$:
+# VAE needs a *reparametrization trick* because random distributions are non-differentiable.
+# 
+# #+begin_quote
+# Reparametrization for $N(\mu,\sigma)$: $\mu + \sigma N(0,1)$
+# 
+# #+begin_center
+# \mu and \sigma are differentiable vectors, $N(0,1)$ is not.
+# #+end_center
+# #+end_quote
+
+* Solution: Gumbel-Softmax VAE (Jang, ICLR2017)
+
+Enforces $Z \sim \textbf{Categorical}$:
 
 　　　→ $z\;$ converges to a 1-hot vector e.g.  $\langle 0,0,1,0 \rangle$ .
 
 \begin{align*}
-  \text{GumbelSoftmax}(x) &= \text{Softmax}( (x + g) / \tau ) \\
-   g&= - \log (- \log \text{Uniform}(0,1))\\
-  \tau &\rightarrow 0
+  x \in \mathbb{R}^N, \quad
+  \text{GumbelSoftmax}(x) &= \text{Softmax}( (x + g) / \tau )                         &\in [0,1]^N      \\
+  g = \text{Gumbel}(0,1)  &= - \log (- \log \text{Uniform}(0,1))                      &\in \mathbb{R}^N \\
+  \text{Softmax}(x)       &= \frac{(e^{x_1}, e^{x_2},\ldots e^{x_N})}{\sum_j e^{x_j}} &\in [0,1]^N      \\
+(\tau \downarrow 0) \quad \text{GumbelSoftmax}(x) &\rightarrow \arg \max(x)               &\in \{0,1\}^N
 \end{align*}
 
 # Example: Represent an MNIST image with 30 variables of 8 categories.
@@ -985,14 +1027,59 @@ Reparametrization for $N(\mu,\sigma)$: $\mu + \sigma N(0,1)$
 
  [[png:sae/state-ae]]
 
-* Are the NN-generated propositions */correct?/*  @@html:<br>@@ Note: They are learned unsupervised!
+* Do the NN-generated propositions */make sense?/*
+
+*AMA_1* : an */oracular/* Action Model Acquisition (AMA) method
+
+[[png:ama1/slide5]]
+
+** Do the NN-generated propositions */make sense?/*
+
+ *AMA_1* : an */oracular/* Action Model Acquisition (AMA) method
+
+ [[png:ama1/slide4]]
+
+** Do the NN-generated propositions */make sense?/*
+
+ *AMA_1* : an */oracular/* Action Model Acquisition (AMA) method
+
+ [[png:ama1/slide3]]
+
+** Do the NN-generated propositions */make sense?/*
+
+ *AMA_1* : an */oracular/* Action Model Acquisition (AMA) method
+
+ [[png:ama1/slide2]]
+
+** Do the NN-generated propositions */make sense?/*
+
+ *AMA_1* : an */oracular/* Action Model Acquisition (AMA) method
+
+ [[png:ama1/slide1]]
+
+** Do the NN-generated propositions */make sense?/*
+
+ *AMA_1* : an */oracular/* Action Model Acquisition (AMA) method
+
+ [[png:ama1/slide0]]
+
+** Do the NN-generated propositions */make sense?/*
+
+ *AMA_1* : an */oracular/* Action Model Acquisition (AMA) method
+
+ [[png:ama1/slide]]
+
+* Do the NN-generated propositions */make sense?/*                 :noexport:
+
+#   @@html:<br>@@ Note: They are learned unsupervised!
 
 *AMA_1* : an */oracular/* Action Model Acquisition (AMA) method
 
 　　　　　 *w/o generalization*.
 
-+ 1. *Encode all image transitions* in the environment
-+ 2. For each transition, *convert the latent vector pairs to a PDDL action:*
++ 1. *Train the State AutoEncoder (SAE)* with the training images
++ 2. *Encode all images* in the environment
++ 3. For each transition, *convert the latent vector pairs to a PDDL action:*
 
   #+begin_src lisp
    0011 → 0101  ;; encoded bit vectors of a transition
@@ -1006,9 +1093,7 @@ Reparametrization for $N(\mu,\sigma)$: $\mu + \sigma N(0,1)$
    :effect       (and (not (b1-false)) (b1-true)
                       (not (b2-true))  (b2-false)))
   #+end_src
-+ 3. Solve the PDDL with Fast Downward (Helmert 08) with A^* algorithm
-
-  *If the representation is correct, it _guarantees the optimal solution_*
++ 4. Solve the PDDL with Fast Downward (Helmert 08) with A^* algorithm
 
 ** Step 3: Solve the Symbolic Planning Problem                     :noexport:
 
@@ -1040,9 +1125,9 @@ Reparametrization for $N(\mu,\sigma)$: $\mu + \sigma N(0,1)$
 
  + Runtime: ~3sec (instances are too small for symbolic systems)
 
-** 8-puzzle with MNIST tiles (MNIST 8-puzzle)
+* 8-puzzle with MNIST tiles (MNIST 8-puzzle)
 
-*An instance with a known optimal solution*
+*If the representation is correct, it _guarantees the optimal solution_*.
 
 [[png:results/mnist-plan]]
 
@@ -1055,8 +1140,6 @@ Reparametrization for $N(\mu,\sigma)$: $\mu + \sigma N(0,1)$
 
 #+begin_center
  → *the representation is correct*
-
-(*/see the paper for more results e.g. noisy inputs/*)
 #+end_center
 #+end_larger
 
@@ -1156,7 +1239,7 @@ Trained with *20k* out of *360k* state examples. (8-puzzle)
    :effects      (and (empty x0 y1) (not ...)))
   #+end_src
 
-* Oracular: AMA_1 → */Learning-based: AMA_2/*
+* AMA_1 (Oracular) → */AMA_2 (Learning-based)/*
 
 [[png:ama/overview0]]
 
@@ -1166,19 +1249,38 @@ Trained with *20k* out of *360k* state examples. (8-puzzle)
 
 ** Action Auto Encoder
 
- [[png:aae/aae3]]
+ [[png:aae2/aae1]]
+** Action Auto Encoder
 
-** Action Auto Encoder → */Incorrect Transitions/* @@html:<br>@@ 　 @@html:<br>@@ 　
+ [[png:aae2/aae2]]
+** Action Auto Encoder
 
- [[png:ama/overview1-1]]
+ [[png:aae2/aae3]]
+** Action Auto Encoder
 
-** Action Auto Encoder → */Incorrect Transitions/* @@html:<br>@@ Learn the Preconditions ; Prune the Transitions @@html:<br>@@ 　
+ [[png:aae2/aae4]]
+** Action Auto Encoder
 
- [[png:ama/overview1-2]]
+ [[png:aae2/aae5]]
+** Action Auto Encoder
 
-** Action Auto Encoder → */Incorrect Transitions/* @@html:<br>@@ Learn the Preconditions ; Prune the Transitions @@html:<br>@@ → */State / Action Discriminator/* (Binary Classifiers)
+ [[png:aae2/aae6]]
 
- [[png:ama/overview1-3]]
+** Not all actions are applicable
+
+ [[png:ama2/overview1-1]]
+
+** Not all actions are applicable
+
+ [[png:ama2/overview1-1]]
+
+** Not all actions are applicable
+
+ [[png:ama2/overview1-2]]
+
+** Not all actions are applicable
+
+ [[png:ama2/overview1-3]]
 
 ** Action Discriminator → */Prunes the Incorrect/*                 :noexport:
 
@@ -1198,11 +1300,7 @@ Elkan, Noto 08
 
 ** AMA_2 Overview
 
-  [[png:ama/overview3]]
-
-#+begin_center
-*I skipped many details, /please read the paper/*
-#+end_center
+  [[png:ama2/overview3]]
 
 * Overview                                                     :AAE:noexport:
 
@@ -2235,14 +2333,16 @@ Symbols are strong abstraction mechanisms becasue
 
 * So far, what did I achieve?
 
-+ *visual input \rightarrow a propositional space*
-+ *unlabeled transitions \rightarrow action symbols*
-+ *I have not solved truly difficult, combinatorial problems*
-+ *8-Puzzle is super easy*  : state space is $!9=362880$ states
-+ *15-Puzzle is significantly difficult* : $!16\approx 10^{13}$ states
-+ *SotA only recently solves hard 24-Puzzle instances* : $!25\approx 10^{25}$ states
++ *Visual input \rightarrow a propositional space*
++ *Unlabeled transitions \rightarrow action symbols*
++ _*I have not solved truly difficult, combinatorial problems*_
+  + *8-Puzzle is easy*  : state space is $!9< 400k$ states
+  + *15-Puzzle is significantly more difficult* : $!16\approx 10^{13}$ states
+  + *SotA solves hard 24-Puzzle instances* : $!25\approx 10^{25}$ states
++ We need *SotA domain-indenpendent heuristics* to tacke the problem
+  + As our domains are *automatically generated by NN*
 
-* Heuristic functions
+* Heuristic functions                                              :noexport:
 
 + You know RL learns a Value function $V(s)$
   + *higher the value, better the state*
@@ -2282,9 +2382,9 @@ Symbols are strong abstraction mechanisms becasue
 
  [[png:simple-planning/relax]]
 
-* Descriptive Action Model
+* Heuristics Require a */Descriptive Action Model/* :
 
-In order to use h+, we need a *descriptive action model* that has a *symbolic* effect/precondition
+# I.e., *symbolic description* of the effect/preconditions
 
 Action AutoEncoder is a black-box function
 
@@ -2292,22 +2392,35 @@ Action AutoEncoder is a black-box function
 
 *Still incompatible to SotA heuristics!*
 
-SotA heuristics: The ones that wins the *International Planning Competition*.
+[TODO] picture
+
+# SotA heuristics: The ones that wins the *International Planning Competition*.
 
 SotA relaxation heuristics: *Landmark Cut* (relaxation of h+ into graph cut, AAAI '09)
 
 SotA abstraction heuristics: *Bisimulation Merge-And-Shrink* (AAAI '11)
 
+* Initial Attempt (on Arxiv): Double Stage AMA
+
+Idea:
+
++ Train AAE to obtain the labeled action set
++ Train the Random Forest on the transitions
++ Convert Random Forest to a logical formula
+
+* Did not Work!
+
+
 
 * What is lacking in the AAE: Disentanglement of states and action in */apply/*
 
-AAE's Apply function: $z_{t+1} = \text{apply}(z_t, a) = z_t + \text{effect}(z_t, a)$
++ *AAE's Apply function:* $z_{t+1} = \text{apply}(z_t, a) = z_t + \text{effect}(z_t, a)$
 
-+ PDDL's Apply function: $z_{t+1} = (z_t \setminus \text{eff}^-(a)) \cap \text{eff}^+(a)$
++ *PDDL's Apply function:* $z_{t+1} = (z_t \setminus \text{eff}^-(a)) \cap \text{eff}^+(a)$
 
-  *Effects in classical planning are separated from the current state $z_t$*
++ *Effects in STRIPS are separated from the current state $z_t$*
 
-+ Issue: *No guarantee* that the learned $(z_t, z_{t+1})$ can be expressed by
++ Issue: *No guarantee* that, in the learned latent space, $(z_t, z_{t+1})$ can be compactly expressed by
 
 #+begin_center
  $z_{t+1} = (z_t \setminus \text{eff}^-(a)) \cap \text{eff}^+(a)$
