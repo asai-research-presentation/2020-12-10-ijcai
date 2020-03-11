@@ -1435,6 +1435,16 @@ Measure the type-1 / type-2 error in %
 # #+end_alignright
 # #+end_larger
 
+* Recent Developments
+
+*Zero-Suppressed SAE (ICAPS19)*
+
+First Order SAE (ICAPS19)
+
+Double-Stage AMA (Arxiv)
+
+Cube-Like Space AE (under submission)
+
 * Problematic Behavior of Latplan's SAE
 
 [[png:zsae/unstable]]
@@ -1492,7 +1502,6 @@ Summary:
 #+end_quote
 
 [[png:fosae-overview]]
-
 
 ** (cont.) : First-Order State Auto Encoder
 
