@@ -264,7 +264,7 @@ It is precisely these parts that we address in this presentation.
 
 # #+HTML: <embed src="img/plan.svg" type="image/svg+xml" />
 
-* Deployed Applications 1. Space                                   :noexport:
+** Deployed Applications 1. Space                                  :noexport:
 
 # This is almost a dumb question if you ever took the standard AI class in the university
 
@@ -276,7 +276,7 @@ It is precisely these parts that we address in this presentation.
   + "*Six Minutes of Terror*" -- In only six minutes, the spacecraft
     will slow down from 12,000 to 0 miles per hour. Earth-Mars roundtrip time in lightspeed is 20 minutes.
 
-* Deployed Applications 2. Logistics/transportation                :noexport:
+** Deployed Applications 2. Logistics/transportation               :noexport:
 
 + *TIMIPLAN* effectively solved real problems from Acciona with up to 300 services, 600 locations, 300 trucks, 300 containers, and 50 train segments.
 + *Liner Shipping Fleet Repositioning Problem* (LSFRP) involves moving vessels between services ...
@@ -284,7 +284,7 @@ It is precisely these parts that we address in this presentation.
 + *Greenhouse Logistics*: ... controlling conveyor belts that transport plants between greenhouses and imaging facilities.
 + *Ship Operations*: Transportation and delivery of a list of requested cargo ... considering a number of constraints and elements based on a real problem of Petrobras – the Brazilian Petroleum Company. 
 
-* Deployed Applications 3. Manufacturing, Robotics & Motion Planning :noexport:
+** Deployed Applications 3. Manufacturing, Robotics & Motion Planning :noexport:
 
 + *Xerox PARC printer* (Ruml et al, JAIR '11, ICAPS'05) Generating the programs for 170 interconnected modular printers, each with different capabilities (laminating, color, paper type) in a production printing system. 
 + *IHI* (ICAPS'11) Composing the program for the automated cell-manufactoring machines interconnected by a network of conveyers.
@@ -293,7 +293,7 @@ It is precisely these parts that we address in this presentation.
 + Integrate vehicle routing & motion planning (Ruml et al, ICAPS'12)
 + Willow Garage various work 
 
-* Deployed Applications 4. Others                                  :noexport:
+** Deployed Applications 4. Others                                 :noexport:
 
 I'll continue this until peeps stop saying "I can't imagine any applications of planning, should be toy problems eh?"
 
