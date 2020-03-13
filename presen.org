@@ -1445,7 +1445,6 @@ First Order SAE (ICAPS19)
 
 Double-Stage AMA (Arxiv)
 
-Cube-Like Space AE (under submission)
 
 * Problematic Behavior of Latplan's SAE
 
@@ -1486,7 +1485,6 @@ Zero-Suppressed SAE (ICAPS19)
 
 Double-Stage AMA (Arxiv)
 
-Cube-Like Space AE (under submission)
 
 * First-Order Logic Symbols. @@html:<br>@@ (Predicates, aka Relations)
 
@@ -2156,7 +2154,6 @@ First Order SAE (ICAPS19)
 
 *Double-Stage AMA (Arxiv)*
 
-Cube-Like Space AE (under submission)
 
 * So far, what did I achieve?
 
@@ -2264,7 +2261,7 @@ that */unleash the full potential/ of off-the-shelf planners*
 
 [[png:dsama/dsama4]]
 
-** Double-Stage AMA (Arxiv 1912.05492)
+** Double-Stage AMA (Arxiv 1912.05492)                             :noexport:
 
 [[png:dsama/dsama5]]
 
@@ -2275,106 +2272,37 @@ that */unleash the full potential/ of off-the-shelf planners*
 Vertical axis: Number of trees $T$ in Random Forest
 
 + Fast Downward miserably fails *during the input processing*
++ Another reason: Heavy usage of disjunctions
 
-* Recent Developments
+* Other work from IBM Research on Neural Symbolic hybrid systems
 
-Zero-Suppressed SAE (ICAPS19)
+[[png:nesy/nesy]]
 
-First Order SAE (ICAPS19)
+** Ne-Sy Concept Learner
 
-Double-Stage AMA (Arxiv)
+[[spng:nesy/nscl1]]
 
-*Cube-Like Space AE (under submission)*
+** Ne-Sy Concept Learner
 
-* What is lacking in the AAE: Disentanglement of states and action in */apply/*
+[[spng:nesy/nscl2]]
 
-+ *AAE's progression:* $z_{t+1} = \text{apply}(z_t, a) = z_t + \text{effect}(z_t, a)$
+** Ne-Sy Concept Learner
 
-+ *STRIPS progression:* $z_{t+1} = (z_t \setminus \text{eff}^-(a)) \cap \text{eff}^+(a)$
+[[png:nesy/nscl3]]
 
-+ Effects in STRIPS are *disentangled* from the current state $z_t$
+** Ne-Sy Concept Learner
 
-+ *Main Issue*: There is *no compact STRIPS model for* $Z$
+[[png:nesy/nscl4]]
 
-+ \rightarrow train a NN that learns *$Z$ and $A$ at once (end-to-end)*
+** Ne-Sy Concept Learner
 
-  and *guarantees $A$ to be STRIPS*
+[[spng:nesy/nscl6]]
 
-  + \rightarrow *$Z$ has to adapt*
+** Ne-Sy Concept Learner
 
-* End-to-End Space AutoEncoder
+[[spng:nesy/nscl5]]
 
-[[png:space-ae/1-sae]]
+** Other works in our lab
 
-** End-to-End Space AutoEncoder
-
-[[png:space-ae/2-1]]
-
-** End-to-End Space AutoEncoder
-
-[[png:space-ae/2-2]]
-
-** End-to-End Space AutoEncoder
-
-[[png:space-ae/2-3]]
-
-** End-to-End Space AutoEncoder                                    :noexport:
-
-[[png:space-ae/2-4]]
-** End-to-End Space AutoEncoder
-
-[[png:space-ae/2-3h]]
-
-** End-to-End Space AutoEncoder
-
-[[png:space-ae/2-5]]
-
-* Fixing the AAE: Disentangling effects from states
-
-[[png:space-ae/3-1]]
-
-** Fixing the AAE: Disentangling effects from states
-
-[[png:space-ae/3-2]]
-
-** Fixing the AAE: Disentangling effects from states
-
-[[png:space-ae/3-3]]
-
-** Fixing the AAE: Disentangling effects from states
-
-[[png:space-ae/3-3h]]
-
-** Fixing the AAE: Disentangling effects from states
-
-[[png:space-ae/3-5]]
-
-* Results : Example PDDL output from our system
-
-[[spng:results/fig1]]
-
-* Results : Ablation study
-
-[[spng:results/table1]]
-
-* Results : Blind search tends to eat up 2GB memory limit and dies
-
-[[spng:results/table2]]
-
-* Results : Confirms the search efficiency
-
-[[spng:results/fig2]]
-
-* Conclusion
-
-+ Back-to-Logit technique that disentangles the states and the dynamics *while learning the propositional space*
-+ Allows access to *variety of existing strong SotA heuristic search method*
-+ *First demonstration of SotA heuristics scaling up the search in the automatically learned representation*
-  + These are the central focus of the community in the past >20 years
-+ Unlike RL, it requires
-  + *No policy learning* from the environment
-  + *Domain-independent*; Not specific to any environment
-  + *Guarantees optimality*
-+ Now it is time to start the new era of *powerful SotA heuristics* beating the learned policies with 0 training!
-
+[[png:nesy/nesy]]
 

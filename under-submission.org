@@ -1,0 +1,102 @@
+* Recent Developments
+
+Zero-Suppressed SAE (ICAPS19)
+
+First Order SAE (ICAPS19)
+
+Double-Stage AMA (Arxiv)
+
+*Cube-Like Space AE (under submission)*
+
+* What is lacking in the AAE: Disentanglement of states and action in */apply/*
+
++ *AAE's progression:* $z_{t+1} = \text{apply}(z_t, a) = z_t + \text{effect}(z_t, a)$
+
++ *STRIPS progression:* $z_{t+1} = (z_t \setminus \text{eff}^-(a)) \cap \text{eff}^+(a)$
+
++ Effects in STRIPS are *disentangled* from the current state $z_t$
+
++ *Main Issue*: There is *no compact STRIPS model for* $Z$
+
++ \rightarrow train a NN that learns *$Z$ and $A$ at once (end-to-end)*
+
+  and *guarantees $A$ to be STRIPS*
+
+  + \rightarrow *$Z$ has to adapt*
+
+* End-to-End Space AutoEncoder
+
+[[png:space-ae/1-sae]]
+
+** End-to-End Space AutoEncoder
+
+[[png:space-ae/2-1]]
+
+** End-to-End Space AutoEncoder
+
+[[png:space-ae/2-2]]
+
+** End-to-End Space AutoEncoder
+
+[[png:space-ae/2-3]]
+
+** End-to-End Space AutoEncoder                                    :noexport:
+
+[[png:space-ae/2-4]]
+** End-to-End Space AutoEncoder
+
+[[png:space-ae/2-3h]]
+
+** End-to-End Space AutoEncoder
+
+[[png:space-ae/2-5]]
+
+* Fixing the AAE: Disentangling effects from states
+
+[[png:space-ae/3-1]]
+
+** Fixing the AAE: Disentangling effects from states
+
+[[png:space-ae/3-2]]
+
+** Fixing the AAE: Disentangling effects from states
+
+[[png:space-ae/3-3]]
+
+** Fixing the AAE: Disentangling effects from states
+
+[[png:space-ae/3-3h]]
+
+** Fixing the AAE: Disentangling effects from states
+
+[[png:space-ae/3-5]]
+
+* Results : Example PDDL output from our system
+
+[[spng:results/fig1]]
+
+* Results : Ablation study
+
+[[spng:results/table1]]
+
+* Results : Blind search tends to eat up 2GB memory limit and dies
+
+[[spng:results/table2]]
+
+* Results : Confirms the search efficiency
+
+[[spng:results/fig2]]
+
+* Conclusion
+
++ Back-to-Logit technique that disentangles the states and the dynamics *while learning the propositional space*
++ Allows access to *variety of existing strong SotA heuristic search method*
++ *First demonstration of SotA heuristics scaling up the search in the automatically learned representation*
+  + These are the central focus of the community in the past >20 years
++ Unlike RL, it requires
+  + *No policy learning* from the environment
+  + *Domain-independent*; Not specific to any environment
+  + *Guarantees optimality*
++ Now it is time to start the new era of *powerful SotA heuristics* beating the learned policies with 0 training!
+
+
