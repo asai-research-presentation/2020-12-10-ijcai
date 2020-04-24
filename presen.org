@@ -115,12 +115,12 @@ MIT-IBM Watson AI Lab
 
 * What characterises the */deliberative/* decision making?
 
-+ State Representation -- State is understantable
++ State Representation -- States are comprehensive
 + Operational Choises -- Actions -- You know how it transforms the state
 + Multi-step -- *reasoning about multi-step futures*
 + Systematic -- *no stones unturned (i.e. complete)*
   + (unless you can prove otherwise)
-  + Also, *do not turn any stone twice*
+  + (also, *do not turn any stone twice*)
 
 # When deliberation is unnecessary?
 # 
@@ -1445,6 +1445,8 @@ First Order SAE (ICAPS19)
 
 Double-Stage AMA (Arxiv)
 
+Cube-Space AE (IJCAI20)
+
 
 * Problematic Behavior of Latplan's SAE
 
@@ -1485,6 +1487,7 @@ Zero-Suppressed SAE (ICAPS19)
 
 Double-Stage AMA (Arxiv)
 
+Cube-Space AE (IJCAI20)
 
 * First-Order Logic Symbols. @@html:<br>@@ (Predicates, aka Relations)
 
@@ -2154,6 +2157,7 @@ First Order SAE (ICAPS19)
 
 *Double-Stage AMA (Arxiv)*
 
+Cube-Space AE (IJCAI20)
 
 * So far, what did I achieve?
 
