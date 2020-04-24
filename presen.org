@@ -2249,11 +2249,9 @@ Cube-Space AE (IJCAI20)
 
 #+begin_quote
 #+begin_center
-*/Descriptive action model/ is the next major milestone*
+To */unleash the full potential/ of off-the-shelf planners*
 
-that */unleash the full potential/ of off-the-shelf planners*
-
-*upon unstructured inputs!!!*
+*/Descriptive action model/ is the next milestone*
 #+end_center
 #+end_quote
 
@@ -2271,17 +2269,17 @@ that */unleash the full potential/ of off-the-shelf planners*
 
 ** Good Accuracy
 
-F-measure
+F-measure for effects
 
 [[spng:dsama/AAE]]
 
 ** Good Accuracy
 
-F-measure
+F-measure for preconditions
 
 [[spng:dsama/AD]]
 
-** Double-Stage AMA (Arxiv 1912.05492)
+** Double-Stage AMA (Arxiv 1912.05492)                             :noexport:
 
 [[png:dsama/dsama4]]
 
@@ -2289,7 +2287,7 @@ F-measure
 
 [[png:dsama/dsama5]]
 
-** Good Accuracy, Ridiculously Large PDDL
+** Fail: Ridiculously Large PDDL
 
 [[spng:dsama/size]]
 
@@ -2503,9 +2501,9 @@ It also does not require crazy amount of training.
   + *Guarantees optimality*
 + Now it is time to start the new era of *powerful SotA heuristics* beating the learned policies with 0 training!
 
-* Current Ongoing Work (Join if anyone wants to collaborate!)
+* Current Ongoing Work (msg me if anyone wants to collaborate)
 
-*Discrete, Logical Word Embedding for NLP*
+*Discrete, Logical Word Embedding for NLP* that you can plan
 
 Unsupervised Motion Grounding from Fine Time Series
 
@@ -2515,6 +2513,17 @@ Future work:
 
 /Symbols are all you need/ -- Beating Atari Game with Mixed-Discrete-Continuous Latplan
 
+* Current Ongoing Work (msg me if anyone wants to collaborate)
+
+Discrete, Logical Word Embedding for NLP that you can plan
+
+*Unsupervised _Motion Grounding_ from Fine Time Series*
+
+　
+
+Future work:
+
+/Symbols are all you need/ -- Beating Atari Game with Mixed-Discrete-Continuous Latplan
 * Other work from IBM Research on Neural Symbolic hybrid systems   :noexport:
 
 [[png:nesy/nesy]]
