@@ -2503,8 +2503,17 @@ It also does not require crazy amount of training.
   + *Guarantees optimality*
 + Now it is time to start the new era of *powerful SotA heuristics* beating the learned policies with 0 training!
 
+* Current Ongoing Work (Join if anyone wants to collaborate!)
 
+*Discrete, Logical Word Embedding for NLP*
 
+Unsupervised Motion Grounding from Fine Time Series
+
+　
+
+Future work:
+
+/Symbols are all you need/ -- Beating Atari Game with Mixed-Discrete-Continuous Latplan
 
 * Other work from IBM Research on Neural Symbolic hybrid systems   :noexport:
 
