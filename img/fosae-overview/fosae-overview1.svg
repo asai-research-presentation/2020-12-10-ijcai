@@ -939,7 +939,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="440.93513"
+     inkscape:cx="329.31327"
      inkscape:cy="77.768731"
      inkscape:document-units="in"
      inkscape:current-layer="layer1"
@@ -948,7 +948,7 @@
      inkscape:bbox-nodes="true"
      inkscape:snap-bbox-midpoints="false"
      inkscape:window-width="1918"
-     inkscape:window-height="1001"
+     inkscape:window-height="997"
      inkscape:window-x="0"
      inkscape:window-y="28"
      inkscape:window-maximized="0"
@@ -964,7 +964,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1022,14 +1022,18 @@
          sodipodi:role="line"
          id="tspan5618"
          x="459.37512"
-         y="1080.5889">Monkey 1 is eating a banana 1</tspan><tspan
+         y="1080.5889">Monkey 1 is eating Banana 1</tspan><tspan
          sodipodi:role="line"
          x="459.37512"
          y="1107.233"
-         id="tspan5620">Monkey 2 is eating a banana 2</tspan><tspan
+         id="tspan5620">Monkey 2 is eating Banana 2</tspan><tspan
          sodipodi:role="line"
          x="459.37512"
          y="1133.8772"
+         id="tspan4626">Monkey 2 is not eating Banana 1</tspan><tspan
+         sodipodi:role="line"
+         x="459.37512"
+         y="1160.5212"
          id="tspan5622">Monkey 1 and Monkey 2 are siblings</tspan></text>
   </g>
 </svg>
