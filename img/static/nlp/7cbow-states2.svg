@@ -331,14 +331,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.90776848"
-     inkscape:cx="138.54288"
-     inkscape:cy="375.98497"
+     inkscape:cx="445.69782"
+     inkscape:cy="524.99625"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1920"
      inkscape:window-height="998"
-     inkscape:window-x="0"
+     inkscape:window-x="1920"
      inkscape:window-y="28"
      inkscape:window-maximized="1" />
   <metadata
@@ -786,25 +786,21 @@
     <text
        xml:space="preserve"
        style="color:#000000;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:22.5px;line-height:normal;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold Italic';text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;baseline-shift:baseline;text-anchor:start;white-space:normal;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       x="504.53394"
-       y="915.76349"
+       x="298.53427"
+       y="577.57153"
        id="text4392"><tspan
          sodipodi:role="line"
          id="tspan4394"
-         x="504.53394"
-         y="915.76349">Note:</tspan><tspan
+         x="298.53427"
+         y="577.57153">Note:</tspan><tspan
          sodipodi:role="line"
-         x="504.53394"
-         y="943.88849"
-         id="tspan4398">It can also perform negative sampling</tspan><tspan
+         x="298.53427"
+         y="605.69653"
+         id="tspan4400">Initial state is actually</tspan><tspan
          sodipodi:role="line"
-         x="504.53394"
-         y="972.01349"
-         id="tspan4396">Initial state can be a random bit vector,</tspan><tspan
-         sodipodi:role="line"
-         x="504.53394"
-         y="1000.1385"
-         id="tspan4400">  not a contant 0 vector</tspan></text>
+         x="298.53427"
+         y="633.82153"
+         id="tspan4399"> a random bit vector</tspan></text>
     <rect
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        id="rect4468"
