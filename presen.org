@@ -38,32 +38,32 @@ MIT-IBM Watson AI Lab
 
 #+end_outline-text-1
 
-* Decision Making
+* High-Level Decision Making
 
 [[png:mars/mars5]]
 
-** Decision Making
+** High-Level Decision Making
 
 [[png:mars/mars4]]
 
-** Decision Making
+** High-Level Decision Making
 
 [[png:mars/mars3]]
 
 
-** Decision Making
+** High-Level Decision Making
 
 [[png:mars/mars2]]
 
-** Decision Making
+** High-Level Decision Making
 
 [[png:mars/mars1]]
 
-** Decision Making
+** High-Level Decision Making
 
 [[png:mars/mars]]
 
-* Decision Making
+* High-Level Decision Making
 
 #+begin_container-fluid
 #+begin_row-fluid
@@ -143,14 +143,18 @@ Wrong Time, Wrong Place
 #+begin_container-fluid
 #+begin_row-fluid
 #+begin_span6
-(3 February 1990, Washington) ... appeared to be the robber's first try, due to his lack of a previous
-record of violence AND his terminally stupid choices, as follows:
+(3 February 1990, Washington) ... 
+
+# appeared to be the robber's first try, due to his lack of a previous
+# record of violence AND his terminally stupid choices, as follows:
 
 1. His target was a gun shop.
 
 2. Full of firearms customers.
 
 3. A uniformed officer was standing at the counter.
+
++ "/... removing the confused criminal from the gene pool. No one else was hurt./"
 
 #+end_span6
 #+begin_span6
@@ -163,10 +167,14 @@ record of violence AND his terminally stupid choices, as follows:
 # The officer and a clerk promptly returned fire, covered by
 #   several customers
 
-+ ... removing the confused
-  criminal from the gene pool.
-  No one else was hurt.
-  → */human-like intelligence/ is BS* (esp. average human)
+#+begin_center
+
++ → */human-like intelligence/ is terrible* on average
++ → _We wish to build a *rational, deliberative agent*_
+
+  operating on the _raw input (e.g. visual)_
+
+#+end_center
 
 # [[sgif:darwin]]
 # 
@@ -685,11 +693,14 @@ Planning Input
 
 ** Input1: Training Input -- Image Pairs
 
+#+begin_center
+Agent performed some action to the before-state
+
+resulting in the after state
+#+end_center
+
 [[png:overview/1]]
 
-#+begin_center
-Agent performed some action to the before-state, resulting in the after state
-#+end_center
 
 ** Input1: Training Input -- Image Pairs
 
@@ -865,7 +876,7 @@ An AutoEncoder that *enforces a certain distribution* on $Z \subset \mathbb{R}^n
 Minimize $|x-f(x)|$ + *Kullback-Leibler Divergence* (KL loss)
 
 + $D_{\text{KL}}(p||q)$: distribution distance between $p$ and $q$
-+ Gaussian VAE: Assuming $Z\sim q=\mathcal{N}(\mu,\sigma)$, make $q\rightarrow p=\mathcal{N}(0,1)$
++ *Gaussian VAE*: $Z\sim q=\mathcal{N}(\mu,\sigma)$, make $q\rightarrow p=\mathcal{N}(0,1)$
 + Encoder generates $\mu,\sigma$, then $z=\mu+\sigma\cdot\epsilon$ where $\epsilon\sim\mathcal{N}(0,1)$
 + $D_{\text{KL}}(p||q)=1-\sigma+\log\sigma-\mu^2$
 
@@ -889,11 +900,11 @@ https://www.jeremyjordan.me/variational-autoencoders/
 # #+end_center
 # #+end_quote
 
-* Solution: Gumbel-Softmax VAE (Jang, ICLR2017)
+* Our Solution: Gumbel-Softmax VAE (Jang, ICLR2017)
 
-Enforces $Z \sim \textbf{Categorical}$:
+$Z \sim \textbf{Categorical}$:
 
-　　　→ $z\;$ converges to a 1-hot vector e.g.  $\langle 0,0,1,0 \rangle$ .
+　　　→ $z\;$ _converges to a 1-hot vector_ e.g.  $\langle 0,0,1,0 \rangle$ .
 
 \begin{align*}
   x \in \mathbb{R}^N, \quad
@@ -2371,9 +2382,12 @@ Double-Stage AMA (Arxiv)
 
 [[png:space-ae/3-1]]
 
-** Min = delete effect / set intersection, Max = add effect / set union
+** Min = delete effect / set intersection @@html:<br>@@ Max = add effect / set union
+
+This turned out to be hard to train
 
 [[png:space-ae/3-2]]
+
 
 ** Fixing the AAE: Disentangling effects from states               :noexport:
 
@@ -2385,43 +2399,50 @@ Double-Stage AMA (Arxiv)
 
 ** Proposed: */Back-to-Logit/* technique
 
++ (1) *Go to the /logit/ space by a monotonic transformation*,
++ (2) *perform a numeric addition*,
++ (3) *then /come back!/* 🚗🔥🔥🔥🔥🔥🕙🏛🗲🗲
+
 [[png:space-ae/3-5]]
 
++ BatchNorm was chosen as the monotonic transformation.
 
-** Extract the effects of action $a$ directly from the dataset
+** Extract the effects of action $a$ from the dataset
 
-$\{ (z_t, z_{t+1}) \mid \text{action}(z_t, z_{t+1})=a\}$:
+Dataset $\{ (z_t, z_{t+1}) \mid \text{action}(z_t, z_{t+1})=a\}$:
 
 #+begin_container-fluid
 #+begin_row-fluid
-#+begin_span6
-If $(0,1)$ : add-effect. If $(1,0)$ : delete-effect.
+#+begin_span8
+$(z_{t,f},z_{t+1,f})=(0,1)\Rightarrow f\in\text{eff}^+(a)$.
 
-#+end_span6
+$(z_{t,f},z_{t+1,f})=(1,0)\Rightarrow f\in\text{eff}^-(a)$.
+
+#+end_span8
 #+begin_span4
 [[png:space-ae/3-5]]
 #+end_span4
 #+end_row-fluid
 #+end_container-fluid
 
-based on Theorem: /add-effect and delete-effect never coexists./
+based on *Theorem*: BtL guarantees that /add and delete-effect never coexist./
 
 #+begin_quote
-Proof sketch: BatchNorm is monotonic, and we perform arithmetic additions.
-When $(z_{t,f},z_{t+1,f})=(0,1)$, thus the effect is positive, therefore
+Proof sketch: Both BatchNorm and Sigmoid are monotonic, and we perform arithmetic additions.
+When $(z_{t,f},z_{t+1,f})=(0,1)$, thus the numeric effect is positive, therefore
 $(1,1)$ may happen but $(0,0)$ and $(1,0)$ cannot happen.
 #+end_quote
 
-** The precondition of action $a$ is also extracted directly
+** Extract the precondition of action $a$
 
-$\{ (z_t, z_{t+1}) \mid \text{action}(z_t, z_{t+1})=a\}$:
+Dataset $\{ (z_t, z_{t+1}) \mid \text{action}(z_t, z_{t+1})=a\}$:
 
-Extracts a *single* decision rule (not decision list nor trees)
+Extracts a *single* decision rule (not decision list or trees)
 
-corresponding to the bit value shared by all data points of this action $a$:
+containing _the bit value shared by all data points_ of this action $a$:
 
 \[
- \text{pre}(a) = \{f|\forall t;z_{t,f}=1\}\cup \{\lnot f|\forall t; z_{t,f}=0}
+ \text{pre}(a) = \{f|\forall t;z_{t,f}=1\}\cup \{\lnot f|\forall t; z_{t,f}=0\}
 \] 
 
 $f$: index in the binary vector
@@ -2434,7 +2455,7 @@ $f$: index in the binary vector
 
 [[spng:results/table1]]
 
-* Results : Blind search tends to eat up 2GB memory limit and dies
+* Results : Blind search eats up 2GB memory and dies. @@html:<br>@@ SotA heuristics (LMcut/M&S) scale up the search!
 
 
 #+begin_container-fluid
@@ -2451,11 +2472,26 @@ Cube-Space AE
 
 [[spng:results/table2]]
 
+#+begin_center
+_*First demonstration* of the meaningful speedup_
+
+_by the domain-independent heuristics_
+
+in the latent space.
+#+end_center
+
 * Results : Confirms the search efficiency
 
 [[spng:results/fig2]]
 
-* Conclusion
+#+begin_quote
+*Significance of this work*:
+Unlike (the hyped) RL approach,
+it is _never trained on the domain-dependent, reward-shaped information._
+It also does not require crazy amount of training.
+#+end_quote
+
+* Conclusion                                                       :noexport:
 
 + Back-to-Logit technique that disentangles the states and the dynamics *while learning the propositional space*
 + Allows access to *variety of existing strong SotA heuristic search method*
