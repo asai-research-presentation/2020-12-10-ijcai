@@ -6,7 +6,7 @@ First Order SAE (ICAPS19)
 
 Double-Stage AMA (Arxiv)
 
-*Cube-Like Space AE (under submission)*
+*Cube-Space AE (IJCAI20)*
 
 * What is lacking in the AAE: Disentanglement of states and action in */apply/*
 
