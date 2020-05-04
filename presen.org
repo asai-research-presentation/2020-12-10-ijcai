@@ -320,7 +320,7 @@ I'll continue this until peeps stop saying "I can't imagine any applications of 
 + Petrobras pipeline (Daniel Ferber @ ICAPS'12)
 + IBM Scenario Planning Advisor: Goal recognition as planning for enterprise risk management 
 
-* Facts/Strength of Modern Symbolic Planning solvers.
+* Facts/Strength of Modern Symbolic Planning solvers.              :noexport:
 
 
 #+begin_container-fluid
