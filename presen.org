@@ -133,9 +133,9 @@ MIT-IBM Watson AI Lab
 * Humans are so bad at deliberation
 
 #+begin_center
-Wrong Time, Wrong Place
+_/1990 Darwin Award Winner/_
 
-1990 Darwin Award Winner
+_/Wrong Time, Wrong Place/_
 
 # Confirmed True by Darwin
 #+end_center
@@ -877,8 +877,8 @@ Minimize $|x-f(x)|$ + *Kullback-Leibler Divergence* (KL loss)
 
 + $D_{\text{KL}}(p||q)$: distribution distance between $p$ and $q$
 + *Gaussian VAE*: $Z\sim q=\mathcal{N}(\mu,\sigma)$, make $q\rightarrow p=\mathcal{N}(0,1)$
-+ Encoder generates $\mu,\sigma$, then $z=\mu+\sigma\cdot\epsilon$ where $\epsilon\sim\mathcal{N}(0,1)$
-+ $D_{\text{KL}}(p||q)=1-\sigma+\log\sigma-\mu^2$
+# + Encoder generates $\mu,\sigma$, then $z=\mu+\sigma\cdot\epsilon$ where $\epsilon\sim\mathcal{N}(0,1)$
+# + $D_{\text{KL}}(p||q)=1-\sigma+\log\sigma-\mu^2$
 
 [[spng:ae-vae-embedding]]
 
@@ -2316,7 +2316,11 @@ Reasons?
 #+begin_center
 + _Flattening = Compiling a Decision Tree into_
   
-  _an exponential number of Decision Lists!_
+  _an exponential number of Decision Lists_
+
+#+begin_larger
++ _Action models learned by NNs are too complex!_
+#+end_larger
 #+end_center
 
 * Recent Developments
@@ -2337,7 +2341,7 @@ Double-Stage AMA (Arxiv)
 
 + Effects in STRIPS are *disentangled* from the current state $z_t$.
 
-  (\rightarrow In the paper, we showed that STRIPS = *cube-like graph* from graph-theory.)
+  (\rightarrow In the paper, STRIPS = *cube-like graph* from graph-theory.)
 
 + *Issue*: *No compact STRIPS model $A$ may exist* in $Z$
 
@@ -2423,10 +2427,10 @@ $(z_{t,f},z_{t+1,f})=(1,0)\Rightarrow f\in\text{eff}^-(a)$.
 #+end_row-fluid
 #+end_container-fluid
 
-based on *Theorem*: BtL guarantees that /add and delete-effect never coexist./
+*Theorem*: BtL guarantees that /add and delete-effect never coexist./
 
 #+begin_quote
-Proof sketch: Both BatchNorm and Sigmoid are monotonic, and we perform arithmetic additions.
+Proof sketch: Both BatchNorm and Discrete are monotonic, and we perform arithmetic additions.
 When $(z_{t,f},z_{t+1,f})=(0,1)$, thus the numeric effect is positive, therefore
 $(1,1)$ may happen but $(0,0)$ and $(1,0)$ cannot happen.
 #+end_quote
@@ -2462,7 +2466,7 @@ $f$: index in the binary vector
 SAE+AAE trained separately
 #+end_span6
 #+begin_span6
-Cube-Space AE
+_*Cube-Space AE*_
 #+end_span6
 #+end_row-fluid
 #+end_container-fluid
@@ -2501,29 +2505,42 @@ It also does not require crazy amount of training.
   + *Guarantees optimality*
 + Now it is time to start the new era of *powerful SotA heuristics* beating the learned policies with 0 training!
 
-* Current Ongoing Work (msg me if anyone wants to collaborate)
+* Current Ongoing Work @@html:<br>@@ (msg me if you want to help me!)
 
-*Discrete, Logical Word Embedding for NLP* that you can plan
+Dev phase:
 
-Unsupervised Motion Grounding from Fine Time Series
+*_Discrete, Logical Word Embedding_ for NLP that you can plan*
 
 　
 
-Future work:
+Idea phase:
+
+Unsupervised Motion Grounding from the Fine Time Series
+
+　
+
+Grand goal:
 
 /Symbols are all you need/ -- Beating Atari Game with Mixed-Discrete-Continuous Latplan
 
-* Current Ongoing Work (msg me if anyone wants to collaborate)
+* Current Ongoing Work @@html:<br>@@ (msg me if you want to help me!)
+
+Dev phase:
 
 Discrete, Logical Word Embedding for NLP that you can plan
 
-*Unsupervised _Motion Grounding_ from Fine Time Series*
+　
+
+Idea phase:
+
+*Unsupervised _Motion Grounding_ from the Fine Time Series*
 
 　
 
-Future work:
+Grand goal:
 
 /Symbols are all you need/ -- Beating Atari Game with Mixed-Discrete-Continuous Latplan
+
 * Other work from IBM Research on Neural Symbolic hybrid systems   :noexport:
 
 [[png:nesy/nesy]]
