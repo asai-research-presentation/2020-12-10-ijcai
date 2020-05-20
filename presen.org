@@ -1641,7 +1641,7 @@ Double-Stage AMA (Arxiv)
 
 *AAE's state progression:* $z_{t+1} = \text{apply}(z_t, a)$
 
-*STRIPS state progression:* $z_{t+1} = (z_t \setminus \text{eff}^-(a)) \cap \text{eff}^+(a)$
+*STRIPS state progression:* $z_{t+1} = (z_t \setminus \text{del}(a)) \cap \text{add}(a)$
 
 + Effects in STRIPS are *disentangled* from the current state $z_t$.
 
@@ -1720,9 +1720,9 @@ Dataset $\{ (z_t, z_{t+1}) \mid \text{action}(z_t, z_{t+1})=a\}$:
 #+begin_container-fluid
 #+begin_row-fluid
 #+begin_span8
-$(z_{t,f},z_{t+1,f})=(0,1)\Rightarrow f\in\text{eff}^+(a)$.
+If $\exists t; (z_{t,f},z_{t+1,f})=(0,1)$ then $f\in\text{add}(a)$.
 
-$(z_{t,f},z_{t+1,f})=(1,0)\Rightarrow f\in\text{eff}^-(a)$.
+If $\exists t; (z_{t,f},z_{t+1,f})=(1,0)$ then $f\in\text{del}(a)$.
 
 #+end_span8
 #+begin_span4
@@ -1735,8 +1735,8 @@ $(z_{t,f},z_{t+1,f})=(1,0)\Rightarrow f\in\text{eff}^-(a)$.
 
 #+begin_quote
 Proof sketch: Both BatchNorm and Discrete are monotonic, and we perform arithmetic additions.
-When $(z_{t,f},z_{t+1,f})=(0,1)$, thus the numeric effect is positive, therefore
-$(1,1)$ may happen but $(0,0)$ and $(1,0)$ cannot happen.
+When $(z_{t,f},z_{t+1,f})=(0,1)$ for some $t$, thus the numeric effect is positive, therefore
+$(1,1)$ may happen but $(1,0)$ cannot happen. $(0,0)$ does not happen because the numeric effect is a constant for each $a,f$.
 #+end_quote
 
 ** Extract the precondition of action $a$
