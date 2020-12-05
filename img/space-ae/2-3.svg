@@ -468,7 +468,7 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.1584158"
+     inkscape:zoom="1.3419272"
      inkscape:cx="471.65112"
      inkscape:cy="229.98451"
      inkscape:document-units="px"
@@ -501,6 +501,14 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(71.066101,-87.309546)">
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:1px;stop-color:#000000"
+       id="rect1129"
+       width="363.70486"
+       height="119.02543"
+       x="205.96753"
+       y="354.96677"
+       ry="4.9300876" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend-3)"
        d="m 210.37746,178.58278 381.88671,0"
@@ -858,5 +866,17 @@
        id="path15958-2"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.6667px;line-height:100%;font-family:sans-serif;-inkscape-font-specification:'Noto Sans CJK JP';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.471;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+       x="698.44647"
+       y="405.789"
+       id="text1133"
+       transform="matrix(1.3007278,0,0,1.3007278,-409.78372,-178.13414)"><tspan
+         sodipodi:role="line"
+         id="tspan1131"
+         x="698.44647"
+         y="405.789"
+         style="font-weight:bold">AAE module</tspan></text>
   </g>
 </svg>
