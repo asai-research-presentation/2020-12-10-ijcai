@@ -38,64 +38,25 @@ MIT-IBM Watson AI Lab
 
 #+end_outline-text-1
 
-* STRIPS/Classical Planning
+* Planners can *solve an 8-puzzle optimally << 0.1sec.*
 
-Modern planners *easily solve an 8-puzzle optimally << 0.1sec.*
-
-#+begin_container-fluid
-#+begin_center
-#+begin_row-fluid
-#+begin_span4
-[[png:8puzzle-standard]] @@html:<br>@@ Initial State
-#+end_span4
-#+begin_span4
-[[png:8puzzle-standard-goal]] @@html:<br>@@ Goal State
-#+end_span4
-#+begin_span4
-[[sgif:8puzzle]]
-#+end_span4
-#+end_row-fluid
-#+end_center
-#+end_container-fluid
-
-　
-
-The input: Written in *Planning Domain Description Language (PDDL).*
-
-　
+/but only when we have a PDDL model./
 
 #+begin_container-fluid
 #+begin_row-fluid
-#+begin_span5
-#+begin_center
-First-order logic states.
-#+end_center
-#+begin_src lisp
-(empty x0 y0)
-(is panel6 x1 y0)
-(up   y0 y1)
-(down y1 y0)...
-#+end_src
-#+end_span5
-
-#+begin_span7
-#+begin_center
-Action rules.
-#+end_center
+#+begin_span12
 #+begin_src lisp
 (:action slide-up ...
-
- :precondition
- (and (empty ?x ?y-old) ...)
-
- :effects
- (and (not (empty ?x ?y-old))...))
+ :precondition (and (empty ?x ?y-old) ...)
+ :effects (and (not (empty ?x ?y-old))...))
 #+end_src
-#+end_span7
+#+end_span12
 #+end_row-fluid
 #+end_container-fluid
 
-* They cannot solve an */Image-based/* 8-puzzle
+#+begin_center
+They cannot solve an */Image-based/* 8-puzzle
+#+end_center
 
 #+begin_container-fluid
 #+begin_row-fluid
@@ -127,16 +88,7 @@ Action rules.
 #+end_row-fluid
 #+end_container-fluid
 
-
-+ *Impractical* in many environments: *unknown* and */no human/ is available*
-
-  #+begin_alignright
-  #+begin_larger
-  e.g. *autonomous space exploration*
-  #+end_larger
-  #+end_alignright
-
-* Knowledge-Acquisition Bottleneck:
+* Knowledge-Acquisition Bottleneck:                                :noexport:
 
 # * We must *automate 2 processes*:
 
@@ -239,35 +191,7 @@ Action rules.
 # The knowledge acquisition bottleneck: time for reassessment? : Cullen, J and Bryman, A Expert Syst. Vol 5 No 3 (August 1988) pp 216-225
 # #+end_note
 
-* Latent-Space Planner (*/Latplan/*)
-
-#+begin_alignright
-#+begin_larger
-*(Asai, Fukunaga AAAI 2018)*
-#+end_larger
-#+end_alignright
-  
-[[png:latplanlogo]]
-
-** Problem Setting                                                 :noexport:
-
-#+begin_center
-#+begin_xlarge
-Problem Setting
-
-of
-
-Latent-Space Planner
-#+end_xlarge
-#+end_center
-
-** Task: Solving an Imaged-Based 8-puzzle w/o Prior Explicit Knowledge :noexport:
-
-*Prior Knowledge* : labels/symbols such as "9 tiles", "moving"
-
-[[sjpg:puzzle]]
-
-** Task: Solving an Imaged-Based 8-puzzle @@html:<br>@@ */without any Prior Explicit Knowledge/* @@html:<br>@@ (i.e. No Human Annotation)
+* Latplan (Asai,Fukunaga 2018): Solving an Imaged-Based 8-puzzle @@html:<br>@@ */without any Prior Explicit Knowledge/* @@html:<br>@@ (i.e. No Human Annotation)
 
 #+begin_center
 */System is not given any labels/symbols/* : e.g. "9 tiles", "moving"
@@ -275,7 +199,7 @@ Latent-Space Planner
 
 [[sjpg:puzzle]]
 
-** Task: Solving */ANY/* Imaged-Based task
+** Latplan system: Solving */ANY/* Imaged-Based task               :noexport:
 
 #+begin_larger
 → */Image-based Domain-independent Classical Planner/*
@@ -302,30 +226,19 @@ Latent-Space Planner
 #+end_row-fluid
 #+end_container-fluid
 
-** Inputs
-
-#+begin_xlarge
-The system is given *2 inputs*:
+** Input1: Training Input -- Image Pairs                           :noexport:
 
 #+begin_center
-Training Input
-
-Planning Input
-#+end_center
-#+end_xlarge
-
-** Input1: Training Input -- Image Pairs
-
-#+begin_center
-Agent performed some action to the before-state
-
-resulting in the after state
+*an unknown high-level action* between
 #+end_center
 
 [[png:overview/1]]
 
+#+begin_center
+(The tile 6 has moved)
+#+end_center
 
-** Input1: Training Input -- Image Pairs
+** Input1: Training Input -- Image Pairs                           :noexport:
 
 #+begin_right
 [[png:overview/2]]
@@ -361,25 +274,29 @@ resulting in the after state
 DQN (Mnih et al. '15), AlphaGo (Silver et al. '16)
 #+end_note
 
-** Input2: Planning Input
+** Input2: Planning Input = Initial/Goal States                    :noexport:
 
 [[png:overview/input2]]
 
-** Output: Visualized Plan
+** Latplan system I/O
 
-#+HTML: <embed src="img/overview/3.svg" type="image/svg+xml"  />
+[[png:overview/3-2]]
 
-** Output: Visualized Plan
+** Latplan system I/O
+
+[[png:overview/3-1]]
+
+** Latplan system I/O
+
+[[png:overview/3]]
+
+** Output: Visualized Plan                                         :noexport:
 
 #+HTML: <embed src="img/overview/3-hanoi.svg" type="image/svg+xml"  />
 
 * Latent-Space Planner (*/LatPlan/*) architechture
 
   [[png:overview/planning1]]
-
-#+begin_alignright
-We must bridge the gap between these two worlds!
-#+end_alignright
 
 * Step 1: Propositional Symbol Grounding
 
@@ -419,18 +336,19 @@ We must bridge the gap between these two worlds!
 #+begin_span7
 　
 
+Tries to perform *lossless compression*
+
 Target Function: Identity $x=f(x)$
 
-　Encode $x\;$ to a *latent vector* $z$
+　Encoder: map $x\;$ to a *latent vector* $z$
   
-　Decode $z\;$ back to the input $x$
+　Decoder: map $z\;$ back to the input $x$
   
 　Training: Minimize $|x - f(x)|\;$
 
 　(*reconstruction loss*)
 #+end_span7
 #+begin_span5
-adding a label: Latent vector
 [[png:deeplearning/autoenc]]
 #+end_span5
 #+end_row-fluid
@@ -438,58 +356,45 @@ adding a label: Latent vector
 
 #+begin_center
 #+begin_larger
-*Main difficulty:* */Latent vector Z is real-valued/*
-+ →  */INCOMPATIBLE with / Useless for/*
++ */Latent vector Z is real-valued/*
+  
+  →  */INCOMPATIBLE with / Useless for/*
 
   *the _propositional logic reasoning_ in Classical Planning.*
 #+end_larger
 #+end_center
 
-* Variational AutoEncoder (VAE)
 
-An AutoEncoder that *enforces a certain distribution* on $Z \subset \mathbb{R}^n$.
+* Discrete AutoEncoders
 
-Minimize $|x-f(x)|$ + *Kullback-Leibler Divergence* (KL loss)
+There are *many* ways to learn discrete vectors these day, check out!!!
 
-+ $D_{\text{KL}}(p||q)$: distribution distance between $p$ and $q$
-+ *Gaussian VAE*: $Z\sim q=\mathcal{N}(\mu,\sigma)$, make $q\rightarrow p=\mathcal{N}(0,1)$
-# + Encoder generates $\mu,\sigma$, then $z=\mu+\sigma\cdot\epsilon$ where $\epsilon\sim\mathcal{N}(0,1)$
-# + $D_{\text{KL}}(p||q)=1-\sigma+\log\sigma-\mu^2$
+#+begin_quote
+Straight-Through Estimator (Bengio et al, 2013)
 
-[[spng:ae-vae-embedding]]
+　  ← Used by (Koul&Fern et al, ICLR18)
 
-# #+begin_quote
-# You have 10k images of apples. A *Gaussian VAE* learns $Z = Encode(X) \approx N(\mu,\sigma)$ for some $\mu,\sigma \in \mathbb{R}^n$.
-# #+end_quote
+*Gumbel-Softmax/Binary-Concrete*
+
+DVAE++ / DVAE# / VQ-VAE / VQ-VAE2
+#+end_quote
 
 #+begin_note
-https://www.jeremyjordan.me/variational-autoencoders/
+(Jang et al / Maddison et al, ICLR17), (Vahdat et al, ICML18 / Neurips18), (van den Oord et al, Neurips17), (Rasavi et al, Neurips19)
 #+end_note
 
-# VAE needs a *reparametrization trick* because random distributions are non-differentiable.
+# Enforces $Z \sim \textbf{Categorical}$:
 # 
-# #+begin_quote
-# Reparametrization for $N(\mu,\sigma)$: $\mu + \sigma N(0,1)$
+# 　　　→ $z\;$ converges to a 1-hot vector e.g.  $\langle 0,0,1,0 \rangle$ .
 # 
-# #+begin_center
-# \mu and \sigma are differentiable vectors, $N(0,1)$ is not.
-# #+end_center
-# #+end_quote
-
-* Our Solution: Gumbel-Softmax VAE (Jang, ICLR2017)
-
-$Z \sim \textbf{Categorical}$:
-
-　　　→ $z\;$ _converges to a 1-hot vector_ e.g.  $\langle 0,0,1,0 \rangle$ .
-
-\begin{align*}
-  x \in \mathbb{R}^N, \quad
-  z = \text{GumbelSoftmax}(x) &= \text{Softmax}( (x + \epsilon) / \tau )                         &\in [0,1]^N      \\
-  \text{Softmax}(x)       &= \frac{(e^{x_1}, e^{x_2},\ldots e^{x_N})}{\sum_j e^{x_j}} &\in [0,1]^N      \\
-  \epsilon = \text{Gumbel}(0,1)  &= - \log (- \log \text{Uniform}(0,1))                      &\in \mathbb{R}^N \\
-(\tau \downarrow 0) \quad \text{GumbelSoftmax}(x) &\rightarrow \arg \max(x)               &\in \{0,1\}^N \\
-D_{\text{KL}} &= \sum_i \text{Softmax}(x)_i\cdot \log\text{Softmax}(x)_i
-\end{align*}
+# \begin{align*}
+#   x \in \mathbb{R}^N, \quad
+#   z = \text{GumbelSoftmax}(x) &= \text{Softmax}( (x + \epsilon) / \tau )                         &\in [0,1]^N      \\
+#   \text{Softmax}(x)       &= \frac{(e^{x_1}, e^{x_2},\ldots e^{x_N})}{\sum_j e^{x_j}} &\in [0,1]^N      \\
+#   \epsilon = \text{Gumbel}(0,1)  &= - \log (- \log \text{Uniform}(0,1))                      &\in \mathbb{R}^N \\
+# (\tau \downarrow 0) \quad \text{GumbelSoftmax}(x) &\rightarrow \arg \max(x)               &\in \{0,1\}^N \\
+# D_{\text{KL}} &= \sum_i \text{Softmax}(x)_i\cdot \log\text{Softmax}(x)_i
+# \end{align*}
 
 # Example: Represent an MNIST image with 30 variables of 8 categories.
 # 
@@ -513,13 +418,61 @@ D_{\text{KL}} &= \sum_i \text{Softmax}(x)_i\cdot \log\text{Softmax}(x)_i
 #+end_larger
 #+end_center
 
-* State Autoencoder (*/before training/*)
-
- [[png:sae/state-ae-before]]
 
 * State Autoencoder (_/after training/_)
 
  [[png:sae/state-ae]]
+
+* Action Model Acquisition (AMA2)
+
+[[png:ama/overview0]]
+
+** Action Auto Encoder
+
+ [[png:ama/overview1]]
+
+** Action Auto Encoder                                             :noexport:
+
+ [[png:aae2/aae1]]
+** Action Auto Encoder                                             :noexport:
+
+ [[png:aae2/aae2]]
+** Action Auto Encoder                                             :noexport:
+
+ [[png:aae2/aae3]]
+** Action Auto Encoder                                             :noexport:
+
+ [[png:aae2/aae4]]
+** Action Auto Encoder                                             :noexport:
+
+ [[png:aae2/aae5]]
+** Action Auto Encoder                                             :noexport:
+
+ [[png:aae2/aae6]]
+
+** Not all actions are applicable
+
+ [[png:ama2/overview1-1]]
+
+** Not all actions are applicable
+
+ [[png:ama2/overview1-2]]
+
+** Not all actions are applicable                                  :noexport:
+
+ [[png:ama2/overview1-3]]
+
+** Not all actions are applicable                                  :noexport:
+
+ [[png:ama2/overview1-4]]
+
+** Not all actions are applicable
+
+ [[png:ama2/overview1-5]]
+
+** AMA_2 Overview                                                  :noexport:
+
+  [[png:ama2/overview3]]
 
 * Do the NN-generated propositions */make sense?/*
 
@@ -830,7 +783,7 @@ Learning a *positive / negative classifier* from *positive / /unlabelled/ datase
   
   Some are valid, some are invalid
 
-* Experiments
+* Experiments                                                      :noexport:
 
 #+begin_container-fluid
 #+begin_row-fluid
@@ -1024,36 +977,6 @@ Measure the type-1 / type-2 error in %
 # #+end_alignright
 # #+end_larger
 
-* Recent Developments
-
-*Zero-Suppressed SAE (ICAPS19)*
-
-First Order SAE (ICAPS19)
-
-Double-Stage AMA (Arxiv)
-
-Cube-Space AE (IJCAI20)
-
-* Recent Developments
-
-Zero-Suppressed SAE (ICAPS19)
-
-*First Order SAE (ICAPS19)*
-
-Double-Stage AMA (Arxiv)
-
-Cube-Space AE (IJCAI20)
-
-* Recent Developments
-
-Zero-Suppressed SAE (ICAPS19)
-
-First Order SAE (ICAPS19)
-
-*Double-Stage AMA (Arxiv) /negative results/*
-
-Cube-Space AE (IJCAI20)
-
 * So far, what did I achieve?
 
 + *Visual input \rightarrow /propositional/ symbols*
@@ -1147,13 +1070,17 @@ To */unleash the full potential/ of off-the-shelf planners*
 
 [[png:dsama/dsama3]]
 
-** Good Accuracy
+#+begin_center
+*Failed:* Domain file *too large* & *too many disjunctions*
+#+end_center
+
+** Good Accuracy                                                   :noexport:
 
 F-measure for effects
 
 [[spng:dsama/AAE]]
 
-** Good Accuracy
+** Good Accuracy                                                   :noexport:
 
 F-measure for preconditions
 
@@ -1167,7 +1094,7 @@ F-measure for preconditions
 
 [[png:dsama/dsama5]]
 
-** Fail: Ridiculously Large PDDL
+** Fail: Ridiculously Large PDDL                                   :noexport:
 
 [[spng:dsama/size]]
 
@@ -1175,7 +1102,7 @@ Vertical axis: Number of trees $T$ in Random Forest
 
 Horizontal axis: Tree depth $D$
 
-** Fast Downward miserably fails @@html:<br>@@ /during the input processing/
+** Fast Downward fails @@html:<br>@@ /during the input processing/ :noexport:
 
 
 Reasons?
@@ -1203,35 +1130,39 @@ Reasons?
 #+end_larger
 #+end_center
 
-* Recent Developments
 
-Zero-Suppressed SAE (ICAPS19)
+* AAE's progression is a */black box/*
 
-First Order SAE (ICAPS19)
+#+begin_quote
+*/AAE's progression:/* 　 $z_{t+1} = \text{apply}(z_t, a)$
 
-Double-Stage AMA (Arxiv)
+_/STRIPS progression:/_ $z_{t+1} = (z_t \ \setminus \ \text{del}(a)\ )\ \cap\ \text{add}(a)$
+#+end_quote
 
-*Cube-Space AE (IJCAI20) (we address this)*
-
-* Source of the problem in the AAE: @@html:<br>@@ _Entanglement_ between _states and effects_
-
-*AAE's state progression:* $z_{t+1} = \text{apply}(z_t, a)$
-
-*STRIPS state progression:* $z_{t+1} = (z_t \setminus \text{del}(a)) \cap \text{add}(a)$
-
-+ Effects in STRIPS are *disentangled* from the current state $z_t$.
-
-  (\rightarrow In the paper, STRIPS = *cube-like graph* from graph-theory.)
-
-+ *Issue*: *No compact STRIPS model $A$ may exist* in $Z$
++ *Issue1*: *Effects must be disentangled from $z_t$*.
 
   #+begin_alignright
-  $Z$ is already learned by the SAE and dumped into a fixed form
+  (\rightarrow see paper, _/STRIPS = cube-like graph from graph-theory./_)
   #+end_alignright
 
-+ *Solution*: _Train $Z$ and $A$ at once_ (end-to-end)
+  　
 
- 　 _while restricting $A$ to be STRIPS._ Then *$Z$ must adapt*
++ *Issue2*: $Z$ *is fixed* $\longleftarrow$ *$Z$ and $A$ are trained separately*
+
+  #+begin_alignright
+  $Z$ may not have compact STRIPS models
+  #+end_alignright
+
+  　
+
+
+#+begin_larger
+#+begin_center
++ *Solution*: _Restrict $A$ to STRIPS_  +  _train $Z$ and $A$ end-to-end_
+
+  $\rightarrow$ *$Z$ must adapt to $A$ (STRIPS)*
+#+end_center
+#+end_larger
 
 * End-to-End Space AutoEncoder
 
@@ -1279,17 +1210,29 @@ This turned out to be hard to train
 
 [[png:space-ae/3-3h]]
 
-** Proposed: */Back-to-Logit/* technique
+** Proposed: */Back-to-Logit/* = continuous effects
 
-+ (1) *Go to the /logit/ space by a monotonic transformation*,
++ (1) *Make propositional (0/1) states continuous (/back to logit!/)*
+
+  #+begin_alignright
+  🚗🔥🔥🔥🔥🔥🕙🏛🗲🗲
+  #+end_alignright
+
+  　 ← by a monotonic conversion : Batch Normalization
+
 + (2) *perform a numeric addition*,
-+ (3) *then /come back!/* 🚗🔥🔥🔥🔥🔥🕙🏛🗲🗲
++ (3) *discretize the result → propositional successor state*
 
 [[png:space-ae/3-5]]
 
-+ BatchNorm was chosen as the monotonic transformation.
+** Results: Better training (ablation study)
 
-** Extract the effects of action $a$ from the dataset
+[[png:results/ablation]]
+
++ (2) BTL is essential; min/max does not work
++ (3) Batchnorm is essential; Other losses are also essential
+
+* To PDDL: Extracting action effects (details ommited)
 
 Dataset $\{ (z_t, z_{t+1}) \mid \text{action}(z_t, z_{t+1})=a\}$:
 
@@ -1307,7 +1250,7 @@ If $\exists t; (z_{t,f},z_{t+1,f})=(1,0)$ then $f\in\text{del}(a)$.
 #+end_row-fluid
 #+end_container-fluid
 
-*Theorem*: BtL guarantees that /add and delete-effect never coexist./
+*Theorem*: */BtL guarantees that add and delete-effect never coexist./*
 
 #+begin_quote
 Proof sketch: Both BatchNorm and Discrete are monotonic, and we perform arithmetic additions.
@@ -1315,7 +1258,7 @@ When $(z_{t,f},z_{t+1,f})=(0,1)$ for some $t$, thus the numeric effect is positi
 $(1,1)$ may happen but $(1,0)$ cannot happen. $(0,0)$ does not happen because the numeric effect is a constant for each $a,f$.
 #+end_quote
 
-** Extract the precondition of action $a$
+* To PDDL: Extracting action preconditions
 
 Dataset $\{ (z_t, z_{t+1}) \mid \text{action}(z_t, z_{t+1})=a\}$:
 
@@ -1328,6 +1271,10 @@ containing _the bit value shared by all data points_ of this action $a$:
 \] 
 
 $f$: index in the binary vector
+
+#+begin_alignright
+(similar to Amado et al, 2018)
+#+end_alignright
 
 * Results : Example PDDL output from our system
 
@@ -1373,15 +1320,15 @@ it is _never trained on the domain-dependent, reward-shaped information._
 It also does not require crazy amount of training.
 #+end_quote
 
-* Conclusion                                                       :noexport:
+* Conclusion : New Milestone Achieved
 
-+ Back-to-Logit technique that disentangles the states and the dynamics *while learning the propositional space*
-+ Allows access to *variety of existing strong SotA heuristic search method*
-+ *First demonstration of SotA heuristics scaling up the search in the automatically learned representation*
-  + These are the central focus of the community in the past >20 years
++ */Back-to-Logit/* : disentangles the states and actions *while learning the propositional space*
++ *Variety of SotA heuristic search methods became available*
++ *First demonstration of SotA heuristics scaling up the search in a learned representation*
+  + The central focus of the community in the past >20 years
 + Unlike RL, it requires
   + *No policy learning* from the environment
   + *Domain-independent*; Not specific to any environment
   + *Guarantees optimality*
-+ Now it is time to start the new era of *powerful SotA heuristics* beating the learned policies with 0 training!
++ *Powerful SotA heuristics* will start beating RL with *0 training*!
 
