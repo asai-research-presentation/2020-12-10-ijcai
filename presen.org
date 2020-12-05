@@ -20,7 +20,13 @@
 #+begin_larger
 *Learning Neural-Symbolic Descriptive Planning Models*
 
-*via Cube-Space Priors: The Voyage Home (to STRIPS)*
+*via Cube-Space Priors*
+
+　
+
+*The Voyage Home*
+
+*(to STRIPS)*
 #+end_larger
 
 　
