@@ -309,35 +309,34 @@ DQN (Mnih et al. '15), AlphaGo (Silver et al. '16)
 
 #+HTML: <embed src="img/overview/3-hanoi.svg" type="image/svg+xml"  />
 
-* Latent-Space Planner (*/LatPlan/*) architechture
+* Latplan architechture
 
   [[png:overview/planning1]]
 
-* Step 1: Propositional Symbol Grounding
+** Step 1: Propositional Symbol Grounding
 
- [[png:overview/planning2]]
+[[png:overview/planning2]]
 
-* Step 2: Action Model Acquisition (AMA)
+** Step 2: Action Model Acquisition (AMA)
 
- [[png:overview/planning3]]
+[[png:overview/planning3]]
 
-* Step 3: Solve the Symbolic Planning Problem
+** Step 3: Solve the Symbolic Planning Problem
 
- [[png:overview/planning4]]
+[[png:overview/planning4]]
 
-* Step 4: Executing the Symbolic Plan
+** Step 4: Executing the Symbolic Plan
 
- [[png:overview/planning5]]
+[[png:overview/planning5]]
 
-* Step 5: Obtaining the Visualization
+** Step 5: Obtaining the Visualization
 
-  [[png:overview/planning6]]
+[[png:overview/planning6]]
 
 #+begin_center
 #+begin_larger
 #+end_larger
 #+end_center
-
 
 * AutoEncoder (AE): Unsupervised Learning for NN
 
@@ -379,8 +378,7 @@ Target Function: Identity $x=f(x)$
 #+end_larger
 #+end_center
 
-
-* Discrete AutoEncoders
+* Discrete Variational AutoEncoders (VAEs)
 
 There are *many* ways to learn discrete vectors these day, check out!!!
 
@@ -433,7 +431,6 @@ DVAE++ / DVAE# / VQ-VAE / VQ-VAE2
 #+end_larger
 #+end_center
 
-
 * State Autoencoder (_/after training/_)
 
  [[png:sae/state-ae]]
@@ -446,30 +443,30 @@ DVAE++ / DVAE# / VQ-VAE / VQ-VAE2
 
  [[png:ama/overview1]]
 
-** Action Auto Encoder                                             :noexport:
+** Action Auto Encoder
 
  [[png:aae2/aae1]]
-** Action Auto Encoder                                             :noexport:
+** Action Auto Encoder
 
  [[png:aae2/aae2]]
-** Action Auto Encoder                                             :noexport:
+** Action Auto Encoder
 
  [[png:aae2/aae3]]
-** Action Auto Encoder                                             :noexport:
+** Action Auto Encoder
 
  [[png:aae2/aae4]]
-** Action Auto Encoder                                             :noexport:
+** Action Auto Encoder
 
  [[png:aae2/aae5]]
-** Action Auto Encoder                                             :noexport:
+** Action Auto Encoder
 
  [[png:aae2/aae6]]
 
-** Not all actions are applicable
+** Not all actions are applicable                                  :noexport:
 
  [[png:ama2/overview1-1]]
 
-** Not all actions are applicable
+** Not all actions are applicable                                  :noexport:
 
  [[png:ama2/overview1-2]]
 
@@ -481,15 +478,15 @@ DVAE++ / DVAE# / VQ-VAE / VQ-VAE2
 
  [[png:ama2/overview1-4]]
 
-** Not all actions are applicable
+** Not all actions are applicable                                  :noexport:
 
  [[png:ama2/overview1-5]]
 
-** AMA_2 Overview                                                  :noexport:
+** AMA_2 Overview
 
-  [[png:ama2/overview3]]
+  [[png:ama2/overview3-minus-ad]]
 
-* Do the NN-generated propositions */make sense?/*
+* Do the NN-generated propositions */make sense?/*                 :noexport:
 
 *AMA_1* : an */oracular/* Action Model Acquisition (AMA) method
 
@@ -587,7 +584,7 @@ DVAE++ / DVAE# / VQ-VAE / VQ-VAE2
 
  + Runtime: ~3sec (instances are too small for symbolic systems)
 
-* 8-puzzle with MNIST tiles (MNIST 8-puzzle)
+* 8-puzzle with MNIST tiles (MNIST 8-puzzle)                       :noexport:
 
 *If the representation is correct, it _guarantees the optimal solution_*.
 
@@ -605,7 +602,7 @@ DVAE++ / DVAE# / VQ-VAE / VQ-VAE2
 #+end_center
 #+end_larger
 
-* AMA_1 (Oracular) → */AMA_2 (Learning-based)/*
+* AMA_1 (Oracular) → */AMA_2 (Learning-based)/*                   :noexport:
 
 [[png:ama/overview0]]
 
@@ -652,7 +649,7 @@ DVAE++ / DVAE# / VQ-VAE / VQ-VAE2
 
   [[png:ama2/overview3]]
 
-* Overview                                                     :AAE:noexport:
+* Overview                                                         :noexport:
 
 #+begin_center
 #+begin_xlarge
@@ -712,7 +709,7 @@ motivation: no action label, unsupervised learning, std network not applicable
 motivation: no action label, unsupervised learning, standard predictor network not applicable
 #+end_center
 
-* Overview                                                      :AD:noexport:
+* Overview                                                         :noexport:
 
 #+begin_center
 #+begin_xlarge
