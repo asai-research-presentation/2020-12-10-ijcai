@@ -1164,30 +1164,30 @@ _/STRIPS progression:/_ $z_{t+1} = (z_t \ \setminus \ \text{del}(a)\ )\ \cap\ \t
 #+end_center
 #+end_larger
 
-* End-to-End Space AutoEncoder
+* Cube-Space AE
 
 [[png:space-ae/1-sae]]
 
-** End-to-End Space AutoEncoder
+** Cube-Space AE
 
 [[png:space-ae/2-1]]
 
-** End-to-End Space AutoEncoder
+** Cube-Space AE
 
 [[png:space-ae/2-2]]
 
-** End-to-End Space AutoEncoder
+** Cube-Space AE
 
 [[png:space-ae/2-3]]
 
-** End-to-End Space AutoEncoder                                    :noexport:
+** Cube-Space AE                                    :noexport:
 
 [[png:space-ae/2-4]]
-** End-to-End Space AutoEncoder                                    :noexport:
+** Cube-Space AE                                    :noexport:
 
 [[png:space-ae/2-3h]]
 
-** End-to-End Space AutoEncoder
+** Cube-Space AE
 
 [[png:space-ae/2-5]]
 
@@ -1276,7 +1276,7 @@ $f$: index in the binary vector
 (similar to Amado et al, 2018)
 #+end_alignright
 
-* Results : Example PDDL output from our system
+* Example PDDL output from our system
 
 [[spng:results/fig1]]
 
@@ -1314,21 +1314,60 @@ in the latent space.
 [[spng:results/fig2]]
 
 #+begin_quote
-*Significance of this work*:
+*Significance*:
 Unlike (the hyped) RL approach,
 it is _never trained on the domain-dependent, reward-shaped information._
 It also does not require crazy amount of training.
 #+end_quote
 
+* Results : Strong Generalization
+
+#+begin_center
+Number of states $S$ & transitions $T$
+
+just "copied" from the training dataset
+#+end_center
+
+　
+
+#+begin_container-fluid
+
+#+begin_container-row
+#+begin_span2
+
+#+end_span2
+#+begin_span8
+[[spng:results/generalization]]
+#+end_span8
+#+begin_span2
+
+#+end_span2
+#+end_container-row
+#+end_container-fluid
+
+#+begin_center
+Mostly $S=T=0$
+
+　
+
+*Produced plans did not contain training examples!!*
+#+end_center
+
 * Conclusion : New Milestone Achieved
 
-+ */Back-to-Logit/* : disentangles the states and actions *while learning the propositional space*
-+ *Variety of SotA heuristic search methods became available*
-+ *First demonstration of SotA heuristics scaling up the search in a learned representation*
-  + The central focus of the community in the past >20 years
-+ Unlike RL, it requires
++ */Cube-Space AE/* : Learns STRIPS planning models from images
+  + *SotA heuristic search now available in learned representations*
+    + The central focus of planning community for >20 years
++ Unlike RL, */classical planning heuristics/* requires
   + *No policy learning* from the environment
-  + *Domain-independent*; Not specific to any environment
+  + *Domain-independent*; Works on first-seen environment
   + *Guarantees optimality*
-+ *Powerful SotA heuristics* will start beating RL with *0 training*!
+
+#+begin_larger
+#+begin_center
++ */New Era:/ SotA heuristics will beat RL*
+
+  *with 0 policy training!*
+#+end_center
+#+end_larger
 
