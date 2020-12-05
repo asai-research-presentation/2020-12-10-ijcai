@@ -989,11 +989,12 @@ Measure the type-1 / type-2 error in %
 # #+end_alignright
 # #+end_larger
 
-* So far, what did I achieve?
+* So far, what did Latplan achieve?
 
-+ *Visual input \rightarrow /propositional/ symbols*
-+ *Unlabeled transitions \rightarrow /action/ symbols*
-+ *Object vectors \rightarrow /predicate/ symbols*
+*Visual input \rightarrow /propositional/ symbols*
+*Unlabeled transitions \rightarrow /action/ symbols*
+# *Object vectors \rightarrow /predicate/ symbols*
+
 + _*Lacks evaluation on the truly difficult, combinatorial tasks*_
   + *8-Puzzle is easy*  : state space is $!9< 400k$ states
   + *15-Puzzle* : $!16\approx 10^{13}$ states
@@ -1058,7 +1059,7 @@ Measure the type-1 / type-2 error in %
 
 [[png:dsama/planning7]]
 
-** Heuristics need */Descriptive Action Models/* : PDDL
+** Heuristics need */Descriptive Action Models/* : PDDL            :noexport:
 
 [[png:dsama/planning8]]
 
