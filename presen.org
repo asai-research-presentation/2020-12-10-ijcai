@@ -18,17 +18,18 @@
 # [[png:latplanlogo]]
 
 #+begin_larger
-*Classical Planning in Deep Discrete Latent Space:@@html:<br>@@ Neural Symbolic Architectures and Symbol Grounding*
+*Learning Neural-Symbolic Descriptive Planning Models*
+*via Cube-Space Priors: The Voyage Home (to STRIPS)*
 #+end_larger
 
 　
 
 #+begin_larger
-Masataro Asai (IBM)
+Masataro Asai (IBM Research), Christian Muise (U.Queens)
 #+end_larger
 
 #+begin_larger
-MIT-IBM Watson AI Lab
+[[png:MIT-IBM Lockup secondary]]
 #+end_larger
 
 
@@ -38,7 +39,7 @@ MIT-IBM Watson AI Lab
 
 #+end_outline-text-1
 
-* Planners can *solve an 8-puzzle optimally << 0.1sec.*
+* Classical Planners can *solve an 8-puzzle optimally << 0.1sec.*
 
 #+begin_container-fluid
 #+begin_container-row
