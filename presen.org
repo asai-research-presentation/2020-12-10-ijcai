@@ -40,6 +40,23 @@ MIT-IBM Watson AI Lab
 
 * Planners can *solve an 8-puzzle optimally << 0.1sec.*
 
+#+begin_container-fluid
+#+begin_container-row
+#+begin_span2
+
+#+end_span2
+#+begin_span4
+[[png:8puzzle-standard]]
+#+end_span4
+#+begin_span4
+[[png:8puzzle-standard-goal]]
+#+end_span4
+#+begin_span2
+[[sgif:8puzzle]]
+#+end_span2
+#+end_container-row
+#+end_container-fluid
+
 /but only when we have a PDDL model./
 
 #+begin_container-fluid
@@ -54,9 +71,7 @@ MIT-IBM Watson AI Lab
 #+end_row-fluid
 #+end_container-fluid
 
-#+begin_center
-They cannot solve an */Image-based/* 8-puzzle
-#+end_center
+* They cannot solve an */Image-based/* 8-puzzle
 
 #+begin_container-fluid
 #+begin_row-fluid
