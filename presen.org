@@ -448,26 +448,26 @@ DVAE++ / DVAE# / VQ-VAE / VQ-VAE2
 
 [[png:ama/overview0]]
 
-** Action Auto Encoder
+** Action Auto Encoder (AAE)
 
  [[png:ama/overview1]]
 
-** Action Auto Encoder
+** Action Auto Encoder (AAE)
 
  [[png:aae2/aae1]]
-** Action Auto Encoder
+** Action Auto Encoder (AAE)
 
  [[png:aae2/aae2]]
-** Action Auto Encoder
+** Action Auto Encoder (AAE)
 
  [[png:aae2/aae3]]
-** Action Auto Encoder
+** Action Auto Encoder (AAE)
 
  [[png:aae2/aae4]]
-** Action Auto Encoder
+** Action Auto Encoder (AAE)
 
  [[png:aae2/aae5]]
-** Action Auto Encoder
+** Action Auto Encoder (AAE)
 
  [[png:aae2/aae6]]
 
