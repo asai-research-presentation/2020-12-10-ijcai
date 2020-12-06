@@ -353,7 +353,7 @@ DQN (Mnih et al. '15), AlphaGo (Silver et al. '16)
 #+end_larger
 #+end_center
 
-* AutoEncoder (AE): Unsupervised Learning for NN
+* AutoEncoder (AE): Unsupervised Learning for NN                   :noexport:
 
 # Auto = "self" --- Autoencoding = "encoding itself"
 
@@ -393,7 +393,7 @@ Target Function: Identity $x=f(x)$
 #+end_larger
 #+end_center
 
-* Discrete Variational AutoEncoders (VAEs)
+* State AE = Discrete Variational AutoEncoders (VAEs)              :noexport:
 
 There are *many* ways to learn discrete vectors these day, check out!!!
 
