@@ -14,7 +14,7 @@
    viewBox="0 0 716.33136 318.96059"
    id="svg6210"
    version="1.1"
-   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
    sodipodi:docname="3-2.svg">
   <sodipodi:namedview
      id="base"
@@ -23,7 +23,7 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
+     inkscape:zoom="1.6217822"
      inkscape:cx="409.69951"
      inkscape:cy="134.40113"
      inkscape:document-units="px"
@@ -1048,7 +1048,7 @@
          y="65.374512"
          x="292.03308"
          sodipodi:role="line"
-         style="font-size:25px;line-height:0.98">Input1: State Transition</tspan></text>
+         style="font-size:25px;line-height:0.98">Input1: State Transitions</tspan></text>
     <text
        transform="translate(-9.3428722,-8.6969128)"
        id="text2743"
