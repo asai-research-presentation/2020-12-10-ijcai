@@ -1188,9 +1188,9 @@ _/STRIPS progression:/_ $z_{t+1} = (z_t \ \setminus \ \text{del}(a)\ )\ \cap\ \t
 
 * AMA_3 = End-to-End NN: Cube-Space AE
 
-[[png:space-ae/1-sae]]
-
-** AMA_3 = End-to-End NN: Cube-Space AE
+# [[png:space-ae/1-sae]]
+# 
+# ** AMA_3 = End-to-End NN: Cube-Space AE
 
 [[png:space-ae/2-1]]
 
