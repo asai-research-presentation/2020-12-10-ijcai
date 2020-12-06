@@ -1049,15 +1049,15 @@ Measure the type-1 / type-2 error in %
 
 [[png:dsama/planning4]]
 
-** AMA_2 AAE/AD
+** AMA_2 is black box → Primitive GoalCount heuristics
 
 [[png:dsama/planning5]]
 
-** AMA_2 AAE/AD cheated with a custom planner
+** AMA_2 AAE/AD cheated with a custom planner                      :noexport:
 
 [[png:dsama/planning6]]
 
-** Heuristics need */Descriptive Action Models/* : PDDL
+** SotA Planners need */Descriptive Action Models/* : PDDL
 
 [[png:dsama/planning7]]
 
@@ -1157,7 +1157,7 @@ _/STRIPS progression:/_ $z_{t+1} = (z_t \ \setminus \ \text{del}(a)\ )\ \cap\ \t
 + *Issue1*: *Effects must be disentangled from $z_t$*.
 
   #+begin_alignright
-  (\rightarrow see paper, _/STRIPS = cube-like graph from graph-theory./_)
+  (\rightarrow read the paper, _/STRIPS = Cube-Like Graph from graph-theory./_)
   #+end_alignright
 
   　
