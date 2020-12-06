@@ -1306,8 +1306,7 @@ $f$: index in the binary vector
 
 [[spng:results/table1]]
 
-* Results : Blind search eats up 2GB memory and dies. @@html:<br>@@ SotA heuristics (LMcut/M&S) scale up the search!
-
+* Results : Higher Success Rates + Better Scalability
 
 #+begin_container-fluid
 #+begin_row-fluid
@@ -1320,29 +1319,11 @@ _*Cube-Space AE*_
 #+end_row-fluid
 #+end_container-fluid
 
-
 [[spng:results/table2]]
-
-#+begin_center
-_*First demonstration* of the meaningful speedup_
-
-_by the domain-independent heuristics_
-
-in the latent space.
-#+end_center
-
-* Results : Confirms the search efficiency
 
 [[spng:results/fig2]]
 
-#+begin_quote
-*Significance*:
-Unlike (the hyped) RL approach,
-it is _never trained on the domain-dependent, reward-shaped information._
-It also does not require crazy amount of training.
-#+end_quote
-
-* Results : Strong Generalization
+* Results : Strong Generalization                                  :noexport:
 
 #+begin_center
 Number of states $S$ & transitions $T$
