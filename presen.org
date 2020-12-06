@@ -446,19 +446,23 @@ DVAE++ / DVAE# / VQ-VAE / VQ-VAE2
 #+end_larger
 #+end_center
 
-* State Autoencoder (_/after training/_)
+** State Autoencoder (_/after training/_)
 
- [[png:sae/state-ae]]
+[[png:sae/state-ae]]
 
-* Action Model Acquisition (AMA2)
+* Action Model Acquisition (AMA2) Overview
 
 [[png:ama/overview0]]
 
-** Action Auto Encoder (AAE)
+** Action Model Acquisition (AMA2) Overview
 
  [[png:ama/overview1]]
 
-** Action Auto Encoder (AAE)
+** Action Model Acquisition (AMA2) Overview
+
+  [[png:ama2/overview3-minus-ad]]
+
+* Action Auto Encoder (AAE)
 
  [[png:aae2/aae1]]
 ** Action Auto Encoder (AAE)
@@ -497,9 +501,6 @@ DVAE++ / DVAE# / VQ-VAE / VQ-VAE2
 
  [[png:ama2/overview1-5]]
 
-** AMA_2 Overview
-
-  [[png:ama2/overview3-minus-ad]]
 
 * Do the NN-generated propositions */make sense?/*                 :noexport:
 
