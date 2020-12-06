@@ -318,27 +318,27 @@ DQN (Mnih et al. '15), AlphaGo (Silver et al. '16)
 
 #+HTML: <embed src="img/overview/3-hanoi.svg" type="image/svg+xml"  />
 
-* Latplan architechture
+* Latplan architechture                                            :noexport:
 
   [[png:overview/planning1]]
 
-** Step 1: Propositional Symbol Grounding
+* Step 1: Propositional Symbol Grounding
 
 [[png:overview/planning2]]
 
-** Step 2: Action Model Acquisition (AMA)
+** Step 2: 
 
 [[png:overview/planning3]]
 
-** Step 3: Solve the Symbolic Planning Problem
+** Step 3: 
 
 [[png:overview/planning4]]
 
-** Step 4: Executing the Symbolic Plan
+** Step 4: 
 
 [[png:overview/planning5]]
 
-** Step 5: Obtaining the Visualization
+** Step 5: 
 
 [[png:overview/planning6]]
 
