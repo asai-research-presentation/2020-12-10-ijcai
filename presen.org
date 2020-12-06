@@ -1001,6 +1001,7 @@ Measure the type-1 / type-2 error in %
 * So far, what did Latplan achieve?
 
 *Visual input \rightarrow /propositional/ symbols*
+
 *Unlabeled transitions \rightarrow /action/ symbols*
 # *Object vectors \rightarrow /predicate/ symbols*
 
