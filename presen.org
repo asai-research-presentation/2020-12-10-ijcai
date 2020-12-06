@@ -1181,36 +1181,36 @@ _/STRIPS progression:/_ $z_{t+1} = (z_t \ \setminus \ \text{del}(a)\ )\ \cap\ \t
 
 #+begin_larger
 #+begin_center
-+ *Solution*: _Restrict $A$ to STRIPS_  +  _train $Z$ and $A$ end-to-end_
++ *Solution*: _Train $Z$ and $A$ end-to-end_ + _Restrict $A$ to STRIPS_
 
   $\rightarrow$ *$Z$ must adapt to $A$ (STRIPS)*
 #+end_center
 #+end_larger
 
-* Cube-Space AE
+* End-to-End NN: Cube-Space AE
 
 [[png:space-ae/1-sae]]
 
-** Cube-Space AE
+** End-to-End NN: Cube-Space AE
 
 [[png:space-ae/2-1]]
 
-** Cube-Space AE
+** End-to-End NN: Cube-Space AE
 
 [[png:space-ae/2-2]]
 
-** Cube-Space AE
+** End-to-End NN: Cube-Space AE
 
 [[png:space-ae/2-3]]
 
-** Cube-Space AE                                    :noexport:
+** End-to-End NN: Cube-Space AE                                    :noexport:
 
 [[png:space-ae/2-4]]
-** Cube-Space AE                                    :noexport:
+** End-to-End NN: Cube-Space AE                                    :noexport:
 
 [[png:space-ae/2-3h]]
 
-** Cube-Space AE
+** End-to-End NN: Cube-Space AE
 
 [[png:space-ae/2-5]]
 
