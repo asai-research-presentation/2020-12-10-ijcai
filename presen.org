@@ -1380,7 +1380,7 @@ Mostly $S=T=0$
 
 #+begin_larger
 #+begin_center
-+ */New Era:/ SotA heuristics will beat RL*
++ */New Era:/ Symbolic approach will kick the butt of RL*
 
   *with 0 policy training!*
 #+end_center
