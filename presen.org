@@ -47,7 +47,7 @@ Masataro Asai (IBM Research), Christian Muise (U.Queens)
 
 #+end_outline-text-1
 
-* Classical Planners can *solve an 8-puzzle optimally << 0.1sec.*
+* Classical Planners *solve 8-puzzles << .1sec.*
 
 #+begin_container-fluid
 #+begin_container-row
@@ -111,6 +111,12 @@ Masataro Asai (IBM Research), Christian Muise (U.Queens)
 #+end_span4
 #+end_row-fluid
 #+end_container-fluid
+
++ *Latplan (AAAI 2018)* addresses this problem:
+
+  */No Prior Explicit Knowledge/* (i.e. No Human Annotation)
+
+  　 */No labels/symbols given/* : e.g. "9 tiles", "moving"
 
 * Knowledge-Acquisition Bottleneck:                                :noexport:
 
@@ -215,7 +221,7 @@ Masataro Asai (IBM Research), Christian Muise (U.Queens)
 # The knowledge acquisition bottleneck: time for reassessment? : Cullen, J and Bryman, A Expert Syst. Vol 5 No 3 (August 1988) pp 216-225
 # #+end_note
 
-* Latplan (Asai,Fukunaga 2018): Solving an Imaged-Based 8-puzzle @@html:<br>@@ */without any Prior Explicit Knowledge/* @@html:<br>@@ (i.e. No Human Annotation)
+* Latplan (Asai,Fukunaga 2018): Solving an Imaged-Based 8-puzzle @@html:<br>@@ */without any Prior Explicit Knowledge/* @@html:<br>@@ (i.e. No Human Annotation) :noexport:
 
 #+begin_center
 */System is not given any labels/symbols/* : e.g. "9 tiles", "moving"
