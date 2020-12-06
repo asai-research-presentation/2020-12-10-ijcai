@@ -1213,11 +1213,15 @@ _/STRIPS progression:/_ $z_{t+1} = (z_t \ \setminus \ \text{del}(a)\ )\ \cap\ \t
 
 [[png:space-ae/2-5]]
 
-* Fixing the AAE: Disentangling effects from states
+** End-to-End NN: Cube-Space AE
 
 [[png:space-ae/3-1]]
 
-** Min = delete effect / set intersection @@html:<br>@@ Max = add effect / set union
+We proposed */Back-to-Logit/* method (replaces $\text{apply}$):
++ *Theorem*: */Back-to-Logit guarantees STRIPS./*
++ *Easy* to train + *Easy* to extract Effects & Preconditions
+
+** Min = delete effect / set intersection @@html:<br>@@ Max = add effect / set union :noexport:
 
 This turned out to be hard to train
 
@@ -1232,7 +1236,7 @@ This turned out to be hard to train
 
 [[png:space-ae/3-3h]]
 
-** Proposed: */Back-to-Logit/* = continuous effects
+** Proposed: */Back-to-Logit/* = continuous effects                :noexport:
 
 + (1) *Make propositional (0/1) states continuous (/back to logit!/)*
 
@@ -1247,14 +1251,25 @@ This turned out to be hard to train
 
 [[png:space-ae/3-5]]
 
-** Results: Better training (ablation study)
+** Results: Better training (ablation study)                       :noexport:
 
 [[png:results/ablation]]
 
 + (2) BTL is essential; min/max does not work
 + (3) Batchnorm is essential; Other losses are also essential
 
-* To PDDL: Extracting action effects (details ommited)
+
+* NN To PDDL (details ommited)                                     :noexport:
+
+Effect & Precondition Extraction
+
+　
+
+　
+
+ *Theorem*: */BtL guarantees that add and delete-effect never coexist./*
+
+* To PDDL: Extracting action effects (details ommited)             :noexport:
 
 Dataset $\{ (z_t, z_{t+1}) \mid \text{action}(z_t, z_{t+1})=a\}$:
 
@@ -1280,7 +1295,7 @@ When $(z_{t,f},z_{t+1,f})=(0,1)$ for some $t$, thus the numeric effect is positi
 $(1,1)$ may happen but $(1,0)$ cannot happen. $(0,0)$ does not happen because the numeric effect is a constant for each $a,f$.
 #+end_quote
 
-* To PDDL: Extracting action preconditions
+* To PDDL: Extracting action preconditions                         :noexport:
 
 Dataset $\{ (z_t, z_{t+1}) \mid \text{action}(z_t, z_{t+1})=a\}$:
 
