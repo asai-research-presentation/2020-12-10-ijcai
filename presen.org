@@ -462,7 +462,7 @@ DVAE++ / DVAE# / VQ-VAE / VQ-VAE2
 
   [[png:ama2/overview3-minus-ad]]
 
-* Action Auto Encoder (AAE)
+* Action Auto Encoder (AAE)                                        :noexport:
 
  [[png:aae2/aae1]]
 ** Action Auto Encoder (AAE)
@@ -481,23 +481,23 @@ DVAE++ / DVAE# / VQ-VAE / VQ-VAE2
 
  [[png:aae2/aae6]]
 
-** Not all actions are applicable                                  :noexport:
+* Not all actions are applicable                                   :noexport:
 
- [[png:ama2/overview1-1]]
+[[png:ama2/overview1-1]]
 
-** Not all actions are applicable                                  :noexport:
+** Not all actions are applicable
 
  [[png:ama2/overview1-2]]
 
-** Not all actions are applicable                                  :noexport:
+** Not all actions are applicable
 
  [[png:ama2/overview1-3]]
 
-** Not all actions are applicable                                  :noexport:
+** Not all actions are applicable
 
  [[png:ama2/overview1-4]]
 
-** Not all actions are applicable                                  :noexport:
+** Not all actions are applicable
 
  [[png:ama2/overview1-5]]
 
