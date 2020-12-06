@@ -1,0 +1,25 @@
+make[1]: 警告: 副次 make で -jN を強制指定しました: jobserver モードを無効にします.
+make[1]: ディレクトリ '/home/masataro/repos/presentations/2020-12-10-ijcai' に入ります
+make -C img
+make -C css
+make -C scripts
+make[2]: ディレクトリ '/home/masataro/repos/presentations/2020-12-10-ijcai/img' に入ります
+make[2]: ディレクトリ '/home/masataro/repos/presentations/2020-12-10-ijcai/css' に入ります
+sass --update .
+make[2]: ディレクトリ '/home/masataro/repos/presentations/2020-12-10-ijcai/scripts' に入ります
+Q --batch  -f batch-byte-compile compile-org-html.el
+make[2]: Q: コマンドが見つかりませんでした
+Q --batch  -f batch-byte-compile compile-org-latex.el
+make[2]: Q: コマンドが見つかりませんでした
+make[2]: [Makefile:5: compile-org-html.elc] エラー 127 (無視されました)
+make[2]: [Makefile:5: compile-org-latex.elc] エラー 127 (無視されました)
+make[2]: ディレクトリ '/home/masataro/repos/presentations/2020-12-10-ijcai/scripts' から出ます
+scripts/org-html.sh presen.org presen.org.html
+make[2]: 'all' に対して行うべき事はありません.
+make[2]: ディレクトリ '/home/masataro/repos/presentations/2020-12-10-ijcai/img' から出ます
+Loading /home/masataro/repos/presentations/2020-12-10-ijcai/scripts/compile-org-html.el (source)...
+make[2]: ディレクトリ '/home/masataro/repos/presentations/2020-12-10-ijcai/css' から出ます
+Org-mode version 8.3.6 (8.3.6-dist @ /home/masataro/repos/presentations/2020-12-10-ijcai/org-mode/lisp/)
+Package cl is deprecated
+cp -f presen.org.html index.html
+make[1]: ディレクトリ '/home/masataro/repos/presentations/2020-12-10-ijcai' から出ます

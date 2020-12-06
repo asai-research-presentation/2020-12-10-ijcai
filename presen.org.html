@@ -1,0 +1,1248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-12-06 日 12:55 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="viewport" content="width=device-width, initial-scale=1" />
+<title></title>
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="masataro" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/layout.css" />
+<link rel="stylesheet" type="text/css" href="css/default.css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.loupe.min.js"></script>
+<script type="text/javascript" src="js/jgestures/jgestures.min.js"></script>
+<script type="text/javascript" src="js/code.js"></script>
+<script type="text/javascript" src="MathJax/MathJax.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:500,900">
+<script type="text/javascript" src="js/mathjaxconf.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div class="outline-text-1">
+<div class="org-center">
+<p>
+
+</p>
+
+<div class="larger">
+<p>
+<b>Learning Neural-Symbolic Descriptive Planning Models</b>
+</p>
+
+<p>
+<b>via Cube-Space Priors</b>
+</p>
+
+<p>
+　
+</p>
+
+<p>
+<b>The Voyage Home</b>
+</p>
+
+<p>
+<b>(to STRIPS)</b>
+</p>
+
+</div>
+
+<p>
+　
+</p>
+
+<div class="larger">
+<p>
+Masataro Asai (IBM Research), Christian Muise (U.Queens)
+</p>
+
+</div>
+
+<p>
+　
+</p>
+
+<p>
+　
+</p>
+
+
+<div class="figure">
+<p><img src="img/MIT-IBM.png" alt="MIT-IBM.png" />
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-orgheadline1" class="outline-2">
+<h2 id="orgheadline1"><span class="section-number-2">1</span> Classical Planners can <b>solve an 8-puzzle optimally &lt;&lt; 0.1sec.</b></h2>
+<div class="outline-text-2" id="text-1">
+<div class="container-fluid">
+<div class="container-row">
+<div class="span2">
+<p>
+
+</p>
+
+</div>
+<div class="span4">
+
+<div class="figure">
+<p><img src="img/8puzzle-standard.png" alt="8puzzle-standard.png" />
+</p>
+</div>
+
+</div>
+<div class="span4">
+
+<div class="figure">
+<p><img src="img/8puzzle-standard-goal.png" alt="8puzzle-standard-goal.png" />
+</p>
+</div>
+
+</div>
+<div class="span2">
+
+<div class="figure">
+<p><img src="img/static/8puzzle.gif" alt="8puzzle.gif" />
+</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<p>
+<i>but only when we have a PDDL model.</i>
+</p>
+
+<div class="container-fluid">
+<div class="row-fluid">
+<div class="span12">
+<div class="org-src-container">
+
+<pre class="src src-lisp">(<span style="color: #483d8b;">:action</span> slide-up ...
+ <span style="color: #483d8b;">:precondition</span> (and (empty ?x ?y-old) ...)
+ <span style="color: #483d8b;">:effects</span> (and (not (empty ?x ?y-old))...))
+</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline2" class="outline-2">
+<h2 id="orgheadline2"><span class="section-number-2">2</span> They cannot solve an <b><i>Image-based</i></b> 8-puzzle</h2>
+<div class="outline-text-2" id="text-2">
+<div class="container-fluid">
+<div class="row-fluid">
+<div class="span8">
+
+<div class="figure">
+<p><img src="img/static/puzzle.jpg" alt="puzzle.jpg" />
+</p>
+</div>
+
+</div>
+<div class="span4">
+<ul class="org-ul">
+<li><div class="org-center">
+<p>
+<b>BECAUSE</b>
+</p>
+
+<p>
+<b>WE</b>
+</p>
+
+<p>
+<b>DO</b>
+</p>
+
+<p>
+<b>NOT</b>
+</p>
+
+<p>
+<b>HAVE</b>
+</p>
+
+<p>
+<b>A</b>
+</p>
+
+<div class="larger">
+<p>
+<b><i>PDDL</i></b>
+</p>
+
+<p>
+<b><i>MODEL</i>!</b>
+</p>
+
+</div>
+</div></li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline6" class="outline-2">
+<h2 id="orgheadline6"><span class="section-number-2">3</span> Latplan (Asai,Fukunaga 2018): Solving an Imaged-Based 8-puzzle <br> <b><i>without any Prior Explicit Knowledge</i></b> <br> (i.e. No Human Annotation)</h2>
+<div class="outline-text-2" id="text-3">
+<div class="org-center">
+<p>
+<b><i>System is not given any labels/symbols</i></b> : e.g. "9 tiles", "moving"
+</p>
+</div>
+
+
+<div class="figure">
+<p><img src="img/static/puzzle.jpg" alt="puzzle.jpg" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline3" class="outline-3">
+<h3 id="orgheadline3"><span class="section-number-3">3.1</span> Latplan system I/O</h3>
+<div class="outline-text-3" id="text-3-1">
+
+<div class="figure">
+<p><img src="img/overview/3-2.png" alt="3-2.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline4" class="outline-3">
+<h3 id="orgheadline4"><span class="section-number-3">3.2</span> Latplan system I/O</h3>
+<div class="outline-text-3" id="text-3-2">
+
+<div class="figure">
+<p><img src="img/overview/3-1.png" alt="3-1.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline5" class="outline-3">
+<h3 id="orgheadline5"><span class="section-number-3">3.3</span> Latplan system I/O</h3>
+<div class="outline-text-3" id="text-3-3">
+
+<div class="figure">
+<p><img src="img/overview/3.png" alt="3.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline12" class="outline-2">
+<h2 id="orgheadline12"><span class="section-number-2">4</span> Latplan architechture</h2>
+<div class="outline-text-2" id="text-4">
+
+<div class="figure">
+<p><img src="img/overview/planning1.png" alt="planning1.png" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline7" class="outline-3">
+<h3 id="orgheadline7"><span class="section-number-3">4.1</span> Step 1: Propositional Symbol Grounding</h3>
+<div class="outline-text-3" id="text-4-1">
+
+<div class="figure">
+<p><img src="img/overview/planning2.png" alt="planning2.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline8" class="outline-3">
+<h3 id="orgheadline8"><span class="section-number-3">4.2</span> Step 2: Action Model Acquisition (AMA)</h3>
+<div class="outline-text-3" id="text-4-2">
+
+<div class="figure">
+<p><img src="img/overview/planning3.png" alt="planning3.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline9" class="outline-3">
+<h3 id="orgheadline9"><span class="section-number-3">4.3</span> Step 3: Solve the Symbolic Planning Problem</h3>
+<div class="outline-text-3" id="text-4-3">
+
+<div class="figure">
+<p><img src="img/overview/planning4.png" alt="planning4.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline10" class="outline-3">
+<h3 id="orgheadline10"><span class="section-number-3">4.4</span> Step 4: Executing the Symbolic Plan</h3>
+<div class="outline-text-3" id="text-4-4">
+
+<div class="figure">
+<p><img src="img/overview/planning5.png" alt="planning5.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline11" class="outline-3">
+<h3 id="orgheadline11"><span class="section-number-3">4.5</span> Step 5: Obtaining the Visualization</h3>
+<div class="outline-text-3" id="text-4-5">
+
+<div class="figure">
+<p><img src="img/overview/planning6.png" alt="planning6.png" />
+</p>
+</div>
+
+<div class="org-center">
+<div class="larger">
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline13" class="outline-2">
+<h2 id="orgheadline13"><span class="section-number-2">5</span> AutoEncoder (AE): Unsupervised Learning for NN</h2>
+<div class="outline-text-2" id="text-5">
+<div class="container-fluid">
+<div class="row-fluid">
+<div class="span7">
+<p>
+　
+</p>
+
+<p>
+Tries to perform <b>lossless compression</b>
+</p>
+
+<p>
+Target Function: Identity $x=f(x)$
+</p>
+
+<p>
+　Encoder: map $x\;$to a <b>latent vector</b> $z$
+</p>
+
+<p>
+　Decoder: map $z\;$back to the input $x$
+</p>
+
+<p>
+　Training: Minimize $|x - f(x)|\;$
+</p>
+
+<p>
+　(<b>reconstruction loss</b>)
+</p>
+
+</div>
+<div class="span5">
+
+<div class="figure">
+<p><img src="img/deeplearning/autoenc.png" alt="autoenc.png" />
+</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="org-center">
+<div class="larger">
+<ul class="org-ul">
+<li><p>
+<b><i>Latent vector Z is real-valued</i></b>
+</p>
+
+<p>
+→  <b><i>INCOMPATIBLE with / Useless for</i></b>
+</p>
+
+<p>
+<b>the <span class="underline">propositional logic reasoning</span> in Classical Planning.</b>
+</p></li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline14" class="outline-2">
+<h2 id="orgheadline14"><span class="section-number-2">6</span> Discrete Variational AutoEncoders (VAEs)</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+There are <b>many</b> ways to learn discrete vectors these day, check out!!!
+</p>
+
+<blockquote>
+<p>
+Straight-Through Estimator (Bengio et al, 2013)
+</p>
+
+<p>
+　  ← Used by (Koul&amp;Fern et al, ICLR18)
+</p>
+
+<p>
+<b>Gumbel-Softmax/Binary-Concrete</b>
+</p>
+
+<p>
+DVAE++ / DVAE# / VQ-VAE / VQ-VAE2
+</p>
+</blockquote>
+
+<div class="note">
+<p>
+(Jang et al / Maddison et al, ICLR17), (Vahdat et al, ICML18 / Neurips18), (van den Oord et al, Neurips17), (Rasavi et al, Neurips19)
+</p>
+
+</div>
+
+<div class="org-center">
+<div class="larger">
+<ul class="org-ul">
+<li><p>
+<b>Categorical variables are <i>directly</i> compatible</b>
+</p>
+
+<p>
+<b>with symbolic systems.</b>
+</p>
+
+<p>
+<b>2 categories → <i>propositional</i> variables (true/false).</b>
+</p></li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline15" class="outline-2">
+<h2 id="orgheadline15"><span class="section-number-2">7</span> State Autoencoder (<span class="underline"><i>after training</i></span>)</h2>
+<div class="outline-text-2" id="text-7">
+
+<div class="figure">
+<p><img src="img/sae/state-ae.png" alt="state-ae.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline24" class="outline-2">
+<h2 id="orgheadline24"><span class="section-number-2">8</span> Action Model Acquisition (AMA2)</h2>
+<div class="outline-text-2" id="text-8">
+
+<div class="figure">
+<p><img src="img/ama/overview0.png" alt="overview0.png" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline16" class="outline-3">
+<h3 id="orgheadline16"><span class="section-number-3">8.1</span> Action Auto Encoder</h3>
+<div class="outline-text-3" id="text-8-1">
+
+<div class="figure">
+<p><img src="img/ama/overview1.png" alt="overview1.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline17" class="outline-3">
+<h3 id="orgheadline17"><span class="section-number-3">8.2</span> Action Auto Encoder</h3>
+<div class="outline-text-3" id="text-8-2">
+
+<div class="figure">
+<p><img src="img/aae2/aae1.png" alt="aae1.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgheadline18" class="outline-3">
+<h3 id="orgheadline18"><span class="section-number-3">8.3</span> Action Auto Encoder</h3>
+<div class="outline-text-3" id="text-8-3">
+
+<div class="figure">
+<p><img src="img/aae2/aae2.png" alt="aae2.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgheadline19" class="outline-3">
+<h3 id="orgheadline19"><span class="section-number-3">8.4</span> Action Auto Encoder</h3>
+<div class="outline-text-3" id="text-8-4">
+
+<div class="figure">
+<p><img src="img/aae2/aae3.png" alt="aae3.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgheadline20" class="outline-3">
+<h3 id="orgheadline20"><span class="section-number-3">8.5</span> Action Auto Encoder</h3>
+<div class="outline-text-3" id="text-8-5">
+
+<div class="figure">
+<p><img src="img/aae2/aae4.png" alt="aae4.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgheadline21" class="outline-3">
+<h3 id="orgheadline21"><span class="section-number-3">8.6</span> Action Auto Encoder</h3>
+<div class="outline-text-3" id="text-8-6">
+
+<div class="figure">
+<p><img src="img/aae2/aae5.png" alt="aae5.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgheadline22" class="outline-3">
+<h3 id="orgheadline22"><span class="section-number-3">8.7</span> Action Auto Encoder</h3>
+<div class="outline-text-3" id="text-8-7">
+
+<div class="figure">
+<p><img src="img/aae2/aae6.png" alt="aae6.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline23" class="outline-3">
+<h3 id="orgheadline23"><span class="section-number-3">8.8</span> AMA<sub>2</sub> Overview</h3>
+<div class="outline-text-3" id="text-8-8">
+
+<div class="figure">
+<p><img src="img/ama2/overview3-minus-ad.png" alt="overview3-minus-ad.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline25" class="outline-2">
+<h2 id="orgheadline25"><span class="section-number-2">9</span> So far, what did Latplan achieve?</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+<b>Visual input &rarr; <i>propositional</i> symbols</b>
+<b>Unlabeled transitions &rarr; <i>action</i> symbols</b>
+</p>
+
+<ul class="org-ul">
+<li><span class="underline"><b>Lacks evaluation on the truly difficult, combinatorial tasks</b></span>
+<ul class="org-ul">
+<li><b>8-Puzzle is easy</b>  : state space is $!9&lt; 400k$states</li>
+<li><b>15-Puzzle</b> : $!16\approx 10^{13}$states</li>
+<li><b>SotA solves hard 24-Puzzle instances</b> : $!25\approx 10^{25}$states</li>
+</ul></li>
+<li>Requires <b>SotA heuristics</b> to tackle the problem
+<ul class="org-ul">
+<li><b>domain-independent</b> : because our domains are <b>generated by NN</b></li>
+<li><b>Core research focus</b> of planning community in the last 20 years.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline32" class="outline-2">
+<h2 id="orgheadline32"><span class="section-number-2">10</span> Latplan</h2>
+<div class="outline-text-2" id="text-10">
+
+<div class="figure">
+<p><img src="img/dsama/planning4.png" alt="planning4.png" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline26" class="outline-3">
+<h3 id="orgheadline26"><span class="section-number-3">10.1</span> AMA<sub>2</sub> AAE/AD</h3>
+<div class="outline-text-3" id="text-10-1">
+
+<div class="figure">
+<p><img src="img/dsama/planning5.png" alt="planning5.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline27" class="outline-3">
+<h3 id="orgheadline27"><span class="section-number-3">10.2</span> AMA<sub>2</sub> AAE/AD cheated with a custom planner</h3>
+<div class="outline-text-3" id="text-10-2">
+
+<div class="figure">
+<p><img src="img/dsama/planning6.png" alt="planning6.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline28" class="outline-3">
+<h3 id="orgheadline28"><span class="section-number-3">10.3</span> Heuristics need <b><i>Descriptive Action Models</i></b> : PDDL</h3>
+<div class="outline-text-3" id="text-10-3">
+
+<div class="figure">
+<p><img src="img/dsama/planning7.png" alt="planning7.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline29" class="outline-3">
+<h3 id="orgheadline29"><span class="section-number-3">10.4</span> Double-Stage AMA (Arxiv 1912.05492)</h3>
+<div class="outline-text-3" id="text-10-4">
+
+<div class="figure">
+<p><img src="img/dsama/dsama1.png" alt="dsama1.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline30" class="outline-3">
+<h3 id="orgheadline30"><span class="section-number-3">10.5</span> Double-Stage AMA (Arxiv 1912.05492)</h3>
+<div class="outline-text-3" id="text-10-5">
+
+<div class="figure">
+<p><img src="img/dsama/dsama2.png" alt="dsama2.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline31" class="outline-3">
+<h3 id="orgheadline31"><span class="section-number-3">10.6</span> Double-Stage AMA (Arxiv 1912.05492)</h3>
+<div class="outline-text-3" id="text-10-6">
+
+<div class="figure">
+<p><img src="img/dsama/dsama3.png" alt="dsama3.png" />
+</p>
+</div>
+
+<div class="org-center">
+<p>
+<b>Failed:</b> Domain file <b>too large</b> &amp; <b>too many disjunctions</b>
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgheadline33" class="outline-2">
+<h2 id="orgheadline33"><span class="section-number-2">11</span> AAE's progression is a <b><i>black box</i></b></h2>
+<div class="outline-text-2" id="text-11">
+<blockquote>
+<p>
+<b><i>AAE's progression:</i></b> 　 $z_{t+1} = \text{apply}(z_t, a)$
+</p>
+
+<p>
+<span class="underline"><i>STRIPS progression:</i></span> $z_{t+1} = (z_t \ \setminus \ \text{del}(a)\ )\ \cap\ \text{add}(a)$
+</p>
+</blockquote>
+
+<ul class="org-ul">
+<li><p>
+<b>Issue1</b>: <b>Effects must be disentangled from $z_t$</b>.
+</p>
+
+<div class="alignright">
+<p>
+(&rarr; see paper, <span class="underline"><i>STRIPS = cube-like graph from graph-theory.</i></span>)
+</p>
+
+</div>
+
+<p>
+　
+</p></li>
+
+<li><p>
+<b>Issue2</b>: $Z$<b>is fixed</b> $\longleftarrow$<b>$Z$and $A$are trained separately</b>
+</p>
+
+<div class="alignright">
+<p>
+$Z$may not have compact STRIPS models
+</p>
+
+</div>
+
+<p>
+　
+</p></li>
+</ul>
+
+
+<div class="larger">
+<div class="org-center">
+<ul class="org-ul">
+<li><p>
+<b>Solution</b>: <span class="underline">Restrict $A$to STRIPS</span>  +  <span class="underline">train $Z$and $A$end-to-end</span>
+</p>
+
+<p>
+$\rightarrow$<b>$Z$must adapt to $A$(STRIPS)</b>
+</p></li>
+</ul>
+</div>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline38" class="outline-2">
+<h2 id="orgheadline38"><span class="section-number-2">12</span> Cube-Space AE</h2>
+<div class="outline-text-2" id="text-12">
+
+<div class="figure">
+<p><img src="img/space-ae/1-sae.png" alt="1-sae.png" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline34" class="outline-3">
+<h3 id="orgheadline34"><span class="section-number-3">12.1</span> Cube-Space AE</h3>
+<div class="outline-text-3" id="text-12-1">
+
+<div class="figure">
+<p><img src="img/space-ae/2-1.png" alt="2-1.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline35" class="outline-3">
+<h3 id="orgheadline35"><span class="section-number-3">12.2</span> Cube-Space AE</h3>
+<div class="outline-text-3" id="text-12-2">
+
+<div class="figure">
+<p><img src="img/space-ae/2-2.png" alt="2-2.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline36" class="outline-3">
+<h3 id="orgheadline36"><span class="section-number-3">12.3</span> Cube-Space AE</h3>
+<div class="outline-text-3" id="text-12-3">
+
+<div class="figure">
+<p><img src="img/space-ae/2-3.png" alt="2-3.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline37" class="outline-3">
+<h3 id="orgheadline37"><span class="section-number-3">12.4</span> Cube-Space AE</h3>
+<div class="outline-text-3" id="text-12-4">
+
+<div class="figure">
+<p><img src="img/space-ae/2-5.png" alt="2-5.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline42" class="outline-2">
+<h2 id="orgheadline42"><span class="section-number-2">13</span> Fixing the AAE: Disentangling effects from states</h2>
+<div class="outline-text-2" id="text-13">
+
+<div class="figure">
+<p><img src="img/space-ae/3-1.png" alt="3-1.png" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline39" class="outline-3">
+<h3 id="orgheadline39"><span class="section-number-3">13.1</span> Min = delete effect / set intersection <br> Max = add effect / set union</h3>
+<div class="outline-text-3" id="text-13-1">
+<p>
+This turned out to be hard to train
+</p>
+
+
+<div class="figure">
+<p><img src="img/space-ae/3-2.png" alt="3-2.png" />
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgheadline40" class="outline-3">
+<h3 id="orgheadline40"><span class="section-number-3">13.2</span> Proposed: <b><i>Back-to-Logit</i></b> = continuous effects</h3>
+<div class="outline-text-3" id="text-13-2">
+<ul class="org-ul">
+<li><p>
+(1) <b>Make propositional (0/1) states continuous (<i>back to logit!</i>)</b>
+</p>
+
+<div class="alignright">
+<p>
+🚗🔥🔥🔥🔥🔥🕙🏛🗲🗲
+</p>
+
+</div>
+
+<p>
+　 ← by a monotonic conversion : Batch Normalization
+</p></li>
+
+<li>(2) <b>perform a numeric addition</b>,</li>
+<li>(3) <b>discretize the result → propositional successor state</b></li>
+</ul>
+
+
+<div class="figure">
+<p><img src="img/space-ae/3-5.png" alt="3-5.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline41" class="outline-3">
+<h3 id="orgheadline41"><span class="section-number-3">13.3</span> Results: Better training (ablation study)</h3>
+<div class="outline-text-3" id="text-13-3">
+
+<div class="figure">
+<p><img src="img/results/ablation.png" alt="ablation.png" />
+</p>
+</div>
+
+<ul class="org-ul">
+<li>(2) BTL is essential; min/max does not work</li>
+<li>(3) Batchnorm is essential; Other losses are also essential</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline43" class="outline-2">
+<h2 id="orgheadline43"><span class="section-number-2">14</span> To PDDL: Extracting action effects (details ommited)</h2>
+<div class="outline-text-2" id="text-14">
+<p>
+Dataset $\{ (z_t, z_{t+1}) \mid \text{action}(z_t, z_{t+1})=a\}$:
+</p>
+
+<div class="container-fluid">
+<div class="row-fluid">
+<div class="span8">
+<p>
+If $\exists t; (z_{t,f},z_{t+1,f})=(0,1)$then $f\in\text{add}(a)$.
+</p>
+
+<p>
+If $\exists t; (z_{t,f},z_{t+1,f})=(1,0)$then $f\in\text{del}(a)$.
+</p>
+
+</div>
+<div class="span4">
+
+<div class="figure">
+<p><img src="img/space-ae/3-5.png" alt="3-5.png" />
+</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<p>
+<b>Theorem</b>: <b><i>BtL guarantees that add and delete-effect never coexist.</i></b>
+</p>
+
+<blockquote>
+<p>
+Proof sketch: Both BatchNorm and Discrete are monotonic, and we perform arithmetic additions.
+When $(z_{t,f},z_{t+1,f})=(0,1)$for some $t$, thus the numeric effect is positive, therefore
+$(1,1)$may happen but $(1,0)$cannot happen. $(0,0)$does not happen because the numeric effect is a constant for each $a,f$.
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-orgheadline44" class="outline-2">
+<h2 id="orgheadline44"><span class="section-number-2">15</span> To PDDL: Extracting action preconditions</h2>
+<div class="outline-text-2" id="text-15">
+<p>
+Dataset $\{ (z_t, z_{t+1}) \mid \text{action}(z_t, z_{t+1})=a\}$:
+</p>
+
+<p>
+Extracts a <b>single</b> decision rule (not decision list or trees)
+</p>
+
+<p>
+containing <span class="underline">the bit value shared by all data points</span> of this action $a$:
+</p>
+
+<p>
+\[
+ \text{pre}(a) = \{f|\forall t;z_{t,f}=1\}\cup \{\lnot f|\forall t; z_{t,f}=0\}
+\]
+</p>
+
+<p>
+$f$: index in the binary vector
+</p>
+
+<div class="alignright">
+<p>
+(similar to Amado et al, 2018)
+</p>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline45" class="outline-2">
+<h2 id="orgheadline45"><span class="section-number-2">16</span> Example PDDL output from our system</h2>
+<div class="outline-text-2" id="text-16">
+
+<div class="figure">
+<p><img src="img/static/results/fig1.png" alt="fig1.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline46" class="outline-2">
+<h2 id="orgheadline46"><span class="section-number-2">17</span> Results : Blind search eats up 2GB memory and dies. <br> SotA heuristics (LMcut/M&amp;S) scale up the search!</h2>
+<div class="outline-text-2" id="text-17">
+<div class="container-fluid">
+<div class="row-fluid">
+<div class="span6">
+<p>
+SAE+AAE trained separately
+</p>
+
+</div>
+<div class="span6">
+<p>
+<span class="underline"><b>Cube-Space AE</b></span>
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="figure">
+<p><img src="img/static/results/table2.png" alt="table2.png" />
+</p>
+</div>
+
+<div class="org-center">
+<p>
+<span class="underline"><b>First demonstration</b> of the meaningful speedup</span>
+</p>
+
+<p>
+<span class="underline">by the domain-independent heuristics</span>
+</p>
+
+<p>
+in the latent space.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline47" class="outline-2">
+<h2 id="orgheadline47"><span class="section-number-2">18</span> Results : Confirms the search efficiency</h2>
+<div class="outline-text-2" id="text-18">
+
+<div class="figure">
+<p><img src="img/static/results/fig2.png" alt="fig2.png" />
+</p>
+</div>
+
+<blockquote>
+<p>
+<b>Significance</b>:
+Unlike (the hyped) RL approach,
+it is <span class="underline">never trained on the domain-dependent, reward-shaped information.</span>
+It also does not require crazy amount of training.
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-orgheadline48" class="outline-2">
+<h2 id="orgheadline48"><span class="section-number-2">19</span> Results : Strong Generalization</h2>
+<div class="outline-text-2" id="text-19">
+<div class="org-center">
+<p>
+Number of states $S$&amp; transitions $T$
+</p>
+
+<p>
+just "copied" from the training dataset
+</p>
+</div>
+
+<p>
+　
+</p>
+
+<div class="container-fluid">
+<p>
+
+</p>
+
+<div class="container-row">
+<div class="span2">
+<p>
+
+</p>
+
+</div>
+<div class="span8">
+
+<div class="figure">
+<p><img src="img/static/results/generalization.png" alt="generalization.png" />
+</p>
+</div>
+
+</div>
+<div class="span2">
+<p>
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="org-center">
+<p>
+Mostly $S=T=0$
+</p>
+
+<p>
+　
+</p>
+
+<p>
+<b>Produced plans did not contain training examples!!</b>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline49" class="outline-2">
+<h2 id="orgheadline49"><span class="section-number-2">20</span> Conclusion : New Milestone Achieved</h2>
+<div class="outline-text-2" id="text-20">
+<ul class="org-ul">
+<li><b><i>Cube-Space AE</i></b> : Learns STRIPS planning models from images
+<ul class="org-ul">
+<li><b>SotA heuristic search now available in learned representations</b>
+<ul class="org-ul">
+<li>The central focus of planning community for &gt;20 years</li>
+</ul></li>
+</ul></li>
+<li>Unlike RL, <b><i>classical planning heuristics</i></b> requires
+<ul class="org-ul">
+<li><b>No policy learning</b> from the environment</li>
+<li><b>Domain-independent</b>; Works on first-seen environment</li>
+<li><b>Guarantees optimality</b></li>
+</ul></li>
+</ul>
+
+<div class="larger">
+<div class="org-center">
+<ul class="org-ul">
+<li><p>
+<b><i>New Era:</i> SotA heuristics will beat RL</b>
+</p>
+
+<p>
+<b>with 0 policy training!</b>
+</p></li>
+</ul>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: masataro</p>
+<p class="date">Created: 2020-12-06 日 12:55</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
