@@ -1052,7 +1052,7 @@ Measure the type-1 / type-2 error in %
 
  [[png:simple-planning/relax]]
 
-* Latplan
+* Latplan                                                          :noexport:
 
 [[png:dsama/planning4]]
 
