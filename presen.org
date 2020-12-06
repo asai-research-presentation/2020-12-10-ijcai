@@ -450,7 +450,7 @@ DVAE++ / DVAE# / VQ-VAE / VQ-VAE2
 
 [[png:sae/state-ae]]
 
-* Action Model Acquisition (AMA2) Overview
+* Action Model Acquisition (AMA2) Overview                         :noexport:
 
 [[png:ama/overview0]]
 
@@ -1153,10 +1153,10 @@ Reasons?
 #+end_center
 
 
-* AAE's progression is a */black box/*
+* AMA_3 : make AMA_2 _/STRIPS-compatible/_
 
 #+begin_quote
-*/AAE's progression:/* 　 $z_{t+1} = \text{apply}(z_t, a)$
+*/AMA_2's progression:/* $z_{t+1} = \text{apply}(z_t, a)$ = black box
 
 _/STRIPS progression:/_ $z_{t+1} = (z_t \ \setminus \ \text{del}(a)\ )\ \cap\ \text{add}(a)$
 #+end_quote
@@ -1186,34 +1186,34 @@ _/STRIPS progression:/_ $z_{t+1} = (z_t \ \setminus \ \text{del}(a)\ )\ \cap\ \t
 #+end_center
 #+end_larger
 
-* End-to-End NN: Cube-Space AE
+* AMA_3 = End-to-End NN: Cube-Space AE
 
 [[png:space-ae/1-sae]]
 
-** End-to-End NN: Cube-Space AE
+** AMA_3 = End-to-End NN: Cube-Space AE
 
 [[png:space-ae/2-1]]
 
-** End-to-End NN: Cube-Space AE
+** AMA_3 = End-to-End NN: Cube-Space AE
 
 [[png:space-ae/2-2]]
 
-** End-to-End NN: Cube-Space AE
+** AMA_3 = End-to-End NN: Cube-Space AE
 
 [[png:space-ae/2-3]]
 
-** End-to-End NN: Cube-Space AE                                    :noexport:
+** AMA_3 = End-to-End NN: Cube-Space AE                                    :noexport:
 
 [[png:space-ae/2-4]]
-** End-to-End NN: Cube-Space AE                                    :noexport:
+** AMA_3 = End-to-End NN: Cube-Space AE                                    :noexport:
 
 [[png:space-ae/2-3h]]
 
-** End-to-End NN: Cube-Space AE
+** AMA_3 = End-to-End NN: Cube-Space AE
 
 [[png:space-ae/2-5]]
 
-** End-to-End NN: Cube-Space AE
+** AMA_3 = End-to-End NN: Cube-Space AE
 
 [[png:space-ae/3-1]]
 
