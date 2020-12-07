@@ -302,7 +302,7 @@ DQN (Mnih et al. '15), AlphaGo (Silver et al. '16)
 
 [[png:overview/input2]]
 
-** Latplan system I/O
+* Latplan system I/O
 
 [[png:overview/3-2]]
 
