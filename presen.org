@@ -1298,7 +1298,7 @@ $f$: index in the binary vector
 (similar to Amado et al, 2018)
 #+end_alignright
 
-* Example PDDL output from our system
+* Example PDDL output from our system                              :noexport:
 
 [[spng:results/fig1]]
 
