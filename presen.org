@@ -1080,7 +1080,7 @@ To */unleash the full potential/ of off-the-shelf planners*
 #+end_center
 #+end_quote
 
-** Double-Stage AMA (Arxiv 1912.05492)
+* Double-Stage AMA (Arxiv 1912.05492)                              :noexport:
 
 [[png:dsama/dsama1]]
 
