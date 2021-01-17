@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-12-06 日 12:56 -->
+<!-- 2021-01-17 日 16:54 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="viewport" content="width=device-width, initial-scale=1" />
 <title></title>
@@ -211,7 +211,7 @@ Masataro Asai (IBM Research), Christian Muise (U.Queens)
 </div>
 
 <div id="outline-container-orgheadline1" class="outline-2">
-<h2 id="orgheadline1"><span class="section-number-2">1</span> Classical Planners can <b>solve an 8-puzzle optimally &lt;&lt; 0.1sec.</b></h2>
+<h2 id="orgheadline1"><span class="section-number-2">1</span> Classical Planners <b>solve 8-puzzles &lt;&lt; .1sec.</b></h2>
 <div class="outline-text-2" id="text-1">
 <div class="container-fluid">
 <div class="container-row">
@@ -331,83 +331,36 @@ Masataro Asai (IBM Research), Christian Muise (U.Queens)
 </div>
 
 </div>
-</div>
-</div>
 
-<div id="outline-container-orgheadline6" class="outline-2">
-<h2 id="orgheadline6"><span class="section-number-2">3</span> Latplan (Asai,Fukunaga 2018): Solving an Imaged-Based 8-puzzle <br> <b><i>without any Prior Explicit Knowledge</i></b> <br> (i.e. No Human Annotation)</h2>
-<div class="outline-text-2" id="text-3">
-<div class="org-center">
+<ul class="org-ul">
+<li><p>
+<b>Latplan (AAAI 2018)</b> addresses this problem:
+</p>
+
 <p>
-<b><i>System is not given any labels/symbols</i></b> : e.g. "9 tiles", "moving"
+<b><i>No Prior Explicit Knowledge</i></b> (i.e. No Human Annotation)
 </p>
-</div>
 
-
-<div class="figure">
-<p><img src="img/static/puzzle.jpg" alt="puzzle.jpg" />
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgheadline3" class="outline-3">
-<h3 id="orgheadline3"><span class="section-number-3">3.1</span> Latplan system I/O</h3>
-<div class="outline-text-3" id="text-3-1">
-
-<div class="figure">
-<p><img src="img/overview/3-2.png" alt="3-2.png" />
-</p>
-</div>
+<p>
+　 <b><i>No labels/symbols given</i></b> : e.g. "9 tiles", "moving"
+</p></li>
+</ul>
 </div>
 </div>
 
-<div id="outline-container-orgheadline4" class="outline-3">
-<h3 id="orgheadline4"><span class="section-number-3">3.2</span> Latplan system I/O</h3>
-<div class="outline-text-3" id="text-3-2">
-
-<div class="figure">
-<p><img src="img/overview/3-1.png" alt="3-1.png" />
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-orgheadline5" class="outline-3">
-<h3 id="orgheadline5"><span class="section-number-3">3.3</span> Latplan system I/O</h3>
-<div class="outline-text-3" id="text-3-3">
-
-<div class="figure">
-<p><img src="img/overview/3.png" alt="3.png" />
-</p>
-</div>
-</div>
-</div>
-</div>
-
-<div id="outline-container-orgheadline12" class="outline-2">
-<h2 id="orgheadline12"><span class="section-number-2">4</span> Latplan architechture</h2>
-<div class="outline-text-2" id="text-4">
-
-<div class="figure">
-<p><img src="img/overview/planning1.png" alt="planning1.png" />
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgheadline7" class="outline-3">
-<h3 id="orgheadline7"><span class="section-number-3">4.1</span> Step 1: Propositional Symbol Grounding</h3>
-<div class="outline-text-3" id="text-4-1">
+<div id="outline-container-orgheadline7" class="outline-2">
+<h2 id="orgheadline7"><span class="section-number-2">3</span> Step 1: Propositional Symbol Grounding</h2>
+<div class="outline-text-2" id="text-3">
 
 <div class="figure">
 <p><img src="img/overview/planning2.png" alt="planning2.png" />
 </p>
 </div>
 </div>
-</div>
 
-<div id="outline-container-orgheadline8" class="outline-3">
-<h3 id="orgheadline8"><span class="section-number-3">4.2</span> Step 2: Action Model Acquisition (AMA)</h3>
-<div class="outline-text-3" id="text-4-2">
+<div id="outline-container-orgheadline3" class="outline-3">
+<h3 id="orgheadline3"><span class="section-number-3">3.1</span> Step 2:</h3>
+<div class="outline-text-3" id="text-3-1">
 
 <div class="figure">
 <p><img src="img/overview/planning3.png" alt="planning3.png" />
@@ -416,9 +369,9 @@ Masataro Asai (IBM Research), Christian Muise (U.Queens)
 </div>
 </div>
 
-<div id="outline-container-orgheadline9" class="outline-3">
-<h3 id="orgheadline9"><span class="section-number-3">4.3</span> Step 3: Solve the Symbolic Planning Problem</h3>
-<div class="outline-text-3" id="text-4-3">
+<div id="outline-container-orgheadline4" class="outline-3">
+<h3 id="orgheadline4"><span class="section-number-3">3.2</span> Step 3:</h3>
+<div class="outline-text-3" id="text-3-2">
 
 <div class="figure">
 <p><img src="img/overview/planning4.png" alt="planning4.png" />
@@ -427,9 +380,9 @@ Masataro Asai (IBM Research), Christian Muise (U.Queens)
 </div>
 </div>
 
-<div id="outline-container-orgheadline10" class="outline-3">
-<h3 id="orgheadline10"><span class="section-number-3">4.4</span> Step 4: Executing the Symbolic Plan</h3>
-<div class="outline-text-3" id="text-4-4">
+<div id="outline-container-orgheadline5" class="outline-3">
+<h3 id="orgheadline5"><span class="section-number-3">3.3</span> Step 4:</h3>
+<div class="outline-text-3" id="text-3-3">
 
 <div class="figure">
 <p><img src="img/overview/planning5.png" alt="planning5.png" />
@@ -438,9 +391,9 @@ Masataro Asai (IBM Research), Christian Muise (U.Queens)
 </div>
 </div>
 
-<div id="outline-container-orgheadline11" class="outline-3">
-<h3 id="orgheadline11"><span class="section-number-3">4.5</span> Step 5: Obtaining the Visualization</h3>
-<div class="outline-text-3" id="text-4-5">
+<div id="outline-container-orgheadline6" class="outline-3">
+<h3 id="orgheadline6"><span class="section-number-3">3.4</span> Step 5:</h3>
+<div class="outline-text-3" id="text-3-4">
 
 <div class="figure">
 <p><img src="img/overview/planning6.png" alt="planning6.png" />
@@ -456,9 +409,9 @@ Masataro Asai (IBM Research), Christian Muise (U.Queens)
 </div>
 </div>
 
-<div id="outline-container-orgheadline13" class="outline-2">
-<h2 id="orgheadline13"><span class="section-number-2">5</span> AutoEncoder (AE): Unsupervised Learning for NN</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-orgheadline8" class="outline-2">
+<h2 id="orgheadline8"><span class="section-number-2">4</span> AutoEncoder (AE): Unsupervised Learning for NN</h2>
+<div class="outline-text-2" id="text-4">
 <div class="container-fluid">
 <div class="row-fluid">
 <div class="span7">
@@ -525,9 +478,9 @@ Target Function: Identity $x=f(x)$
 </div>
 </div>
 
-<div id="outline-container-orgheadline14" class="outline-2">
-<h2 id="orgheadline14"><span class="section-number-2">6</span> Discrete Variational AutoEncoders (VAEs)</h2>
-<div class="outline-text-2" id="text-6">
+<div id="outline-container-orgheadline9" class="outline-2">
+<h2 id="orgheadline9"><span class="section-number-2">5</span> Discrete Variational AutoEncoders (VAEs)</h2>
+<div class="outline-text-2" id="text-5">
 <p>
 There are <b>many</b> ways to learn discrete vectors these day, check out!!!
 </p>
@@ -578,9 +531,9 @@ DVAE++ / DVAE# / VQ-VAE / VQ-VAE2
 </div>
 </div>
 
-<div id="outline-container-orgheadline15" class="outline-2">
-<h2 id="orgheadline15"><span class="section-number-2">7</span> State Autoencoder (<span class="underline"><i>after training</i></span>)</h2>
-<div class="outline-text-2" id="text-7">
+<div id="outline-container-orgheadline10" class="outline-2">
+<h2 id="orgheadline10"><span class="section-number-2">6</span> State Autoencoder (<span class="underline"><i>after training</i></span>)</h2>
+<div class="outline-text-2" id="text-6">
 
 <div class="figure">
 <p><img src="img/sae/state-ae.png" alt="state-ae.png" />
@@ -589,9 +542,9 @@ DVAE++ / DVAE# / VQ-VAE / VQ-VAE2
 </div>
 </div>
 
-<div id="outline-container-orgheadline24" class="outline-2">
-<h2 id="orgheadline24"><span class="section-number-2">8</span> Action Model Acquisition (AMA2)</h2>
-<div class="outline-text-2" id="text-8">
+<div id="outline-container-orgheadline19" class="outline-2">
+<h2 id="orgheadline19"><span class="section-number-2">7</span> Action Model Acquisition (AMA2)</h2>
+<div class="outline-text-2" id="text-7">
 
 <div class="figure">
 <p><img src="img/ama/overview0.png" alt="overview0.png" />
@@ -599,9 +552,9 @@ DVAE++ / DVAE# / VQ-VAE / VQ-VAE2
 </div>
 </div>
 
-<div id="outline-container-orgheadline16" class="outline-3">
-<h3 id="orgheadline16"><span class="section-number-3">8.1</span> Action Auto Encoder</h3>
-<div class="outline-text-3" id="text-8-1">
+<div id="outline-container-orgheadline11" class="outline-3">
+<h3 id="orgheadline11"><span class="section-number-3">7.1</span> Action Auto Encoder (AAE)</h3>
+<div class="outline-text-3" id="text-7-1">
 
 <div class="figure">
 <p><img src="img/ama/overview1.png" alt="overview1.png" />
@@ -610,9 +563,9 @@ DVAE++ / DVAE# / VQ-VAE / VQ-VAE2
 </div>
 </div>
 
-<div id="outline-container-orgheadline17" class="outline-3">
-<h3 id="orgheadline17"><span class="section-number-3">8.2</span> Action Auto Encoder</h3>
-<div class="outline-text-3" id="text-8-2">
+<div id="outline-container-orgheadline12" class="outline-3">
+<h3 id="orgheadline12"><span class="section-number-3">7.2</span> Action Auto Encoder (AAE)</h3>
+<div class="outline-text-3" id="text-7-2">
 
 <div class="figure">
 <p><img src="img/aae2/aae1.png" alt="aae1.png" />
@@ -620,9 +573,9 @@ DVAE++ / DVAE# / VQ-VAE / VQ-VAE2
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline18" class="outline-3">
-<h3 id="orgheadline18"><span class="section-number-3">8.3</span> Action Auto Encoder</h3>
-<div class="outline-text-3" id="text-8-3">
+<div id="outline-container-orgheadline13" class="outline-3">
+<h3 id="orgheadline13"><span class="section-number-3">7.3</span> Action Auto Encoder (AAE)</h3>
+<div class="outline-text-3" id="text-7-3">
 
 <div class="figure">
 <p><img src="img/aae2/aae2.png" alt="aae2.png" />
@@ -630,9 +583,9 @@ DVAE++ / DVAE# / VQ-VAE / VQ-VAE2
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline19" class="outline-3">
-<h3 id="orgheadline19"><span class="section-number-3">8.4</span> Action Auto Encoder</h3>
-<div class="outline-text-3" id="text-8-4">
+<div id="outline-container-orgheadline14" class="outline-3">
+<h3 id="orgheadline14"><span class="section-number-3">7.4</span> Action Auto Encoder (AAE)</h3>
+<div class="outline-text-3" id="text-7-4">
 
 <div class="figure">
 <p><img src="img/aae2/aae3.png" alt="aae3.png" />
@@ -640,9 +593,9 @@ DVAE++ / DVAE# / VQ-VAE / VQ-VAE2
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline20" class="outline-3">
-<h3 id="orgheadline20"><span class="section-number-3">8.5</span> Action Auto Encoder</h3>
-<div class="outline-text-3" id="text-8-5">
+<div id="outline-container-orgheadline15" class="outline-3">
+<h3 id="orgheadline15"><span class="section-number-3">7.5</span> Action Auto Encoder (AAE)</h3>
+<div class="outline-text-3" id="text-7-5">
 
 <div class="figure">
 <p><img src="img/aae2/aae4.png" alt="aae4.png" />
@@ -650,9 +603,9 @@ DVAE++ / DVAE# / VQ-VAE / VQ-VAE2
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline21" class="outline-3">
-<h3 id="orgheadline21"><span class="section-number-3">8.6</span> Action Auto Encoder</h3>
-<div class="outline-text-3" id="text-8-6">
+<div id="outline-container-orgheadline16" class="outline-3">
+<h3 id="orgheadline16"><span class="section-number-3">7.6</span> Action Auto Encoder (AAE)</h3>
+<div class="outline-text-3" id="text-7-6">
 
 <div class="figure">
 <p><img src="img/aae2/aae5.png" alt="aae5.png" />
@@ -660,9 +613,9 @@ DVAE++ / DVAE# / VQ-VAE / VQ-VAE2
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline22" class="outline-3">
-<h3 id="orgheadline22"><span class="section-number-3">8.7</span> Action Auto Encoder</h3>
-<div class="outline-text-3" id="text-8-7">
+<div id="outline-container-orgheadline17" class="outline-3">
+<h3 id="orgheadline17"><span class="section-number-3">7.7</span> Action Auto Encoder (AAE)</h3>
+<div class="outline-text-3" id="text-7-7">
 
 <div class="figure">
 <p><img src="img/aae2/aae6.png" alt="aae6.png" />
@@ -671,9 +624,9 @@ DVAE++ / DVAE# / VQ-VAE / VQ-VAE2
 </div>
 </div>
 
-<div id="outline-container-orgheadline23" class="outline-3">
-<h3 id="orgheadline23"><span class="section-number-3">8.8</span> AMA<sub>2</sub> Overview</h3>
-<div class="outline-text-3" id="text-8-8">
+<div id="outline-container-orgheadline18" class="outline-3">
+<h3 id="orgheadline18"><span class="section-number-3">7.8</span> AMA<sub>2</sub> Overview</h3>
+<div class="outline-text-3" id="text-7-8">
 
 <div class="figure">
 <p><img src="img/ama2/overview3-minus-ad.png" alt="overview3-minus-ad.png" />
@@ -683,36 +636,25 @@ DVAE++ / DVAE# / VQ-VAE / VQ-VAE2
 </div>
 </div>
 
-<div id="outline-container-orgheadline25" class="outline-2">
-<h2 id="orgheadline25"><span class="section-number-2">9</span> So far, what did Latplan achieve?</h2>
-<div class="outline-text-2" id="text-9">
+<div id="outline-container-orgheadline20" class="outline-2">
+<h2 id="orgheadline20"><span class="section-number-2">8</span> Main Contribution: Scaling up Latplan <br> with <b><i>SotA Classical Planning heuristics</i></b></h2>
+<div class="outline-text-2" id="text-8">
 <p>
-<b>Visual input &rarr; <i>propositional</i> symbols</b>
-</p>
-
-<p>
-<b>Unlabeled transitions &rarr; <i>action</i> symbols</b>
+<b>8-Puzzle</b> ($!9&lt; 400k$states) $\longrightarrow$<b>15-Puzzle</b> ($!16\approx 10^{13}$states)
 </p>
 
 <ul class="org-ul">
-<li><span class="underline"><b>Lacks evaluation on the truly difficult, combinatorial tasks</b></span>
-<ul class="org-ul">
-<li><b>8-Puzzle is easy</b>  : state space is $!9&lt; 400k$states</li>
-<li><b>15-Puzzle</b> : $!16\approx 10^{13}$states</li>
-<li><b>SotA solves hard 24-Puzzle instances</b> : $!25\approx 10^{25}$states</li>
-</ul></li>
-<li>Requires <b>SotA heuristics</b> to tackle the problem
+<li>Scalability requires <b>SotA heuristics</b> to tackle the problem
 <ul class="org-ul">
 <li><b>domain-independent</b> : because our domains are <b>generated by NN</b></li>
-<li><b>Core research focus</b> of planning community in the last 20 years.</li>
 </ul></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgheadline32" class="outline-2">
-<h2 id="orgheadline32"><span class="section-number-2">10</span> Latplan</h2>
-<div class="outline-text-2" id="text-10">
+<div id="outline-container-orgheadline26" class="outline-2">
+<h2 id="orgheadline26"><span class="section-number-2">9</span> Latplan</h2>
+<div class="outline-text-2" id="text-9">
 
 <div class="figure">
 <p><img src="img/dsama/planning4.png" alt="planning4.png" />
@@ -720,9 +662,9 @@ DVAE++ / DVAE# / VQ-VAE / VQ-VAE2
 </div>
 </div>
 
-<div id="outline-container-orgheadline26" class="outline-3">
-<h3 id="orgheadline26"><span class="section-number-3">10.1</span> AMA<sub>2</sub> AAE/AD</h3>
-<div class="outline-text-3" id="text-10-1">
+<div id="outline-container-orgheadline21" class="outline-3">
+<h3 id="orgheadline21"><span class="section-number-3">9.1</span> AMA<sub>2</sub> is black box → Primitive GoalCount heuristics</h3>
+<div class="outline-text-3" id="text-9-1">
 
 <div class="figure">
 <p><img src="img/dsama/planning5.png" alt="planning5.png" />
@@ -731,20 +673,9 @@ DVAE++ / DVAE# / VQ-VAE / VQ-VAE2
 </div>
 </div>
 
-<div id="outline-container-orgheadline27" class="outline-3">
-<h3 id="orgheadline27"><span class="section-number-3">10.2</span> AMA<sub>2</sub> AAE/AD cheated with a custom planner</h3>
-<div class="outline-text-3" id="text-10-2">
-
-<div class="figure">
-<p><img src="img/dsama/planning6.png" alt="planning6.png" />
-</p>
-</div>
-</div>
-</div>
-
-<div id="outline-container-orgheadline28" class="outline-3">
-<h3 id="orgheadline28"><span class="section-number-3">10.3</span> Heuristics need <b><i>Descriptive Action Models</i></b> : PDDL</h3>
-<div class="outline-text-3" id="text-10-3">
+<div id="outline-container-orgheadline22" class="outline-3">
+<h3 id="orgheadline22"><span class="section-number-3">9.2</span> SotA Planners need <b><i>Descriptive Action Models</i></b> : PDDL</h3>
+<div class="outline-text-3" id="text-9-2">
 
 <div class="figure">
 <p><img src="img/dsama/planning7.png" alt="planning7.png" />
@@ -753,9 +684,9 @@ DVAE++ / DVAE# / VQ-VAE / VQ-VAE2
 </div>
 </div>
 
-<div id="outline-container-orgheadline29" class="outline-3">
-<h3 id="orgheadline29"><span class="section-number-3">10.4</span> Double-Stage AMA (Arxiv 1912.05492)</h3>
-<div class="outline-text-3" id="text-10-4">
+<div id="outline-container-orgheadline23" class="outline-3">
+<h3 id="orgheadline23"><span class="section-number-3">9.3</span> Double-Stage AMA (Arxiv 1912.05492)</h3>
+<div class="outline-text-3" id="text-9-3">
 
 <div class="figure">
 <p><img src="img/dsama/dsama1.png" alt="dsama1.png" />
@@ -764,9 +695,9 @@ DVAE++ / DVAE# / VQ-VAE / VQ-VAE2
 </div>
 </div>
 
-<div id="outline-container-orgheadline30" class="outline-3">
-<h3 id="orgheadline30"><span class="section-number-3">10.5</span> Double-Stage AMA (Arxiv 1912.05492)</h3>
-<div class="outline-text-3" id="text-10-5">
+<div id="outline-container-orgheadline24" class="outline-3">
+<h3 id="orgheadline24"><span class="section-number-3">9.4</span> Double-Stage AMA (Arxiv 1912.05492)</h3>
+<div class="outline-text-3" id="text-9-4">
 
 <div class="figure">
 <p><img src="img/dsama/dsama2.png" alt="dsama2.png" />
@@ -775,9 +706,9 @@ DVAE++ / DVAE# / VQ-VAE / VQ-VAE2
 </div>
 </div>
 
-<div id="outline-container-orgheadline31" class="outline-3">
-<h3 id="orgheadline31"><span class="section-number-3">10.6</span> Double-Stage AMA (Arxiv 1912.05492)</h3>
-<div class="outline-text-3" id="text-10-6">
+<div id="outline-container-orgheadline25" class="outline-3">
+<h3 id="orgheadline25"><span class="section-number-3">9.5</span> Double-Stage AMA (Arxiv 1912.05492)</h3>
+<div class="outline-text-3" id="text-9-5">
 
 <div class="figure">
 <p><img src="img/dsama/dsama3.png" alt="dsama3.png" />
@@ -794,9 +725,9 @@ DVAE++ / DVAE# / VQ-VAE / VQ-VAE2
 </div>
 
 
-<div id="outline-container-orgheadline33" class="outline-2">
-<h2 id="orgheadline33"><span class="section-number-2">11</span> AAE's progression is a <b><i>black box</i></b></h2>
-<div class="outline-text-2" id="text-11">
+<div id="outline-container-orgheadline27" class="outline-2">
+<h2 id="orgheadline27"><span class="section-number-2">10</span> AAE's progression is a <b><i>black box</i></b></h2>
+<div class="outline-text-2" id="text-10">
 <blockquote>
 <p>
 <b><i>AAE's progression:</i></b> 　 $z_{t+1} = \text{apply}(z_t, a)$
@@ -814,7 +745,7 @@ DVAE++ / DVAE# / VQ-VAE / VQ-VAE2
 
 <div class="alignright">
 <p>
-(&rarr; see paper, <span class="underline"><i>STRIPS = cube-like graph from graph-theory.</i></span>)
+(&rarr; read the paper, <span class="underline"><i>STRIPS = Cube-Like Graph from graph-theory.</i></span>)
 </p>
 
 </div>
@@ -844,7 +775,7 @@ $Z$may not have compact STRIPS models
 <div class="org-center">
 <ul class="org-ul">
 <li><p>
-<b>Solution</b>: <span class="underline">Restrict $A$to STRIPS</span>  +  <span class="underline">train $Z$and $A$end-to-end</span>
+<b>Solution</b>: <span class="underline">Train $Z$and $A$end-to-end</span> + <span class="underline">Restrict $A$to STRIPS</span>
 </p>
 
 <p>
@@ -857,9 +788,9 @@ $\rightarrow$<b>$Z$must adapt to $A$(STRIPS)</b>
 </div>
 </div>
 
-<div id="outline-container-orgheadline38" class="outline-2">
-<h2 id="orgheadline38"><span class="section-number-2">12</span> Cube-Space AE</h2>
-<div class="outline-text-2" id="text-12">
+<div id="outline-container-orgheadline32" class="outline-2">
+<h2 id="orgheadline32"><span class="section-number-2">11</span> End-to-End NN: Cube-Space AE</h2>
+<div class="outline-text-2" id="text-11">
 
 <div class="figure">
 <p><img src="img/space-ae/1-sae.png" alt="1-sae.png" />
@@ -867,9 +798,9 @@ $\rightarrow$<b>$Z$must adapt to $A$(STRIPS)</b>
 </div>
 </div>
 
-<div id="outline-container-orgheadline34" class="outline-3">
-<h3 id="orgheadline34"><span class="section-number-3">12.1</span> Cube-Space AE</h3>
-<div class="outline-text-3" id="text-12-1">
+<div id="outline-container-orgheadline28" class="outline-3">
+<h3 id="orgheadline28"><span class="section-number-3">11.1</span> End-to-End NN: Cube-Space AE</h3>
+<div class="outline-text-3" id="text-11-1">
 
 <div class="figure">
 <p><img src="img/space-ae/2-1.png" alt="2-1.png" />
@@ -878,9 +809,9 @@ $\rightarrow$<b>$Z$must adapt to $A$(STRIPS)</b>
 </div>
 </div>
 
-<div id="outline-container-orgheadline35" class="outline-3">
-<h3 id="orgheadline35"><span class="section-number-3">12.2</span> Cube-Space AE</h3>
-<div class="outline-text-3" id="text-12-2">
+<div id="outline-container-orgheadline29" class="outline-3">
+<h3 id="orgheadline29"><span class="section-number-3">11.2</span> End-to-End NN: Cube-Space AE</h3>
+<div class="outline-text-3" id="text-11-2">
 
 <div class="figure">
 <p><img src="img/space-ae/2-2.png" alt="2-2.png" />
@@ -889,9 +820,9 @@ $\rightarrow$<b>$Z$must adapt to $A$(STRIPS)</b>
 </div>
 </div>
 
-<div id="outline-container-orgheadline36" class="outline-3">
-<h3 id="orgheadline36"><span class="section-number-3">12.3</span> Cube-Space AE</h3>
-<div class="outline-text-3" id="text-12-3">
+<div id="outline-container-orgheadline30" class="outline-3">
+<h3 id="orgheadline30"><span class="section-number-3">11.3</span> End-to-End NN: Cube-Space AE</h3>
+<div class="outline-text-3" id="text-11-3">
 
 <div class="figure">
 <p><img src="img/space-ae/2-3.png" alt="2-3.png" />
@@ -900,9 +831,9 @@ $\rightarrow$<b>$Z$must adapt to $A$(STRIPS)</b>
 </div>
 </div>
 
-<div id="outline-container-orgheadline37" class="outline-3">
-<h3 id="orgheadline37"><span class="section-number-3">12.4</span> Cube-Space AE</h3>
-<div class="outline-text-3" id="text-12-4">
+<div id="outline-container-orgheadline31" class="outline-3">
+<h3 id="orgheadline31"><span class="section-number-3">11.4</span> End-to-End NN: Cube-Space AE</h3>
+<div class="outline-text-3" id="text-11-4">
 
 <div class="figure">
 <p><img src="img/space-ae/2-5.png" alt="2-5.png" />
@@ -912,9 +843,9 @@ $\rightarrow$<b>$Z$must adapt to $A$(STRIPS)</b>
 </div>
 </div>
 
-<div id="outline-container-orgheadline42" class="outline-2">
-<h2 id="orgheadline42"><span class="section-number-2">13</span> Fixing the AAE: Disentangling effects from states</h2>
-<div class="outline-text-2" id="text-13">
+<div id="outline-container-orgheadline36" class="outline-2">
+<h2 id="orgheadline36"><span class="section-number-2">12</span> Fixing the AAE: Disentangling effects from states</h2>
+<div class="outline-text-2" id="text-12">
 
 <div class="figure">
 <p><img src="img/space-ae/3-1.png" alt="3-1.png" />
@@ -922,9 +853,9 @@ $\rightarrow$<b>$Z$must adapt to $A$(STRIPS)</b>
 </div>
 </div>
 
-<div id="outline-container-orgheadline39" class="outline-3">
-<h3 id="orgheadline39"><span class="section-number-3">13.1</span> Min = delete effect / set intersection <br> Max = add effect / set union</h3>
-<div class="outline-text-3" id="text-13-1">
+<div id="outline-container-orgheadline33" class="outline-3">
+<h3 id="orgheadline33"><span class="section-number-3">12.1</span> Min = delete effect / set intersection <br> Max = add effect / set union</h3>
+<div class="outline-text-3" id="text-12-1">
 <p>
 This turned out to be hard to train
 </p>
@@ -938,9 +869,9 @@ This turned out to be hard to train
 </div>
 
 
-<div id="outline-container-orgheadline40" class="outline-3">
-<h3 id="orgheadline40"><span class="section-number-3">13.2</span> Proposed: <b><i>Back-to-Logit</i></b> = continuous effects</h3>
-<div class="outline-text-3" id="text-13-2">
+<div id="outline-container-orgheadline34" class="outline-3">
+<h3 id="orgheadline34"><span class="section-number-3">12.2</span> Proposed: <b><i>Back-to-Logit</i></b> = continuous effects</h3>
+<div class="outline-text-3" id="text-12-2">
 <ul class="org-ul">
 <li><p>
 (1) <b>Make propositional (0/1) states continuous (<i>back to logit!</i>)</b>
@@ -969,9 +900,9 @@ This turned out to be hard to train
 </div>
 </div>
 
-<div id="outline-container-orgheadline41" class="outline-3">
-<h3 id="orgheadline41"><span class="section-number-3">13.3</span> Results: Better training (ablation study)</h3>
-<div class="outline-text-3" id="text-13-3">
+<div id="outline-container-orgheadline35" class="outline-3">
+<h3 id="orgheadline35"><span class="section-number-3">12.3</span> Results: Better training (ablation study)</h3>
+<div class="outline-text-3" id="text-12-3">
 
 <div class="figure">
 <p><img src="img/results/ablation.png" alt="ablation.png" />
@@ -986,9 +917,9 @@ This turned out to be hard to train
 </div>
 </div>
 
-<div id="outline-container-orgheadline43" class="outline-2">
-<h2 id="orgheadline43"><span class="section-number-2">14</span> To PDDL: Extracting action effects (details ommited)</h2>
-<div class="outline-text-2" id="text-14">
+<div id="outline-container-orgheadline37" class="outline-2">
+<h2 id="orgheadline37"><span class="section-number-2">13</span> To PDDL: Extracting action effects (details ommited)</h2>
+<div class="outline-text-2" id="text-13">
 <p>
 Dataset $\{ (z_t, z_{t+1}) \mid \text{action}(z_t, z_{t+1})=a\}$:
 </p>
@@ -1032,9 +963,9 @@ $(1,1)$may happen but $(1,0)$cannot happen. $(0,0)$does not happen because the n
 </div>
 </div>
 
-<div id="outline-container-orgheadline44" class="outline-2">
-<h2 id="orgheadline44"><span class="section-number-2">15</span> To PDDL: Extracting action preconditions</h2>
-<div class="outline-text-2" id="text-15">
+<div id="outline-container-orgheadline38" class="outline-2">
+<h2 id="orgheadline38"><span class="section-number-2">14</span> To PDDL: Extracting action preconditions</h2>
+<div class="outline-text-2" id="text-14">
 <p>
 Dataset $\{ (z_t, z_{t+1}) \mid \text{action}(z_t, z_{t+1})=a\}$:
 </p>
@@ -1066,9 +997,9 @@ $f$: index in the binary vector
 </div>
 </div>
 
-<div id="outline-container-orgheadline45" class="outline-2">
-<h2 id="orgheadline45"><span class="section-number-2">16</span> Example PDDL output from our system</h2>
-<div class="outline-text-2" id="text-16">
+<div id="outline-container-orgheadline39" class="outline-2">
+<h2 id="orgheadline39"><span class="section-number-2">15</span> Example PDDL output from our system</h2>
+<div class="outline-text-2" id="text-15">
 
 <div class="figure">
 <p><img src="img/static/results/fig1.png" alt="fig1.png" />
@@ -1077,9 +1008,9 @@ $f$: index in the binary vector
 </div>
 </div>
 
-<div id="outline-container-orgheadline46" class="outline-2">
-<h2 id="orgheadline46"><span class="section-number-2">17</span> Results : Blind search eats up 2GB memory and dies. <br> SotA heuristics (LMcut/M&amp;S) scale up the search!</h2>
-<div class="outline-text-2" id="text-17">
+<div id="outline-container-orgheadline40" class="outline-2">
+<h2 id="orgheadline40"><span class="section-number-2">16</span> Results : Blind search eats up 2GB memory and dies. <br> SotA heuristics (LMcut/M&amp;S) scale up the search!</h2>
+<div class="outline-text-2" id="text-16">
 <div class="container-fluid">
 <div class="row-fluid">
 <div class="span6">
@@ -1122,9 +1053,9 @@ in the latent space.
 </div>
 </div>
 
-<div id="outline-container-orgheadline47" class="outline-2">
-<h2 id="orgheadline47"><span class="section-number-2">18</span> Results : Confirms the search efficiency</h2>
-<div class="outline-text-2" id="text-18">
+<div id="outline-container-orgheadline41" class="outline-2">
+<h2 id="orgheadline41"><span class="section-number-2">17</span> Results : Confirms the search efficiency</h2>
+<div class="outline-text-2" id="text-17">
 
 <div class="figure">
 <p><img src="img/static/results/fig2.png" alt="fig2.png" />
@@ -1142,9 +1073,9 @@ It also does not require crazy amount of training.
 </div>
 </div>
 
-<div id="outline-container-orgheadline48" class="outline-2">
-<h2 id="orgheadline48"><span class="section-number-2">19</span> Results : Strong Generalization</h2>
-<div class="outline-text-2" id="text-19">
+<div id="outline-container-orgheadline42" class="outline-2">
+<h2 id="orgheadline42"><span class="section-number-2">18</span> Results : Strong Generalization</h2>
+<div class="outline-text-2" id="text-18">
 <div class="org-center">
 <p>
 Number of states $S$&amp; transitions $T$
@@ -1206,9 +1137,9 @@ Mostly $S=T=0$
 </div>
 </div>
 
-<div id="outline-container-orgheadline49" class="outline-2">
-<h2 id="orgheadline49"><span class="section-number-2">20</span> Conclusion : New Milestone Achieved</h2>
-<div class="outline-text-2" id="text-20">
+<div id="outline-container-orgheadline43" class="outline-2">
+<h2 id="orgheadline43"><span class="section-number-2">19</span> Conclusion : New Milestone Achieved</h2>
+<div class="outline-text-2" id="text-19">
 <ul class="org-ul">
 <li><b><i>Cube-Space AE</i></b> : Learns STRIPS planning models from images
 <ul class="org-ul">
@@ -1229,7 +1160,7 @@ Mostly $S=T=0$
 <div class="org-center">
 <ul class="org-ul">
 <li><p>
-<b><i>New Era:</i> SotA heuristics will beat RL</b>
+<b><i>New Era:</i> Symbolic approach will kick the butt of RL</b>
 </p>
 
 <p>
@@ -1244,7 +1175,7 @@ Mostly $S=T=0$
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: masataro</p>
-<p class="date">Created: 2020-12-06 日 12:56</p>
+<p class="date">Created: 2021-01-17 日 16:54</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

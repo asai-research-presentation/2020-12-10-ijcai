@@ -9,7 +9,7 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    sodipodi:docname="planning5.svg"
-   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
    version="1.1"
    id="svg6210"
    viewBox="0 0 599.99999 289.7659"
@@ -1087,7 +1087,7 @@
      inkscape:document-units="px"
      inkscape:cy="115.30928"
      inkscape:cx="262.89853"
-     inkscape:zoom="1.496875"
+     inkscape:zoom="1.7340037"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
@@ -2684,5 +2684,26 @@
          y="486.06"
          x="227.81596"
          sodipodi:role="line">Classical Planner</tspan></text>
+    <path
+       style="fill:none;stroke:#0000ff;stroke-width:6.30365;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 181.3826,441.17615 102.63901,44.70912"
+       id="path1480-5"
+       sodipodi:nodetypes="cc" />
+    <path
+       id="path1480-7-3"
+       d="M 181.3826,485.88527 284.02161,441.17613"
+       style="fill:none;stroke:#0000ff;stroke-width:6.30365;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       sodipodi:nodetypes="cc" />
+    <text
+       id="text7985-3"
+       y="500.15677"
+       x="227.81596"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:0%;font-family:'Noto Sans CJK JP';-inkscape-font-specification:'Noto Sans CJK JP Bold';text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;baseline-shift:baseline;text-anchor:middle;white-space:normal;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.32917;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       xml:space="preserve"><tspan
+         id="tspan1465"
+         style="font-size:16.1457px;line-height:0.98;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.32917"
+         y="500.15677"
+         x="227.81596"
+         sodipodi:role="line">Goal Count planner</tspan></text>
   </g>
 </svg>

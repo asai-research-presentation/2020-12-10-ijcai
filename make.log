@@ -9,9 +9,9 @@ sass --update .
 make[2]: ディレクトリ '/home/masataro/repos/presentations/2020-12-10-ijcai/scripts' に入ります
 Q --batch  -f batch-byte-compile compile-org-html.el
 make[2]: Q: コマンドが見つかりませんでした
+make[2]: [Makefile:5: compile-org-html.elc] エラー 127 (無視されました)
 Q --batch  -f batch-byte-compile compile-org-latex.el
 make[2]: Q: コマンドが見つかりませんでした
-make[2]: [Makefile:5: compile-org-html.elc] エラー 127 (無視されました)
 make[2]: [Makefile:5: compile-org-latex.elc] エラー 127 (無視されました)
 make[2]: ディレクトリ '/home/masataro/repos/presentations/2020-12-10-ijcai/scripts' から出ます
 scripts/org-html.sh presen.org presen.org.html
